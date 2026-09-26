@@ -79,6 +79,14 @@ To get started with Hexa.NET.ImGui, follow these steps:
 
 For a comprehensive example of how to use the library, refer to the [ExampleGFWLD3D11 project](https://github.com/HexaEngine/Hexa.NET.ImGui/tree/main/Examples/ExampleGLFWD3D11) [ExampleSDL3OpenGL3 project](https://github.com/HexaEngine/Hexa.NET.ImGui/tree/main/Examples/ExampleSDL3OpenGL3/).
 
+### Browser (WebAssembly)
+
+`Hexa.NET.ImGui` (the core package only) runs on `browser-wasm` with the Mono interpreter and with `RunAOTCompilation`. Referencing the package from a `Microsoft.NET.Sdk.WebAssembly` app links `native/browser-wasm/cimgui.a` into `dotnet.wasm` through a `NativeFileReference`, so the app build needs the `wasm-tools` workload and relinks the runtime. No rendering backend is included; see [ExampleBrowserWasm](Examples/ExampleBrowserWasm/) for a headless smoke check of the binding.
+
+- `scripts/build_cimgui_wasm.sh` builds the archive with the Emscripten on `PATH`, which must match the workload's version (3.1.56 for .NET 9 and 10). It appends a generated name table (`scripts/wasm/gen_cimgui_exports.py`) because the browser runtime cannot look up native symbols by name.
+- After regenerating the binding, rerun `dotnet run scripts/wasm/GenerateInterpToNativeSignatures.cs -- Hexa.NET.ImGui/bin/Release/net10.0/Hexa.NET.ImGui.dll Hexa.NET.ImGui Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs`. The interpreter aborts on a native call whose signature that file lacks.
+- The archive is single-threaded and built without FreeType, so `ImGuiFreeType` functions are unavailable in the browser.
+
 ### Using the Flexible and Optimized API
 
 Hexa.NET.ImGui supports both safe and unsafe API calls, along with optimized string handling to bypass UTF-8 encoding and avoid allocations. Here are some examples:

@@ -14,6 +14,13 @@ namespace Hexa.NET.ImGui
     {
         static ImGui()
         {
+#if NET5_0_OR_GREATER
+            if (OperatingSystem.IsBrowser())
+            {
+                InitApi(new BrowserNativeContext());
+                return;
+            }
+#endif
             if (ImGuiConfig.AotStaticLink)
             {
                 InitApi(new NativeLibraryContext(Process.GetCurrentProcess().MainModule!.BaseAddress));

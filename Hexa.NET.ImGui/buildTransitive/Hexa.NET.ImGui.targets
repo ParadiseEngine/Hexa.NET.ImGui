@@ -3,4 +3,9 @@
 		<NativeLibrary Include="$(MSBuildThisFileDirectory)../runtimes/android-arm64/native/*.so" />
 		<NativeLibrary Include="$(MSBuildThisFileDirectory)../runtimes/android-x64/native/*.so" />
 	</ItemGroup>
+	<!-- Mono on browser-wasm links native code statically into dotnet.wasm; a NativeFileReference
+	     also turns on WasmBuildNative, which relinks the runtime during the app build. -->
+	<ItemGroup Condition=" '$(RuntimeIdentifier)' == 'browser-wasm' ">
+		<NativeFileReference Include="$(MSBuildThisFileDirectory)../native/browser-wasm/cimgui.a" />
+	</ItemGroup>
 </Project>

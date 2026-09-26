@@ -1,0 +1,51 @@
+name: Build ImGui Library (browser-wasm)
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/cmake-wasm.yml
+      - scripts/build_cimgui_wasm.sh
+      - scripts/wasm/**
+      - Hexa.NET.ImGui/Browser/**
+      - Hexa.NET.ImGui/ImGui.cs
+      - Hexa.NET.ImGui/buildTransitive/**
+      - Examples/ExampleBrowserWasm/**
+
+jobs:
+  build-cimgui-wasm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          # Must match the Emscripten bundled with the .NET wasm workload, which links the archive.
+          version: 3.1.56
+          actions-cache-folder: emsdk-cache
+
+      - name: Build cimgui.a
+        run: bash scripts/build_cimgui_wasm.sh
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Install wasm-tools workload
+        run: dotnet workload install wasm-tools
+
+      - name: Publish the smoke example against the new archive
+        run: dotnet publish Examples/ExampleBrowserWasm/ExampleBrowserWasm.csproj -c Release -o smoke
+
+      - name: Run the smoke example in headless Chrome
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory smoke/wwwroot &
+          sleep 2
+          google-chrome --headless=new --no-sandbox --virtual-time-budget=60000 --dump-dom http://127.0.0.1:8000/ | tee dom.html
+          grep -q "SMOKE PASS" dom.html
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cimgui-browser-wasm
+          path: Hexa.NET.ImGui/native/browser-wasm/cimgui.a
+          if-no-files-found: error
