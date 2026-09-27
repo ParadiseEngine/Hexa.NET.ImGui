@@ -10,8 +10,13 @@ jobs:
     with:
       lib-name: ImGuiImpl
       repo: HexaEngine/cimgui_impl
-      repo-tag: main
-      cmake-flags: -DBACKENDS_BASE_ONLY=ON -DIMGUI_WCHAR32=ON
+      # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
+      repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DBACKENDS_BASE_ONLY=ON -DIMGUI_WCHAR32=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       cmake-flags-windows: -DCMAKE_SYSTEM_VERSION=10.0.26100.0
       bin-name-osx: libImGuiImpl.dylib
       bin-name-linux: libImGuiImpl.so
@@ -41,8 +46,13 @@ jobs:
       enable-android: false
       lib-name: ImGuiImplSDL2
       repo: HexaEngine/cimgui_impl
-      repo-tag: main
-      cmake-flags: -DBACKENDS_SDL2_ONLY=ON -DIMGUI_WCHAR32=ON
+      # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
+      repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DBACKENDS_SDL2_ONLY=ON -DIMGUI_WCHAR32=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       cmake-flags-windows: -DCMAKE_SYSTEM_VERSION=10.0.26100.0
       bin-name-osx: libImGuiImplSDL2.dylib
       bin-name-linux: libImGuiImplSDL2.so
@@ -70,9 +80,14 @@ jobs:
       enable-android: false
       lib-name: ImGuiImplSDL3
       repo: HexaEngine/cimgui_impl
-      repo-tag: main
+      # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
+      repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
       checkout-self: true
-      cmake-flags: -DBACKENDS_SDL3_ONLY=ON -DIMGUI_WCHAR32=ON -DCMAKE_PREFIX_PATH="./SDL/install"
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DBACKENDS_SDL3_ONLY=ON -DIMGUI_WCHAR32=ON -DCMAKE_PREFIX_PATH="./SDL/install"
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       cmake-flags-windows: -DCMAKE_SYSTEM_VERSION=10.0.26100.0
       bin-name-osx: libImGuiImplSDL3.dylib
       bin-name-linux: libImGuiImplSDL3.so
@@ -97,8 +112,13 @@ jobs:
       enable-android: false
       lib-name: ImGuiImplGLFW
       repo: HexaEngine/cimgui_impl
-      repo-tag: main
-      cmake-flags: -DBACKENDS_GLFW_ONLY=ON -DIMGUI_WCHAR32=ON
+      # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
+      repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DBACKENDS_GLFW_ONLY=ON -DIMGUI_WCHAR32=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       cmake-flags-windows: -DCMAKE_SYSTEM_VERSION=10.0.26100.0
       bin-name-osx: libImGuiImplGLFW.dylib
       bin-name-linux: libImGuiImplGLFW.so
