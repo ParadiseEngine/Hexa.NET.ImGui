@@ -89,6 +89,11 @@
 			<PackagePath>runtimes/win-x64/native</PackagePath>
 			<Pack>true</Pack>
 		</None>
+		<!-- Outside runtimes/ so NuGet does not copy it as a runtime asset; buildTransitive/Hexa.NET.ImGui.targets links it into dotnet.wasm. -->
+		<None Include="native\browser-wasm\*.a">
+			<PackagePath>native/browser-wasm</PackagePath>
+			<Pack>true</Pack>
+		</None>
 		<None Include="native\win-x86\*.dll">
 			<Link>runtimes\win-x86\native\%(RecursiveDir)%(Filename)%(Extension)</Link>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
