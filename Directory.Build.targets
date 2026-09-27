@@ -1,0 +1,15 @@
+<Project>
+	<!-- Fork package identity. The Hexa.NET.* prefix is reserved on nuget.org by HexaEngine, so this
+	     fork publishes Paradise.Hexa.NET.* with unchanged assembly names and namespaces. Set here,
+	     after each project body, so the upstream csproj files stay untouched and merge cleanly. -->
+	<PropertyGroup Condition="$(MSBuildProjectName.StartsWith('Hexa.NET.'))">
+		<PackageId>Paradise.$(MSBuildProjectName)</PackageId>
+		<PackageProjectUrl>https://github.com/ParadiseEngine/Hexa.NET.ImGui</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ParadiseEngine/Hexa.NET.ImGui</RepositoryUrl>
+	</PropertyGroup>
+	<!-- NuGet imports buildTransitive/<PackageId>.targets only, so the renamed package must carry
+	     the upstream targets file under its own id. -->
+	<ItemGroup Condition="$(MSBuildProjectName.StartsWith('Hexa.NET.'))">
+		<Content Update="buildTransitive\$(MSBuildProjectName).targets" PackagePath="buildTransitive/$(PackageId).targets" />
+	</ItemGroup>
+</Project>

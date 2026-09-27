@@ -36,6 +36,10 @@ Hexa.NET.ImGui is divided into four different packages to provide modularity and
 - [Hexa.NET.ImNodes](https://www.nuget.org/packages/Hexa.NET.ImNodes/)
 - [Hexa.NET.ImPlot](https://www.nuget.org/packages/Hexa.NET.ImPlot/)
 
+### ParadiseEngine fork packages
+
+This fork publishes the same assemblies and namespaces to nuget.org as `Paradise.Hexa.NET.ImGui`, `Paradise.Hexa.NET.ImGui.Backends`, `Paradise.Hexa.NET.ImGui.Backends.GLFW`, `Paradise.Hexa.NET.ImGui.Backends.SDL2`, `Paradise.Hexa.NET.ImGui.Backends.SDL3`, `Paradise.Hexa.NET.ImGuizmo`, `Paradise.Hexa.NET.ImNodes`, `Paradise.Hexa.NET.ImPlot` and `Paradise.Hexa.NET.ImPlot3D`, because the `Hexa.NET.*` prefix is reserved by HexaEngine. `Directory.Build.targets` sets the package identity. Pushing a `v*` tag runs `push-nuget.yml`, which builds the natives, packs with the tag's version, and publishes through nuget.org Trusted Publishing as the `NUGET_USER` repository variable.
+
 ## Releated Projects
 
 - [Hexa.NET.ImGui.Widgets](https://github.com/HexaEngine/Hexa.NET.ImGui.Widgets)
