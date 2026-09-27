@@ -75,8 +75,12 @@ jobs:
           PACKAGE_VERSION: ${{ steps.version.outputs.value }}
         run: |
           projects=($PROJECTS)
+          # GeneratePackageOnBuild keeps dotnet pack from building, so build every TFM first.
           for project in "${projects[@]}"; do
-            dotnet pack "$project/$project.csproj" -c Release -o nupkgs \
+            dotnet build "$project/$project.csproj" -c Release \
+              -p:ContinuousIntegrationBuild=true \
+              -p:PackageVersion="$PACKAGE_VERSION"
+            dotnet pack "$project/$project.csproj" -c Release -o nupkgs --no-build \
               -p:ContinuousIntegrationBuild=true \
               -p:PackageVersion="$PACKAGE_VERSION"
           done
