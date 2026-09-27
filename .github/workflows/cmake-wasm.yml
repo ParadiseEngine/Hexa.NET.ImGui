@@ -8,6 +8,8 @@ on:
       - scripts/build_cimgui_wasm.sh
       - scripts/wasm/**
       - Hexa.NET.ImGui/Browser/**
+      - Hexa.NET.ImGui/Generated/**
+      - Hexa.NET.ImGui/Manual/**
       - Hexa.NET.ImGui/ImGui.cs
       - Hexa.NET.ImGui/buildTransitive/**
       - Examples/ExampleBrowserWasm/**
@@ -34,12 +36,21 @@ jobs:
       - name: Install wasm-tools workload
         run: dotnet workload install wasm-tools
 
+      # A stale file only shows up as an interpreter abort at the first unseen signature.
+      - name: Check InterpToNativeSignatures.cs matches the binding
+        run: |
+          dotnet build Hexa.NET.ImGui/Hexa.NET.ImGui.csproj -c Release -f net10.0
+          dotnet run scripts/wasm/GenerateInterpToNativeSignatures.cs -- Hexa.NET.ImGui/bin/Release/net10.0/Hexa.NET.ImGui.dll Hexa.NET.ImGui Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs
+          git diff --exit-code Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs
+
       - name: Publish the smoke example against the new archive
         run: dotnet publish Examples/ExampleBrowserWasm/ExampleBrowserWasm.csproj -c Release -o smoke
 
       - name: Run the smoke example in headless Chrome
         run: |
           python3 -m http.server 8000 --bind 127.0.0.1 --directory smoke/wwwroot &
+          server=$!
+          trap 'kill $server' EXIT
           sleep 2
           google-chrome --headless=new --no-sandbox --virtual-time-budget=60000 --dump-dom http://127.0.0.1:8000/ | tee dom.html
           grep -q "SMOKE PASS" dom.html
