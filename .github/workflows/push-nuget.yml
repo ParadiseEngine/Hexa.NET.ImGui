@@ -1,6 +1,6 @@
 name: Publish NuGet Packages
 
-# Publishes the Paradise.Hexa.NET.* packages to nuget.org. The version comes from the v* tag or
+# Publishes Hexa.NET.X as the Paradise.X packages on nuget.org. The version comes from the v* tag or
 # the dispatch input; the csproj PackageVersion only applies to local packs.
 on:
   push:
@@ -87,7 +87,7 @@ jobs:
               -p:PackageVersion="$PACKAGE_VERSION"
           done
           ls nupkgs
-          count=$(ls nupkgs/Paradise.Hexa.NET.*."$PACKAGE_VERSION".nupkg | wc -l)
+          count=$(ls nupkgs/Paradise.*."$PACKAGE_VERSION".nupkg | wc -l)
           if [[ "$count" -ne "${#projects[@]}" ]]; then
             echo "::error::Expected ${#projects[@]} packages, found $count"
             exit 1
