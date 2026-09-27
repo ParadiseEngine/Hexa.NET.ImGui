@@ -8,7 +8,7 @@
 # natives.yml (gh workflow run natives.yml --ref HexaGen-Mainline) and rerun this script.
 set -euo pipefail
 
-repo="${NATIVES_REPO:-ParadiseEngine/Hexa.NET.ImGui}"
+repo="${NATIVES_REPO:-ParadiseEngine/Paradise.ImGui}"
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 run_id="${1:-}"
 

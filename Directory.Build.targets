@@ -1,11 +1,16 @@
 <Project>
-	<!-- Fork package identity. The Hexa.NET.* prefix is reserved on nuget.org by HexaEngine, so this
-	     fork publishes Paradise.Hexa.NET.* with unchanged assembly names and namespaces. Set here,
-	     after each project body, so the upstream csproj files stay untouched and merge cleanly. -->
+	<!-- Fork package identity. LICENSE.txt's Naming Clause forbids the "Hexa.NET" name or prefix for
+	     redistributed or modified packages without Juna Meinhold's written permission, and requires
+	     other uses of the name to say they are not official. Hexa.NET.X is therefore packed as
+	     Paradise.X, marked unofficial. Assembly names and namespaces stay upstream's identifiers so
+	     code compiles unchanged. Set here, after each project body, so upstream's csproj files stay
+	     untouched and merge cleanly. -->
 	<PropertyGroup Condition="$(MSBuildProjectName.StartsWith('Hexa.NET.'))">
-		<PackageId>Paradise.$(MSBuildProjectName)</PackageId>
-		<PackageProjectUrl>https://github.com/ParadiseEngine/Hexa.NET.ImGui</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/ParadiseEngine/Hexa.NET.ImGui</RepositoryUrl>
+		<PackageId>Paradise.$(MSBuildProjectName.Substring(9))</PackageId>
+		<Authors>ParadiseEngine</Authors>
+		<Description>Not an official Hexa.NET package: ParadiseEngine's fork of $(MSBuildProjectName) by Juna Meinhold, with natives built at -O3 from pinned sources. $(Description)</Description>
+		<PackageProjectUrl>https://github.com/ParadiseEngine/Paradise.ImGui</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ParadiseEngine/Paradise.ImGui</RepositoryUrl>
 	</PropertyGroup>
 	<!-- NuGet imports buildTransitive/<PackageId>.targets only, so the renamed package must carry
 	     the upstream targets file under its own id. -->
