@@ -37,7 +37,7 @@ def place(artifacts_dir: str, repo_root: str) -> int:
             continue
         parts = entry.split("-")
         library, rid = "-".join(parts[:-2]), "-".join(parts[-2:])
-        if len(parts) < 3 or library not in destinations:
+        if library not in destinations:
             sys.exit(f"artifact '{entry}' has no destination in hexa-workflows/*/hexa-workflows.json")
         target = os.path.join(repo_root, destinations[library], rid)
         os.makedirs(target, exist_ok=True)

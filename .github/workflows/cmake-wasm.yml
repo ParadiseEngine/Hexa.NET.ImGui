@@ -2,11 +2,9 @@ name: Build ImGui Library (browser-wasm)
 
 on:
   workflow_call:
+  # Changes to this workflow or scripts/ run it through natives.yml instead.
   pull_request:
     paths:
-      - .github/workflows/cmake-wasm.yml
-      - scripts/build_cimgui_wasm.sh
-      - scripts/wasm/**
       - Hexa.NET.ImGui/Browser/**
       - Hexa.NET.ImGui/Generated/**
       - Hexa.NET.ImGui/Manual/**
