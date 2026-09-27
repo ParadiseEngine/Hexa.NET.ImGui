@@ -7,7 +7,11 @@ on:
   workflow_dispatch:
   
 jobs:
+  natives:
+    uses: ./.github/workflows/natives.yml
+
   build:
+    needs: natives
     runs-on: ubuntu-latest
     environment: production
 
@@ -18,6 +22,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # Native libraries are not committed; natives.yml built them from the pinned sources.
+      - name: Download native libraries
+        uses: actions/download-artifact@v4
+        with:
+          name: natives
+          path: .
+
+      - name: Verify every packed native pattern has files
+        run: mkdir -p no-artifacts && python3 scripts/place_natives.py no-artifacts .
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4

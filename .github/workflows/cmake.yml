@@ -1,6 +1,7 @@
 name: Build ImGui and Addons Libraries
 
-on: [workflow_dispatch]
+on:
+  workflow_call:
 
 jobs:
   build-cimgui:
@@ -126,21 +127,3 @@ jobs:
       android-api: 23
       pre-configure-steps: "bash scripts/setup_addon_build.sh"
       checkout-self: true
-
-  create-pr:
-    needs:
-      [
-        build-cimgui,
-        build-cimplot,
-        build-cimnodes,
-        build-cimguizmo,
-        build-cimplot3d,
-      ]
-    uses: JunaMeinhold/cmake-actions/.github/workflows/create-pr.yml@v1.x.x
-    with:
-      lib-name: "ImGui"
-      lib-version: "v1.92.9b"
-      pr-base-branch: "main"
-      pr-reviewers: JunaMeinhold
-      pr-branch: imgui-artifacts
-      pr-manifest-path: imgui

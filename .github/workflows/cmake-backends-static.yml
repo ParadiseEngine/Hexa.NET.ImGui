@@ -1,14 +1,14 @@
 name: Build ImGui Backends (Static)
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   build-base:
     name: Build (Base)
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: ImGuiImpl
+      lib-name: ImGuiImpl-static
       repo: HexaEngine/cimgui_impl
       # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
       repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
@@ -44,7 +44,7 @@ jobs:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
       enable-android: false
-      lib-name: ImGuiImplSDL2
+      lib-name: ImGuiImplSDL2-static
       repo: HexaEngine/cimgui_impl
       # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
       repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
@@ -78,7 +78,7 @@ jobs:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
       enable-android: false
-      lib-name: ImGuiImplSDL3
+      lib-name: ImGuiImplSDL3-static
       repo: HexaEngine/cimgui_impl
       # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
       repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
@@ -110,7 +110,7 @@ jobs:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
       enable-android: false
-      lib-name: ImGuiImplGLFW
+      lib-name: ImGuiImplGLFW-static
       repo: HexaEngine/cimgui_impl
       # Pinned to the cimgui_impl commit the shipped backend natives were built from (imgui b48d1af, as in cimgui).
       repo-tag: d31eabc9f71904d6d52448ef1f618e761c3bbceb
@@ -138,14 +138,3 @@ jobs:
       setup-vulkan-windows: false
       pre-deps-steps: "bash scripts/downgrade_cmake.sh"
       checkout-self: true
-
-  create-pr:
-    needs: [build-base, build-sdl2, build-sdl3, build-glfw]
-    uses: JunaMeinhold/cmake-actions/.github/workflows/create-pr.yml@v1.x.x
-    with:
-      lib-name: "ImGuiImpl"
-      lib-version: "v1.92.4"
-      pr-base-branch: "main"
-      pr-reviewers: JunaMeinhold
-      pr-branch: backends-static-artifacts
-      pr-manifest-path: imgui_impl

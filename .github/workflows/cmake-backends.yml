@@ -1,7 +1,7 @@
 name: Build ImGui Backends
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   build-base:
@@ -138,14 +138,3 @@ jobs:
       setup-vulkan-windows: false
       pre-deps-steps: "bash scripts/downgrade_cmake.sh"
       checkout-self: true
-
-  create-pr:
-    needs: [build-base, build-sdl2, build-sdl3, build-glfw]
-    uses: JunaMeinhold/cmake-actions/.github/workflows/create-pr.yml@v1.x.x
-    with:
-      lib-name: "ImGuiImpl"
-      lib-version: "v1.92.9"
-      pr-base-branch: "main"
-      pr-reviewers: JunaMeinhold
-      pr-branch: backends-artifacts
-      pr-manifest-path: imgui_impl
