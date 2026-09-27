@@ -369,3 +369,6 @@ token.txt
 
 # scripts/build_cimgui_wasm.sh work directory
 /build/
+
+# Native libraries are built by natives.yml; scripts/fetch_natives.sh downloads them
+/*/native/

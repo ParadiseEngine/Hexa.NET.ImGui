@@ -1,7 +1,7 @@
 name: Build ImGui Library (browser-wasm)
 
 on:
-  workflow_dispatch:
+  workflow_call:
   pull_request:
     paths:
       - .github/workflows/cmake-wasm.yml

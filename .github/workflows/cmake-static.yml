@@ -1,12 +1,13 @@
 name: Build ImGui and Addons Libraries (Static)
 
-on: [workflow_dispatch]
+on:
+  workflow_call:
 
 jobs:
   build-cimgui:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimgui
+      lib-name: cimgui-static
       repo: JunaMeinhold/cimgui
       # Pinned to the cimgui commit the checked-in binding (Generator/cimgui) was generated from
       # (Dear ImGui 1.92.9b docking); it only adds *_Construct exports the binding does not use.
@@ -33,7 +34,7 @@ jobs:
   build-cimplot:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimplot
+      lib-name: cimplot-static
       repo: JunaMeinhold/cimplot
       # Pinned to the cimplot commit Generator/cimplot was generated from.
       repo-tag: eb05976dca29780f7aa98d462b1e905784109a1f
@@ -57,7 +58,7 @@ jobs:
   build-cimnodes:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimnodes
+      lib-name: cimnodes-static
       repo: JunaMeinhold/cimnodes
       # Pinned to the cimnodes commit Generator/cimnodes was generated from.
       repo-tag: 9544ec8b3d20aa8280d8802cfe2c6dd08b49e61d
@@ -81,7 +82,7 @@ jobs:
   build-cimguizmo:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimguizmo
+      lib-name: cimguizmo-static
       repo: JunaMeinhold/cimguizmo
       # Pinned to the cimguizmo commit Generator/cimguizmo was generated from.
       repo-tag: 7a7dc6bfdd2d9d0e85186834671bfcd275cb9adc
@@ -105,7 +106,7 @@ jobs:
   build-cimplot3d:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimplot3d
+      lib-name: cimplot3d-static
       repo: JunaMeinhold/cimplot3d
       # Pinned to the cimplot3d commit the shipped natives were built from (ImPlot3D 0.4). Note that
       # Generator/cimplot3d still describes ImPlot3D 0.3 WIP (dc046a1).
@@ -126,21 +127,3 @@ jobs:
       android-api: 23
       pre-configure-steps: "bash scripts/setup_addon_build.sh"
       checkout-self: true
-
-  create-pr:
-    needs:
-      [
-        build-cimgui,
-        build-cimplot,
-        build-cimnodes,
-        build-cimguizmo,
-        build-cimplot3d,
-      ]
-    uses: JunaMeinhold/cmake-actions/.github/workflows/create-pr.yml@v1.x.x
-    with:
-      lib-name: "ImGui"
-      lib-version: "v1.92.4"
-      pr-base-branch: "main"
-      pr-reviewers: JunaMeinhold
-      pr-branch: imgui-artifacts
-      pr-manifest-path: imgui

@@ -87,6 +87,14 @@ For a comprehensive example of how to use the library, refer to the [ExampleGFWL
 - After regenerating the binding, rerun `dotnet run scripts/wasm/GenerateInterpToNativeSignatures.cs -- Hexa.NET.ImGui/bin/Release/net10.0/Hexa.NET.ImGui.dll Hexa.NET.ImGui Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs`. The interpreter aborts on a native call whose signature that file lacks.
 - The archive is single-threaded and built without FreeType, so `ImGuiFreeType` functions are unavailable in the browser.
 
+### Native Libraries
+
+Native libraries are not committed. `.github/workflows/natives.yml` builds all of them (cimgui, the addons, the backends, shared and static, and `browser-wasm`) at `-O3` from the source commits pinned in the `cmake*.yml` workflows and `scripts/`, then uploads the project `native/` folders as one `natives` artifact. It runs on pull requests and pushes that change those inputs, and `push-nuget.yml` runs it before packing.
+
+- For local builds, examples, and tests, run `scripts/fetch_natives.sh` (needs an authenticated `gh`). It downloads the latest successful `natives` artifact from `HexaGen-Mainline`, or pass a run id. Artifacts expire; if none is left, dispatch `natives.yml`.
+- `scripts/place_natives.py` maps artifacts to projects through `hexa-workflows/*/hexa-workflows.json`. It fails if any `native\<rid>\*` pattern a project packs has no files, because an empty glob would silently drop that runtime from the package.
+- When syncing from upstream, keep `*/native/` deleted. Upstream still commits binaries, so merges conflict on those files.
+
 ### Using the Flexible and Optimized API
 
 Hexa.NET.ImGui supports both safe and unsafe API calls, along with optimized string handling to bypass UTF-8 encoding and avoid allocations. Here are some examples:
