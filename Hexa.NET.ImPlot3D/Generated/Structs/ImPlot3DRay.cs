@@ -18,7 +18,7 @@ using Hexa.NET.ImGui;
 namespace Hexa.NET.ImPlot3D
 {
 	/// <summary>
-	/// To be documented.
+	/// ImPlot3DRay: Represents a ray in 3D space with an origin and direction<br/>
 	/// </summary>
 	[NativeName(NativeNameType.StructOrClass, "ImPlot3DRay")]
 	[StructLayout(LayoutKind.Sequential)]
@@ -28,14 +28,14 @@ namespace Hexa.NET.ImPlot3D
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Origin")]
-		[NativeName(NativeNameType.Type, "ImPlot3DPoint")]
+		[NativeName(NativeNameType.Type, "ImPlot3DPoint_c")]
 		public ImPlot3DPoint Origin;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Direction")]
-		[NativeName(NativeNameType.Type, "ImPlot3DPoint")]
+		[NativeName(NativeNameType.Type, "ImPlot3DPoint_c")]
 		public ImPlot3DPoint Direction;
 
 

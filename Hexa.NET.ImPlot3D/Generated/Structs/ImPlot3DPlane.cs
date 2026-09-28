@@ -18,7 +18,7 @@ using Hexa.NET.ImGui;
 namespace Hexa.NET.ImPlot3D
 {
 	/// <summary>
-	/// To be documented.
+	/// ImPlot3DPlane: Represents a plane in 3D space defined by a point and normal vector<br/>
 	/// </summary>
 	[NativeName(NativeNameType.StructOrClass, "ImPlot3DPlane")]
 	[StructLayout(LayoutKind.Sequential)]
@@ -28,14 +28,14 @@ namespace Hexa.NET.ImPlot3D
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Point")]
-		[NativeName(NativeNameType.Type, "ImPlot3DPoint")]
+		[NativeName(NativeNameType.Type, "ImPlot3DPoint_c")]
 		public ImPlot3DPoint Point;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Normal")]
-		[NativeName(NativeNameType.Type, "ImPlot3DPoint")]
+		[NativeName(NativeNameType.Type, "ImPlot3DPoint_c")]
 		public ImPlot3DPoint Normal;
 
 

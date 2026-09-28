@@ -21,20 +21,636 @@ namespace Hexa.NET.ImPlot3D
 		/// <summary>
 		/// To be documented.
 		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_ImPlot3DSpec")]
+		[return: NativeName(NativeNameType.Type, "ImPlot3DSpec *")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static ImPlot3DSpec* ImPlot3DSpecNative()
+		{
+			#if NET5_0_OR_GREATER
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DSpec*>)funcTable[1])();
+			#else
+			return (ImPlot3DSpec*)((delegate* unmanaged[Cdecl]<nint>)funcTable[1])();
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_ImPlot3DSpec")]
+		[return: NativeName(NativeNameType.Type, "ImPlot3DSpec *")]
+		public static ImPlot3DSpec* ImPlot3DSpec()
+		{
+			ImPlot3DSpec* ret = ImPlot3DSpecNative();
+			return ret;
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_destroy")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void DestroyNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, void>)funcTable[2])(self);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[2])((nint)self);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_destroy")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void Destroy([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self)
+		{
+			DestroyNative(self);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_destroy")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void Destroy([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				DestroyNative((ImPlot3DSpec*)pself);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_Float")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float")] float v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, float, void>)funcTable[3])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, float, void>)funcTable[3])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_Float")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float")] float v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_Float")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float")] float v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_double")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "double")] double v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, double, void>)funcTable[4])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, double, void>)funcTable[4])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_double")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "double")] double v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_double")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "double")] double v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S8")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS8")] sbyte v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, sbyte, void>)funcTable[5])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, sbyte, void>)funcTable[5])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S8")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS8")] sbyte v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S8")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS8")] sbyte v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U8")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU8")] byte v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, byte, void>)funcTable[6])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, byte, void>)funcTable[6])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U8")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU8")] byte v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U8")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU8")] byte v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S16")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS16")] short v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, short, void>)funcTable[7])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, short, void>)funcTable[7])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S16")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS16")] short v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S16")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS16")] short v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U16")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU16")] ushort v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, ushort, void>)funcTable[8])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, ushort, void>)funcTable[8])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U16")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU16")] ushort v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U16")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU16")] ushort v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S32")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS32")] int v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, int, void>)funcTable[9])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, int, void>)funcTable[9])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S32")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS32")] int v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S32")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS32")] int v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32")] uint v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, uint, void>)funcTable[10])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, uint, void>)funcTable[10])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32")] uint v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32")] uint v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S64")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS64")] long v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, long, void>)funcTable[11])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, long, void>)funcTable[11])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S64")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS64")] long v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_S64")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImS64")] long v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U64")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU64")] ulong v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, ulong, void>)funcTable[12])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, ulong, void>)funcTable[12])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U64")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU64")] ulong v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U64")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU64")] ulong v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32Ptr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32 *")] uint* v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, uint*, void>)funcTable[13])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, nint, void>)funcTable[13])((nint)self, prop, (nint)v);
+			#endif
+		}
+
+		/// <summary>
+		/// Set a property from an ImU32* array (per-index colors).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32Ptr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32 *")] uint* v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// Set a property from an ImU32* array (per-index colors).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32Ptr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32 *")] uint* v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// Set a property from an ImU32* array (per-index colors).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32Ptr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32 *")] ref uint v)
+		{
+			fixed (uint* pv = &v)
+			{
+				SetPropNative(self, prop, (uint*)pv);
+			}
+		}
+
+		/// <summary>
+		/// Set a property from an ImU32* array (per-index colors).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_U32Ptr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImU32 *")] ref uint v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				fixed (uint* pv = &v)
+				{
+					SetPropNative((ImPlot3DSpec*)pself, prop, (uint*)pv);
+				}
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_FloatPtr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float *")] float* v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, float*, void>)funcTable[14])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, nint, void>)funcTable[14])((nint)self, prop, (nint)v);
+			#endif
+		}
+
+		/// <summary>
+		/// Set a property from a float* array (per-index sizes).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_FloatPtr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float *")] float* v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// Set a property from a float* array (per-index sizes).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_FloatPtr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float *")] float* v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// Set a property from a float* array (per-index sizes).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_FloatPtr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float *")] ref float v)
+		{
+			fixed (float* pv = &v)
+			{
+				SetPropNative(self, prop, (float*)pv);
+			}
+		}
+
+		/// <summary>
+		/// Set a property from a float* array (per-index sizes).<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_FloatPtr")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "float *")] ref float v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				fixed (float* pv = &v)
+				{
+					SetPropNative((ImPlot3DSpec*)pself, prop, (float*)pv);
+				}
+			}
+		}
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_Vec4")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetPropNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 v)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImPlot3DSpec*, ImPlot3DProp, Vector4, void>)funcTable[15])(self, prop, v);
+			#else
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DProp, Vector4, void>)funcTable[15])((nint)self, prop, v);
+			#endif
+		}
+
+		/// <summary>
+		/// Set a property from an ImVec4 value.<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_Vec4")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ImPlot3DSpec* self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 v)
+		{
+			SetPropNative(self, prop, v);
+		}
+
+		/// <summary>
+		/// Set a property from an ImVec4 value.<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DSpec_SetProp_Vec4")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetProp([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DSpec *")] ref ImPlot3DSpec self, [NativeName(NativeNameType.Param, "prop")] [NativeName(NativeNameType.Type, "ImPlot3DProp")] ImPlot3DProp prop, [NativeName(NativeNameType.Param, "v")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 v)
+		{
+			fixed (ImPlot3DSpec* pself = &self)
+			{
+				SetPropNative((ImPlot3DSpec*)pself, prop, v);
+			}
+		}
+
+		/// <summary>
+		/// Creates a new ImPlot3D context. Call this after ImGui::CreateContext<br/>
+		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_CreateContext")]
 		[return: NativeName(NativeNameType.Type, "ImPlot3DContext *")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		internal static ImPlot3DContext* CreateContextNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DContext*>)funcTable[1])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DContext*>)funcTable[16])();
 			#else
-			return (ImPlot3DContext*)((delegate* unmanaged[Cdecl]<nint>)funcTable[1])();
+			return (ImPlot3DContext*)((delegate* unmanaged[Cdecl]<nint>)funcTable[16])();
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Creates a new ImPlot3D context. Call this after ImGui::CreateContext<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_CreateContext")]
 		[return: NativeName(NativeNameType.Type, "ImPlot3DContext *")]
@@ -45,7 +661,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Destroys an ImPlot3D context. Call this before ImGui::DestroyContext. nullptr = destroy current context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_DestroyContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -53,14 +669,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void DestroyContextNative([NativeName(NativeNameType.Param, "ctx")] [NativeName(NativeNameType.Type, "ImPlot3DContext *")] ImPlot3DContext* ctx)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DContext*, void>)funcTable[2])(ctx);
+			((delegate* unmanaged[Cdecl]<ImPlot3DContext*, void>)funcTable[17])(ctx);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[2])((nint)ctx);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[17])((nint)ctx);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Destroys an ImPlot3D context. Call this before ImGui::DestroyContext. nullptr = destroy current context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_DestroyContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -70,7 +686,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Destroys an ImPlot3D context. Call this before ImGui::DestroyContext. nullptr = destroy current context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_DestroyContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -80,7 +696,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Destroys an ImPlot3D context. Call this before ImGui::DestroyContext. nullptr = destroy current context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_DestroyContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -93,7 +709,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Returns the current ImPlot3D context. nullptr if no context has been set<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_GetCurrentContext")]
 		[return: NativeName(NativeNameType.Type, "ImPlot3DContext *")]
@@ -101,14 +717,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DContext* GetCurrentContextNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DContext*>)funcTable[3])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DContext*>)funcTable[18])();
 			#else
-			return (ImPlot3DContext*)((delegate* unmanaged[Cdecl]<nint>)funcTable[3])();
+			return (ImPlot3DContext*)((delegate* unmanaged[Cdecl]<nint>)funcTable[18])();
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Returns the current ImPlot3D context. nullptr if no context has been set<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_GetCurrentContext")]
 		[return: NativeName(NativeNameType.Type, "ImPlot3DContext *")]
@@ -119,7 +735,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the current ImPlot3D context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetCurrentContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -127,14 +743,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetCurrentContextNative([NativeName(NativeNameType.Param, "ctx")] [NativeName(NativeNameType.Type, "ImPlot3DContext *")] ImPlot3DContext* ctx)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DContext*, void>)funcTable[4])(ctx);
+			((delegate* unmanaged[Cdecl]<ImPlot3DContext*, void>)funcTable[19])(ctx);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[4])((nint)ctx);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[19])((nint)ctx);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the current ImPlot3D context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetCurrentContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -144,7 +760,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the current ImPlot3D context<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetCurrentContext")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -157,44 +773,84 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static byte BeginPlotNative([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] byte* titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
+		internal static byte BeginPlotNative([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] byte* titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, Vector2, ImPlot3DFlags, byte>)funcTable[5])(titleId, size, flags);
+			return ((delegate* unmanaged[Cdecl]<byte*, Vector2, ImPlot3DFlags, byte>)funcTable[20])(titleId, size, flags);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, Vector2, ImPlot3DFlags, byte>)funcTable[5])((nint)titleId, size, flags);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, Vector2, ImPlot3DFlags, byte>)funcTable[20])((nint)titleId, size, flags);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] byte* titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] byte* titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
 		{
 			byte ret = BeginPlotNative(titleId, size, flags);
 			return ret != 0;
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] byte* titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] byte* titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size)
 		{
 			byte ret = BeginPlotNative(titleId, size, (ImPlot3DFlags)(0));
 			return ret != 0;
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -205,7 +861,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -216,11 +882,21 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] in byte titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] in byte titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
 		{
 			fixed (byte* ptitleId = &titleId)
 			{
@@ -230,11 +906,21 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] in byte titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] in byte titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size)
 		{
 			fixed (byte* ptitleId = &titleId)
 			{
@@ -244,7 +930,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -258,7 +954,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -272,11 +978,21 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
 		{
 			fixed (byte* ptitleId = titleId)
 			{
@@ -286,11 +1002,21 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size)
 		{
 			fixed (byte* ptitleId = titleId)
 			{
@@ -300,7 +1026,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -314,7 +1050,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -328,11 +1074,21 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] string titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] string titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DFlags")] ImPlot3DFlags flags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -360,11 +1116,21 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] string titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2 const")] Vector2 size)
+		public static bool BeginPlot([NativeName(NativeNameType.Param, "title_id")] [NativeName(NativeNameType.Type, "char const *")] string titleId, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 size)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -392,7 +1158,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -424,7 +1200,17 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Starts a 3D plotting context. If this function returns true, EndPlot() MUST<br/>
+		/// be called! You are encouraged to use the following convention:<br/>
+		/// if (ImPlot3D::BeginPlot(...))<br/>
+		/// ImPlot3D::PlotLine(...);<br/>
+		/// ...<br/>
+		/// ImPlot3D::EndPlot();<br/>
+		/// Important notes:<br/>
+		/// - #title_id must be unique to the current ImGui ID scope. If you need to avoid ID<br/>
+		/// collisions or don't want to display a title in the plot, use double hashes<br/>
+		/// (e.g. "MyPlot##HiddenIdText" or "##NoTitle").<br/>
+		/// - #size is the **frame** size of the plot widget, not the plot area.<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_BeginPlot")]
 		[return: NativeName(NativeNameType.Type, "bool")]
@@ -464,9 +1250,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void EndPlotNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[6])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[21])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[6])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[21])();
 			#endif
 		}
 
@@ -481,7 +1267,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -489,14 +1275,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxisNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "label")] [NativeName(NativeNameType.Type, "char const *")] byte* label, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags flags)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, byte*, ImPlot3DAxisFlags, void>)funcTable[7])(axis, label, flags);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, byte*, ImPlot3DAxisFlags, void>)funcTable[22])(axis, label, flags);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, ImPlot3DAxisFlags, void>)funcTable[7])(axis, (nint)label, flags);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, ImPlot3DAxisFlags, void>)funcTable[22])(axis, (nint)label, flags);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -506,7 +1292,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -516,7 +1302,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -526,7 +1312,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -536,7 +1322,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -549,7 +1335,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -562,7 +1348,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -575,7 +1361,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -588,7 +1374,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -619,7 +1405,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Enables an axis or sets the label andor flags for an existing axis. Leave #label = nullptr for no label<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxis")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -650,7 +1436,8 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis range limits. If ImPlot3DCond_Always is used, the axis limits will be locked.<br/>
+		/// Note: To invert an axis, use ImPlot3DAxisFlags_Invert with SetupAxis instead of swapping minmax<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisLimits")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -658,14 +1445,15 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxisLimitsNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "v_min")] [NativeName(NativeNameType.Type, "double")] double vMin, [NativeName(NativeNameType.Param, "v_max")] [NativeName(NativeNameType.Type, "double")] double vMax, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, ImPlot3DCond, void>)funcTable[8])(axis, vMin, vMax, cond);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, ImPlot3DCond, void>)funcTable[23])(axis, vMin, vMax, cond);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, ImPlot3DCond, void>)funcTable[8])(axis, vMin, vMax, cond);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, ImPlot3DCond, void>)funcTable[23])(axis, vMin, vMax, cond);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis range limits. If ImPlot3DCond_Always is used, the axis limits will be locked.<br/>
+		/// Note: To invert an axis, use ImPlot3DAxisFlags_Invert with SetupAxis instead of swapping minmax<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisLimits")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -675,7 +1463,8 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis range limits. If ImPlot3DCond_Always is used, the axis limits will be locked.<br/>
+		/// Note: To invert an axis, use ImPlot3DAxisFlags_Invert with SetupAxis instead of swapping minmax<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisLimits")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -685,82 +1474,82 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupAxisFormatNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<float, byte*, int, void*, int> formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		internal static void SetupAxisFormatNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<double, byte*, int, void*, int> formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, delegate*<float, byte*, int, void*, int>, void*, void>)funcTable[9])(axis, formatter, data);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, delegate*<double, byte*, int, void*, int>, void*, void>)funcTable[24])(axis, formatter, data);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, nint, void>)funcTable[9])(axis, (nint)formatter, (nint)data);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, nint, void>)funcTable[24])(axis, (nint)formatter, (nint)data);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<float, byte*, int, void*, int> formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<double, byte*, int, void*, int> formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
 		{
 			SetupAxisFormatNative(axis, formatter, data);
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<float, byte*, int, void*, int> formatter)
+		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<double, byte*, int, void*, int> formatter)
 		{
 			SetupAxisFormatNative(axis, formatter, (void*)(default));
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] ImPlot3DFormatter formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
 		{
-			SetupAxisFormatNative(axis, (delegate*<float, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(formatter), data);
+			SetupAxisFormatNative(axis, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(formatter), data);
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] ImPlot3DFormatter formatter)
 		{
-			SetupAxisFormatNative(axis, (delegate*<float, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(formatter), (void*)(default));
+			SetupAxisFormatNative(axis, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(formatter), (void*)(default));
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<float, byte*, int, void*, int> formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
+		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] delegate*<double, byte*, int, void*, int> formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
 		{
 			SetupAxisFormatNative(axis, formatter, (void*)data);
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the format of numeric axis labels via formatter callback. Given value, write a label into buff. Optionally pass user data<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisFormat")]
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void SetupAxisFormat([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "formatter")] [NativeName(NativeNameType.Type, "ImPlot3DFormatter")] ImPlot3DFormatter formatter, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
 		{
-			SetupAxisFormatNative(axis, (delegate*<float, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(formatter), (void*)data);
+			SetupAxisFormatNative(axis, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(formatter), (void*)data);
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -768,14 +1557,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxisTicksNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "values")] [NativeName(NativeNameType.Type, "double const *")] double* values, [NativeName(NativeNameType.Param, "n_ticks")] [NativeName(NativeNameType.Type, "int")] int nTicks, [NativeName(NativeNameType.Param, "labels")] [NativeName(NativeNameType.Type, "char const * const[-1]")] byte** labels, [NativeName(NativeNameType.Param, "keep_default")] [NativeName(NativeNameType.Type, "bool")] byte keepDefault)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double*, int, byte**, byte, void>)funcTable[10])(axis, values, nTicks, labels, keepDefault);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double*, int, byte**, byte, void>)funcTable[25])(axis, values, nTicks, labels, keepDefault);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, int, nint, byte, void>)funcTable[10])(axis, (nint)values, nTicks, (nint)labels, keepDefault);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, int, nint, byte, void>)funcTable[25])(axis, (nint)values, nTicks, (nint)labels, keepDefault);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -785,7 +1574,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -795,7 +1584,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -805,7 +1594,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -815,7 +1604,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -828,7 +1617,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -841,7 +1630,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -854,7 +1643,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -867,7 +1656,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -880,7 +1669,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -893,7 +1682,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -929,7 +1718,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -965,7 +1754,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -981,7 +1770,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -997,7 +1786,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1036,7 +1825,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_doublePtr")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1075,7 +1864,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1083,14 +1872,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxisTicksNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "v_min")] [NativeName(NativeNameType.Type, "double")] double vMin, [NativeName(NativeNameType.Param, "v_max")] [NativeName(NativeNameType.Type, "double")] double vMax, [NativeName(NativeNameType.Param, "n_ticks")] [NativeName(NativeNameType.Type, "int")] int nTicks, [NativeName(NativeNameType.Param, "labels")] [NativeName(NativeNameType.Type, "char const * const[-1]")] byte** labels, [NativeName(NativeNameType.Param, "keep_default")] [NativeName(NativeNameType.Type, "bool")] byte keepDefault)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, int, byte**, byte, void>)funcTable[11])(axis, vMin, vMax, nTicks, labels, keepDefault);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, int, byte**, byte, void>)funcTable[26])(axis, vMin, vMax, nTicks, labels, keepDefault);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, int, nint, byte, void>)funcTable[11])(axis, vMin, vMax, nTicks, (nint)labels, keepDefault);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, int, nint, byte, void>)funcTable[26])(axis, vMin, vMax, nTicks, (nint)labels, keepDefault);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1100,7 +1889,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1110,7 +1899,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1120,7 +1909,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1130,7 +1919,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1143,7 +1932,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1156,7 +1945,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1192,7 +1981,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' ticks and optionally the labels for the next plot. To keep the default ticks, set #keep_default=true<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisTicks_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1228,7 +2017,167 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' scale using built-in options<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DScale")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetupAxisScaleNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "ImPlot3DScale")] ImPlot3DScale scale)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImAxis3D, ImPlot3DScale, void>)funcTable[27])(axis, scale);
+			#else
+			((delegate* unmanaged[Cdecl]<ImAxis3D, ImPlot3DScale, void>)funcTable[27])(axis, scale);
+			#endif
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using built-in options<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DScale")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "scale")] [NativeName(NativeNameType.Type, "ImPlot3DScale")] ImPlot3DScale scale)
+		{
+			SetupAxisScaleNative(axis, scale);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using built-in options<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		internal static void SetupAxisScaleNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		{
+			#if NET5_0_OR_GREATER
+			((delegate* unmanaged[Cdecl]<ImAxis3D, delegate*<double, void*, double>, delegate*<double, void*, double>, void*, void>)funcTable[28])(axis, forward, inverse, data);
+			#else
+			((delegate* unmanaged[Cdecl]<ImAxis3D, nint, nint, nint, void>)funcTable[28])(axis, (nint)forward, (nint)inverse, (nint)data);
+			#endif
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		{
+			SetupAxisScaleNative(axis, forward, inverse, data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse)
+		{
+			SetupAxisScaleNative(axis, forward, inverse, (void*)(default));
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		{
+			SetupAxisScaleNative(axis, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(forward), inverse, data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse)
+		{
+			SetupAxisScaleNative(axis, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(forward), inverse, (void*)(default));
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		{
+			SetupAxisScaleNative(axis, forward, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(inverse), data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform inverse)
+		{
+			SetupAxisScaleNative(axis, forward, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(inverse), (void*)(default));
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] void* data)
+		{
+			SetupAxisScaleNative(axis, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(forward), (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(inverse), data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform inverse)
+		{
+			SetupAxisScaleNative(axis, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(forward), (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(inverse), (void*)(default));
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
+		{
+			SetupAxisScaleNative(axis, forward, inverse, (void*)data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
+		{
+			SetupAxisScaleNative(axis, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(forward), inverse, (void*)data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] delegate*<double, void*, double> forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
+		{
+			SetupAxisScaleNative(axis, forward, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(inverse), (void*)data);
+		}
+
+		/// <summary>
+		/// Sets an axis' scale using user supplied forward and inverse transforms<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisScale_Plot3DTransform")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxisScale([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "forward")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform forward, [NativeName(NativeNameType.Param, "inverse")] [NativeName(NativeNameType.Type, "ImPlot3DTransform")] ImPlot3DTransform inverse, [NativeName(NativeNameType.Param, "data")] [NativeName(NativeNameType.Type, "void *")] nint data)
+		{
+			SetupAxisScaleNative(axis, (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(forward), (delegate*<double, void*, double>)Utils.GetFunctionPointerForDelegate(inverse), (void*)data);
+		}
+
+		/// <summary>
+		/// Sets an axis' limits constraints. The axis will be constrained to never go below #v_min or above #v_max<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisLimitsConstraints")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1236,14 +2185,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxisLimitsConstraintsNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "v_min")] [NativeName(NativeNameType.Type, "double")] double vMin, [NativeName(NativeNameType.Param, "v_max")] [NativeName(NativeNameType.Type, "double")] double vMax)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[12])(axis, vMin, vMax);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[29])(axis, vMin, vMax);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[12])(axis, vMin, vMax);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[29])(axis, vMin, vMax);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' limits constraints. The axis will be constrained to never go below #v_min or above #v_max<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisLimitsConstraints")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1253,32 +2202,32 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' zoom constraints. The zoom (axis range size: range.max - range.min) will be constrained between #zoom_min and #zoom_max<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisZoomConstraints")]
 		[return: NativeName(NativeNameType.Type, "void")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupAxisZoomConstraintsNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "z_min")] [NativeName(NativeNameType.Type, "double")] double zMin, [NativeName(NativeNameType.Param, "z_max")] [NativeName(NativeNameType.Type, "double")] double zMax)
+		internal static void SetupAxisZoomConstraintsNative([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "zoom_min")] [NativeName(NativeNameType.Type, "double")] double zoomMin, [NativeName(NativeNameType.Param, "zoom_max")] [NativeName(NativeNameType.Type, "double")] double zoomMax)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[13])(axis, zMin, zMax);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[30])(axis, zoomMin, zoomMax);
 			#else
-			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[13])(axis, zMin, zMax);
+			((delegate* unmanaged[Cdecl]<ImAxis3D, double, double, void>)funcTable[30])(axis, zoomMin, zoomMax);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets an axis' zoom constraints. The zoom (axis range size: range.max - range.min) will be constrained between #zoom_min and #zoom_max<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxisZoomConstraints")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxisZoomConstraints([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "z_min")] [NativeName(NativeNameType.Type, "double")] double zMin, [NativeName(NativeNameType.Param, "z_max")] [NativeName(NativeNameType.Type, "double")] double zMax)
+		public static void SetupAxisZoomConstraints([NativeName(NativeNameType.Param, "axis")] [NativeName(NativeNameType.Type, "ImAxis3D")] ImAxis3D axis, [NativeName(NativeNameType.Param, "zoom_min")] [NativeName(NativeNameType.Type, "double")] double zoomMin, [NativeName(NativeNameType.Param, "zoom_max")] [NativeName(NativeNameType.Type, "double")] double zoomMax)
 		{
-			SetupAxisZoomConstraintsNative(axis, zMin, zMax);
+			SetupAxisZoomConstraintsNative(axis, zoomMin, zoomMax);
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1286,14 +2235,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxesNative([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] byte* yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] byte* zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, byte*, byte*, ImPlot3DAxisFlags, ImPlot3DAxisFlags, ImPlot3DAxisFlags, void>)funcTable[14])(xLabel, yLabel, zLabel, xFlags, yFlags, zFlags);
+			((delegate* unmanaged[Cdecl]<byte*, byte*, byte*, ImPlot3DAxisFlags, ImPlot3DAxisFlags, ImPlot3DAxisFlags, void>)funcTable[31])(xLabel, yLabel, zLabel, xFlags, yFlags, zFlags);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, nint, nint, ImPlot3DAxisFlags, ImPlot3DAxisFlags, ImPlot3DAxisFlags, void>)funcTable[14])((nint)xLabel, (nint)yLabel, (nint)zLabel, xFlags, yFlags, zFlags);
+			((delegate* unmanaged[Cdecl]<nint, nint, nint, ImPlot3DAxisFlags, ImPlot3DAxisFlags, ImPlot3DAxisFlags, void>)funcTable[31])((nint)xLabel, (nint)yLabel, (nint)zLabel, xFlags, yFlags, zFlags);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1303,7 +2252,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1313,7 +2262,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1323,7 +2272,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1333,7 +2282,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1346,7 +2295,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1359,7 +2308,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1372,7 +2321,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1385,7 +2334,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1398,7 +2347,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1411,7 +2360,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1424,7 +2373,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1437,7 +2386,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1468,7 +2417,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1499,7 +2448,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1530,7 +2479,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1561,7 +2510,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1574,7 +2523,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1587,7 +2536,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1600,7 +2549,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1613,7 +2562,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1626,7 +2575,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1639,7 +2588,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1652,7 +2601,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1665,7 +2614,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1696,7 +2645,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1727,7 +2676,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1758,7 +2707,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1789,7 +2738,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1805,7 +2754,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1821,7 +2770,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1837,7 +2786,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1853,7 +2802,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1869,7 +2818,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1885,7 +2834,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1901,7 +2850,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1917,7 +2866,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -1969,7 +2918,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2021,7 +2970,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2073,7 +3022,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2125,7 +3074,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2141,7 +3090,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2157,7 +3106,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2173,7 +3122,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2189,7 +3138,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2223,7 +3172,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2257,7 +3206,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2291,7 +3240,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2325,7 +3274,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2341,7 +3290,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2357,7 +3306,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2373,7 +3322,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2389,7 +3338,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2423,7 +3372,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2457,7 +3406,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2491,7 +3440,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2525,7 +3474,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2559,7 +3508,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2593,7 +3542,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2627,7 +3576,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2661,7 +3610,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2695,7 +3644,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2729,7 +3678,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2763,7 +3712,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2797,7 +3746,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2810,7 +3759,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2823,7 +3772,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2836,7 +3785,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2849,7 +3798,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2862,7 +3811,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2875,7 +3824,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2888,7 +3837,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2901,7 +3850,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2932,7 +3881,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2963,7 +3912,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -2994,7 +3943,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3025,7 +3974,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3041,7 +3990,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3057,7 +4006,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3073,7 +4022,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3089,7 +4038,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3105,7 +4054,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3121,7 +4070,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3137,7 +4086,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3153,7 +4102,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3205,7 +4154,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3257,7 +4206,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3309,7 +4258,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3361,7 +4310,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3377,7 +4326,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3393,7 +4342,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3409,7 +4358,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3425,7 +4374,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3459,7 +4408,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3493,7 +4442,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3527,7 +4476,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3561,7 +4510,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3577,7 +4526,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3593,7 +4542,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3609,7 +4558,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3625,7 +4574,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3659,7 +4608,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3693,7 +4642,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3727,7 +4676,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3761,7 +4710,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3795,7 +4744,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3829,7 +4778,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3863,7 +4812,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3897,7 +4846,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3931,7 +4880,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3965,7 +4914,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3999,7 +4948,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -4033,7 +4982,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -4049,7 +4998,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -4065,7 +5014,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -4076,966 +5025,6 @@ namespace Hexa.NET.ImPlot3D
 				fixed (byte* pzLabel = &zLabel)
 				{
 					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				fixed (byte* pzLabel = &zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			byte* pStr1 = null;
-			int pStrSize1 = 0;
-			if (zLabel != null)
-			{
-				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
-				if (pStrSize1 >= Utils.MaxStackallocSize)
-				{
-					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
-				}
-				else
-				{
-					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
-					pStr1 = pStrStack1;
-				}
-				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
-				pStr1[pStrOffset1] = 0;
-			}
-			SetupAxesNative(xLabel, pStr0, pStr1, xFlags, yFlags, zFlags);
-			if (pStrSize1 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr1);
-			}
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			byte* pStr1 = null;
-			int pStrSize1 = 0;
-			if (zLabel != null)
-			{
-				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
-				if (pStrSize1 >= Utils.MaxStackallocSize)
-				{
-					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
-				}
-				else
-				{
-					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
-					pStr1 = pStrStack1;
-				}
-				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
-				pStr1[pStrOffset1] = 0;
-			}
-			SetupAxesNative(xLabel, pStr0, pStr1, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-			if (pStrSize1 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr1);
-			}
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			byte* pStr1 = null;
-			int pStrSize1 = 0;
-			if (zLabel != null)
-			{
-				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
-				if (pStrSize1 >= Utils.MaxStackallocSize)
-				{
-					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
-				}
-				else
-				{
-					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
-					pStr1 = pStrStack1;
-				}
-				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
-				pStr1[pStrOffset1] = 0;
-			}
-			SetupAxesNative(xLabel, pStr0, pStr1, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-			if (pStrSize1 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr1);
-			}
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			byte* pStr1 = null;
-			int pStrSize1 = 0;
-			if (zLabel != null)
-			{
-				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
-				if (pStrSize1 >= Utils.MaxStackallocSize)
-				{
-					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
-				}
-				else
-				{
-					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
-					pStr1 = pStrStack1;
-				}
-				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
-				pStr1[pStrOffset1] = 0;
-			}
-			SetupAxesNative(xLabel, pStr0, pStr1, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-			if (pStrSize1 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr1);
-			}
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				fixed (byte* pzLabel = zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, zFlags);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
-		{
-			fixed (byte* pyLabel = &yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = &zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = &zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = &zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				fixed (byte* pzLabel = &zLabel)
-				{
-					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, zFlags);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
-		{
-			fixed (byte* pyLabel = yLabel)
-			{
-				byte* pStr0 = null;
-				int pStrSize0 = 0;
-				if (zLabel != null)
-				{
-					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
-					if (pStrSize0 >= Utils.MaxStackallocSize)
-					{
-						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-					}
-					else
-					{
-						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-						pStr0 = pStrStack0;
-					}
-					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
-					pStr0[pStrOffset0] = 0;
-				}
-				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = &zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, zFlags);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = &zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = &zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = &zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, zFlags);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (yLabel != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (byte* pzLabel = zLabel)
-			{
-				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
 				}
 			}
 		}

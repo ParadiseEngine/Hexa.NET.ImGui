@@ -20,7 +20,7 @@ namespace Hexa.NET.ImPlot3D
 	/// <summary>
 	/// To be documented.
 	/// </summary>
-	[NativeName(NativeNameType.StructOrClass, "ImPlot3DStyle")]
+	[NativeName(NativeNameType.StructOrClass, "ImPlot3DStyle_c")]
 	[StructLayout(LayoutKind.Sequential)]
 	public partial struct ImPlot3DStyle
 	{
@@ -48,13 +48,6 @@ namespace Hexa.NET.ImPlot3D
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		[NativeName(NativeNameType.Field, "MarkerWeight")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float MarkerWeight;
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
 		[NativeName(NativeNameType.Field, "FillAlpha")]
 		[NativeName(NativeNameType.Type, "float")]
 		public float FillAlpha;
@@ -63,56 +56,63 @@ namespace Hexa.NET.ImPlot3D
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "PlotDefaultSize")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 PlotDefaultSize;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "PlotMinSize")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 PlotMinSize;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "PlotPadding")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 PlotPadding;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "LabelPadding")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 LabelPadding;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
+		[NativeName(NativeNameType.Field, "ViewScaleFactor")]
+		[NativeName(NativeNameType.Type, "float")]
+		public float ViewScaleFactor;
+
+		/// <summary>
+		/// To be documented.
+		/// </summary>
 		[NativeName(NativeNameType.Field, "LegendPadding")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 LegendPadding;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "LegendInnerPadding")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 LegendInnerPadding;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "LegendSpacing")]
-		[NativeName(NativeNameType.Type, "ImVec2")]
+		[NativeName(NativeNameType.Type, "ImVec2_c")]
 		public Vector2 LegendSpacing;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Colors")]
-		[NativeName(NativeNameType.Type, "ImVec4[15]")]
+		[NativeName(NativeNameType.Type, "ImVec4_c[14]")]
 		public Vector4 Colors_0;
 		public Vector4 Colors_1;
 		public Vector4 Colors_2;
@@ -127,7 +127,6 @@ namespace Hexa.NET.ImPlot3D
 		public Vector4 Colors_11;
 		public Vector4 Colors_12;
 		public Vector4 Colors_13;
-		public Vector4 Colors_14;
 
 		/// <summary>
 		/// To be documented.
@@ -140,17 +139,17 @@ namespace Hexa.NET.ImPlot3D
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public unsafe ImPlot3DStyle(float lineWeight = default, int marker = default, float markerSize = default, float markerWeight = default, float fillAlpha = default, Vector2 plotDefaultSize = default, Vector2 plotMinSize = default, Vector2 plotPadding = default, Vector2 labelPadding = default, Vector2 legendPadding = default, Vector2 legendInnerPadding = default, Vector2 legendSpacing = default, Vector4* colors = default, ImPlot3DColormap colormap = default)
+		public unsafe ImPlot3DStyle(float lineWeight = default, int marker = default, float markerSize = default, float fillAlpha = default, Vector2 plotDefaultSize = default, Vector2 plotMinSize = default, Vector2 plotPadding = default, Vector2 labelPadding = default, float viewScaleFactor = default, Vector2 legendPadding = default, Vector2 legendInnerPadding = default, Vector2 legendSpacing = default, Vector4* colors = default, ImPlot3DColormap colormap = default)
 		{
 			LineWeight = lineWeight;
 			Marker = marker;
 			MarkerSize = markerSize;
-			MarkerWeight = markerWeight;
 			FillAlpha = fillAlpha;
 			PlotDefaultSize = plotDefaultSize;
 			PlotMinSize = plotMinSize;
 			PlotPadding = plotPadding;
 			LabelPadding = labelPadding;
+			ViewScaleFactor = viewScaleFactor;
 			LegendPadding = legendPadding;
 			LegendInnerPadding = legendInnerPadding;
 			LegendSpacing = legendSpacing;
@@ -170,7 +169,6 @@ namespace Hexa.NET.ImPlot3D
 				Colors_11 = colors[11];
 				Colors_12 = colors[12];
 				Colors_13 = colors[13];
-				Colors_14 = colors[14];
 			}
 			Colormap = colormap;
 		}
@@ -178,17 +176,17 @@ namespace Hexa.NET.ImPlot3D
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public unsafe ImPlot3DStyle(float lineWeight = default, int marker = default, float markerSize = default, float markerWeight = default, float fillAlpha = default, Vector2 plotDefaultSize = default, Vector2 plotMinSize = default, Vector2 plotPadding = default, Vector2 labelPadding = default, Vector2 legendPadding = default, Vector2 legendInnerPadding = default, Vector2 legendSpacing = default, Span<Vector4> colors = default, ImPlot3DColormap colormap = default)
+		public unsafe ImPlot3DStyle(float lineWeight = default, int marker = default, float markerSize = default, float fillAlpha = default, Vector2 plotDefaultSize = default, Vector2 plotMinSize = default, Vector2 plotPadding = default, Vector2 labelPadding = default, float viewScaleFactor = default, Vector2 legendPadding = default, Vector2 legendInnerPadding = default, Vector2 legendSpacing = default, Span<Vector4> colors = default, ImPlot3DColormap colormap = default)
 		{
 			LineWeight = lineWeight;
 			Marker = marker;
 			MarkerSize = markerSize;
-			MarkerWeight = markerWeight;
 			FillAlpha = fillAlpha;
 			PlotDefaultSize = plotDefaultSize;
 			PlotMinSize = plotMinSize;
 			PlotPadding = plotPadding;
 			LabelPadding = labelPadding;
+			ViewScaleFactor = viewScaleFactor;
 			LegendPadding = legendPadding;
 			LegendInnerPadding = legendInnerPadding;
 			LegendSpacing = legendSpacing;
@@ -208,7 +206,6 @@ namespace Hexa.NET.ImPlot3D
 				Colors_11 = colors[11];
 				Colors_12 = colors[12];
 				Colors_13 = colors[13];
-				Colors_14 = colors[14];
 			}
 			Colormap = colormap;
 		}
@@ -224,163 +221,10 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (Vector4* p = &this.Colors_0)
 				{
-					return new Span<Vector4>(p, 15);
+					return new Span<Vector4>(p, 14);
 				}
 			}
 		}
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DStyle_destroy")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Destroy()
-		{
-			fixed (ImPlot3DStyle* @this = &this)
-			{
-				ImPlot3D.DestroyNative(@this);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DStyle_SetColor")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void SetColor([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx, [NativeName(NativeNameType.Param, "col")] [NativeName(NativeNameType.Type, "ImVec4 const")] Vector4 col)
-		{
-			fixed (ImPlot3DStyle* @this = &this)
-			{
-				ImPlot3D.SetColorNative(@this, idx, col);
-			}
-		}
-
-	}
-
-	/// <summary>
-	/// To be documented.
-	/// </summary>
-	[NativeName(NativeNameType.Typedef, "ImPlot3DStyle")]
-	#if NET5_0_OR_GREATER
-	[DebuggerDisplay("{DebuggerDisplay,nq}")]
-	#endif
-	public unsafe struct ImPlot3DStylePtr : IEquatable<ImPlot3DStylePtr>
-	{
-		public ImPlot3DStylePtr(ImPlot3DStyle* handle) { Handle = handle; }
-
-		public ImPlot3DStyle* Handle;
-
-		public bool IsNull => Handle == null;
-
-		public static ImPlot3DStylePtr Null => new ImPlot3DStylePtr(null);
-
-		public ImPlot3DStyle this[int index] { get => Handle[index]; set => Handle[index] = value; }
-
-		public static implicit operator ImPlot3DStylePtr(ImPlot3DStyle* handle) => new ImPlot3DStylePtr(handle);
-
-		public static implicit operator ImPlot3DStyle*(ImPlot3DStylePtr handle) => handle.Handle;
-
-		public static bool operator ==(ImPlot3DStylePtr left, ImPlot3DStylePtr right) => left.Handle == right.Handle;
-
-		public static bool operator !=(ImPlot3DStylePtr left, ImPlot3DStylePtr right) => left.Handle != right.Handle;
-
-		public static bool operator ==(ImPlot3DStylePtr left, ImPlot3DStyle* right) => left.Handle == right;
-
-		public static bool operator !=(ImPlot3DStylePtr left, ImPlot3DStyle* right) => left.Handle != right;
-
-		public bool Equals(ImPlot3DStylePtr other) => Handle == other.Handle;
-
-		/// <inheritdoc/>
-		public override bool Equals(object obj) => obj is ImPlot3DStylePtr handle && Equals(handle);
-
-		/// <inheritdoc/>
-		public override int GetHashCode() => ((nuint)Handle).GetHashCode();
-
-		#if NET5_0_OR_GREATER
-		private string DebuggerDisplay => string.Format("ImPlot3DStylePtr [0x{0}]", ((nuint)Handle).ToString("X"));
-		#endif
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref float LineWeight => ref Unsafe.AsRef<float>(&Handle->LineWeight);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref int Marker => ref Unsafe.AsRef<int>(&Handle->Marker);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref float MarkerSize => ref Unsafe.AsRef<float>(&Handle->MarkerSize);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref float MarkerWeight => ref Unsafe.AsRef<float>(&Handle->MarkerWeight);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref float FillAlpha => ref Unsafe.AsRef<float>(&Handle->FillAlpha);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 PlotDefaultSize => ref Unsafe.AsRef<Vector2>(&Handle->PlotDefaultSize);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 PlotMinSize => ref Unsafe.AsRef<Vector2>(&Handle->PlotMinSize);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 PlotPadding => ref Unsafe.AsRef<Vector2>(&Handle->PlotPadding);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 LabelPadding => ref Unsafe.AsRef<Vector2>(&Handle->LabelPadding);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 LegendPadding => ref Unsafe.AsRef<Vector2>(&Handle->LegendPadding);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 LegendInnerPadding => ref Unsafe.AsRef<Vector2>(&Handle->LegendInnerPadding);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref Vector2 LegendSpacing => ref Unsafe.AsRef<Vector2>(&Handle->LegendSpacing);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public unsafe Span<Vector4> Colors
-		
-		{
-			get
-			{
-				return new Span<Vector4>(&Handle->Colors_0, 15);
-			}
-		}
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		public ref ImPlot3DColormap Colormap => ref Unsafe.AsRef<ImPlot3DColormap>(&Handle->Colormap);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DStyle_destroy")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Destroy()
-		{
-			ImPlot3D.DestroyNative(Handle);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DStyle_SetColor")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void SetColor([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx, [NativeName(NativeNameType.Param, "col")] [NativeName(NativeNameType.Type, "ImVec4 const")] Vector4 col)
-		{
-			ImPlot3D.SetColorNative(Handle, idx, col);
-		}
-
 	}
 
 }
