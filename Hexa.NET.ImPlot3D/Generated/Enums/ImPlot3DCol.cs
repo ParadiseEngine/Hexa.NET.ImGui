@@ -18,119 +18,111 @@ namespace Hexa.NET.ImPlot3D
 	/// To be documented.
 	/// </summary>
 	[NativeName(NativeNameType.Enum, "ImPlot3DCol_")]
-	[Flags]
 	public enum ImPlot3DCol : int
 	{
-		/// <summary>
-		/// Line color<br/>
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_Line")]
-		[NativeName(NativeNameType.Value, "0")]
-		Line = unchecked(0),
-
-		/// <summary>
-		/// Fill color<br/>
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_Fill")]
-		[NativeName(NativeNameType.Value, "1")]
-		Fill = unchecked(1),
-
-		/// <summary>
-		/// Marker outline color<br/>
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_MarkerOutline")]
-		[NativeName(NativeNameType.Value, "2")]
-		MarkerOutline = unchecked(2),
-
-		/// <summary>
-		/// Marker fill color<br/>
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_MarkerFill")]
-		[NativeName(NativeNameType.Value, "3")]
-		MarkerFill = unchecked(3),
-
 		/// <summary>
 		/// Title color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_TitleText")]
-		[NativeName(NativeNameType.Value, "4")]
-		TitleText = unchecked(4),
+		[NativeName(NativeNameType.Value, "0")]
+		TitleText = unchecked(0),
 
 		/// <summary>
 		/// Color for texts appearing inside of plots<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_InlayText")]
-		[NativeName(NativeNameType.Value, "5")]
-		InlayText = unchecked(5),
+		[NativeName(NativeNameType.Value, "1")]
+		InlayText = unchecked(1),
 
 		/// <summary>
 		/// Frame background color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_FrameBg")]
-		[NativeName(NativeNameType.Value, "6")]
-		FrameBg = unchecked(6),
+		[NativeName(NativeNameType.Value, "2")]
+		FrameBg = unchecked(2),
 
 		/// <summary>
 		/// Plot area background color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_PlotBg")]
-		[NativeName(NativeNameType.Value, "7")]
-		Bg = unchecked(7),
+		[NativeName(NativeNameType.Value, "3")]
+		Bg = unchecked(3),
 
 		/// <summary>
 		/// Plot area border color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_PlotBorder")]
-		[NativeName(NativeNameType.Value, "8")]
-		Border = unchecked(8),
+		[NativeName(NativeNameType.Value, "4")]
+		Border = unchecked(4),
 
 		/// <summary>
 		/// Legend background color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_LegendBg")]
-		[NativeName(NativeNameType.Value, "9")]
-		LegendBg = unchecked(9),
+		[NativeName(NativeNameType.Value, "5")]
+		LegendBg = unchecked(5),
 
 		/// <summary>
 		/// Legend border color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_LegendBorder")]
-		[NativeName(NativeNameType.Value, "10")]
-		LegendBorder = unchecked(10),
+		[NativeName(NativeNameType.Value, "6")]
+		LegendBorder = unchecked(6),
 
 		/// <summary>
 		/// Legend text color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_LegendText")]
-		[NativeName(NativeNameType.Value, "11")]
-		LegendText = unchecked(11),
+		[NativeName(NativeNameType.Value, "7")]
+		LegendText = unchecked(7),
 
 		/// <summary>
 		/// Axis label and tick lables color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_AxisText")]
-		[NativeName(NativeNameType.Value, "12")]
-		AxisText = unchecked(12),
+		[NativeName(NativeNameType.Value, "8")]
+		AxisText = unchecked(8),
 
 		/// <summary>
 		/// Axis grid color<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_AxisGrid")]
-		[NativeName(NativeNameType.Value, "13")]
-		AxisGrid = unchecked(13),
+		[NativeName(NativeNameType.Value, "9")]
+		AxisGrid = unchecked(9),
 
 		/// <summary>
 		/// Axis tick color (defaults to AxisGrid)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_AxisTick")]
-		[NativeName(NativeNameType.Value, "14")]
-		AxisTick = unchecked(14),
+		[NativeName(NativeNameType.Value, "10")]
+		AxisTick = unchecked(10),
+
+		/// <summary>
+		/// Background color of axis hover region (defaults to transparent)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_AxisBg")]
+		[NativeName(NativeNameType.Value, "11")]
+		AxisBg = unchecked(11),
+
+		/// <summary>
+		/// Axis hover color (defaults to ImGuiCol_ButtonHovered)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_AxisBgHovered")]
+		[NativeName(NativeNameType.Value, "12")]
+		AxisBgHovered = unchecked(12),
+
+		/// <summary>
+		/// Axis active color (defaults to ImGuiCol_ButtonActive)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_AxisBgActive")]
+		[NativeName(NativeNameType.Value, "13")]
+		AxisBgActive = unchecked(13),
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DCol_COUNT")]
-		[NativeName(NativeNameType.Value, "15")]
-		Count = unchecked(15),
+		[NativeName(NativeNameType.Value, "14")]
+		Count = unchecked(14),
 	}
 }

@@ -18,7 +18,6 @@ namespace Hexa.NET.ImPlot3D
 	/// To be documented.
 	/// </summary>
 	[NativeName(NativeNameType.Enum, "ImPlot3DStyleVar_")]
-	[Flags]
 	public enum ImPlot3DStyleVar : int
 	{
 		/// <summary>
@@ -43,46 +42,46 @@ namespace Hexa.NET.ImPlot3D
 		MarkerSize = unchecked(2),
 
 		/// <summary>
-		/// float, plot outline weight of markers in pixels<br/>
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_MarkerWeight")]
-		[NativeName(NativeNameType.Value, "3")]
-		MarkerWeight = unchecked(3),
-
-		/// <summary>
 		/// float, alpha modifier applied to all plot item fills<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_FillAlpha")]
-		[NativeName(NativeNameType.Value, "4")]
-		FillAlpha = unchecked(4),
+		[NativeName(NativeNameType.Value, "3")]
+		FillAlpha = unchecked(3),
 
 		/// <summary>
 		/// ImVec2, default size used when ImVec2(0,0) is passed to BeginPlot<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_PlotDefaultSize")]
-		[NativeName(NativeNameType.Value, "5")]
-		DefaultSize = unchecked(5),
+		[NativeName(NativeNameType.Value, "4")]
+		DefaultSize = unchecked(4),
 
 		/// <summary>
 		/// ImVec2, minimum size plot frame can be when shrunk<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_PlotMinSize")]
-		[NativeName(NativeNameType.Value, "6")]
-		MinSize = unchecked(6),
+		[NativeName(NativeNameType.Value, "5")]
+		MinSize = unchecked(5),
 
 		/// <summary>
 		/// ImVec2, padding between widget frame and plot area, labels, or outside legends (i.e. main padding)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_PlotPadding")]
-		[NativeName(NativeNameType.Value, "7")]
-		Padding = unchecked(7),
+		[NativeName(NativeNameType.Value, "6")]
+		Padding = unchecked(6),
 
 		/// <summary>
 		/// ImVec2, padding between axes labels, tick labels, and plot edge<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_LabelPadding")]
+		[NativeName(NativeNameType.Value, "7")]
+		LabelPadding = unchecked(7),
+
+		/// <summary>
+		/// float, scale factor for 3D view, you can use it to make the whole plot larger or smaller<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DStyleVar_ViewScaleFactor")]
 		[NativeName(NativeNameType.Value, "8")]
-		LabelPadding = unchecked(8),
+		ViewScaleFactor = unchecked(8),
 
 		/// <summary>
 		/// ImVec2, legend padding from plot edges<br/>

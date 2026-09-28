@@ -1,0 +1,60 @@
+name: Build ImGui Library (browser-wasm)
+
+on:
+  workflow_call:
+  # Changes to this workflow or scripts/ run it through natives.yml instead.
+  pull_request:
+    paths:
+      - Hexa.NET.ImGui/Browser/**
+      - Hexa.NET.ImGui/Generated/**
+      - Hexa.NET.ImGui/Manual/**
+      - Hexa.NET.ImGui/ImGui.cs
+      - Hexa.NET.ImGui/buildTransitive/**
+      - Examples/ExampleBrowserWasm/**
+
+jobs:
+  build-cimgui-wasm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          # Must match the Emscripten bundled with the .NET wasm workload, which links the archive.
+          version: 3.1.56
+          actions-cache-folder: emsdk-cache
+
+      - name: Build cimgui.a
+        run: bash scripts/build_cimgui_wasm.sh
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Install wasm-tools workload
+        run: dotnet workload install wasm-tools
+
+      # A stale file only shows up as an interpreter abort at the first unseen signature.
+      - name: Check InterpToNativeSignatures.cs matches the binding
+        run: |
+          dotnet build Hexa.NET.ImGui/Hexa.NET.ImGui.csproj -c Release -f net10.0
+          dotnet run scripts/wasm/GenerateInterpToNativeSignatures.cs -- Hexa.NET.ImGui/bin/Release/net10.0/Hexa.NET.ImGui.dll Hexa.NET.ImGui Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs
+          git diff --exit-code Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs
+
+      - name: Publish the smoke example against the new archive
+        run: dotnet publish Examples/ExampleBrowserWasm/ExampleBrowserWasm.csproj -c Release -o smoke
+
+      - name: Run the smoke example in headless Chrome
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory smoke/wwwroot &
+          server=$!
+          trap 'kill $server' EXIT
+          sleep 2
+          google-chrome --headless=new --no-sandbox --virtual-time-budget=60000 --dump-dom http://127.0.0.1:8000/ | tee dom.html
+          grep -q "SMOKE PASS" dom.html
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cimgui-browser-wasm
+          path: Hexa.NET.ImGui/native/browser-wasm/cimgui.a
+          if-no-files-found: error

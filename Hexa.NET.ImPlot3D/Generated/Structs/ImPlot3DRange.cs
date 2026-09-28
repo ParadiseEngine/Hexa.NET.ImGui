@@ -18,7 +18,7 @@ using Hexa.NET.ImGui;
 namespace Hexa.NET.ImPlot3D
 {
 	/// <summary>
-	/// To be documented.
+	/// ImPlot3DRange: Represents a 1D range with min and max values<br/>
 	/// </summary>
 	[NativeName(NativeNameType.StructOrClass, "ImPlot3DRange")]
 	[StructLayout(LayoutKind.Sequential)]
@@ -28,21 +28,21 @@ namespace Hexa.NET.ImPlot3D
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Min")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float Min;
+		[NativeName(NativeNameType.Type, "double")]
+		public double Min;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Max")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float Max;
+		[NativeName(NativeNameType.Type, "double")]
+		public double Max;
 
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public unsafe ImPlot3DRange(float min = default, float max = default)
+		public unsafe ImPlot3DRange(double min = default, double max = default)
 		{
 			Min = min;
 			Max = max;
@@ -50,16 +50,43 @@ namespace Hexa.NET.ImPlot3D
 
 
 		/// <summary>
-		/// To be documented.
+		/// Check if value is within range<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DRange_Contains")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool Contains([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "float")] float value)
+		public unsafe bool Contains([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value)
 		{
 			fixed (ImPlot3DRange* @this = &this)
 			{
 				byte ret = ImPlot3D.ContainsNative(@this, value);
 				return ret != 0;
+			}
+		}
+
+		/// <summary>
+		/// Expand range to include value<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DRange_Expand")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public unsafe void Expand([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value)
+		{
+			fixed (ImPlot3DRange* @this = &this)
+			{
+				ImPlot3D.ExpandNative(@this, value);
+			}
+		}
+
+		/// <summary>
+		/// Get range size<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DRange_Size")]
+		[return: NativeName(NativeNameType.Type, "double")]
+		public unsafe double Size()
+		{
+			fixed (ImPlot3DRange* @this = &this)
+			{
+				double ret = ImPlot3D.SizeNative(@this);
+				return ret;
 			}
 		}
 
@@ -73,33 +100,6 @@ namespace Hexa.NET.ImPlot3D
 			fixed (ImPlot3DRange* @this = &this)
 			{
 				ImPlot3D.DestroyNative(@this);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DRange_Expand")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Expand([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "float")] float value)
-		{
-			fixed (ImPlot3DRange* @this = &this)
-			{
-				ImPlot3D.ExpandNative(@this, value);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DRange_Size")]
-		[return: NativeName(NativeNameType.Type, "float")]
-		public unsafe float Size()
-		{
-			fixed (ImPlot3DRange* @this = &this)
-			{
-				float ret = ImPlot3D.SizeNative(@this);
-				return ret;
 			}
 		}
 
@@ -150,20 +150,41 @@ namespace Hexa.NET.ImPlot3D
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public ref float Min => ref Unsafe.AsRef<float>(&Handle->Min);
+		public ref double Min => ref Unsafe.AsRef<double>(&Handle->Min);
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public ref float Max => ref Unsafe.AsRef<float>(&Handle->Max);
+		public ref double Max => ref Unsafe.AsRef<double>(&Handle->Max);
 		/// <summary>
-		/// To be documented.
+		/// Check if value is within range<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DRange_Contains")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool Contains([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "float")] float value)
+		public unsafe bool Contains([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value)
 		{
 			byte ret = ImPlot3D.ContainsNative(Handle, value);
 			return ret != 0;
+		}
+
+		/// <summary>
+		/// Expand range to include value<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DRange_Expand")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public unsafe void Expand([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value)
+		{
+			ImPlot3D.ExpandNative(Handle, value);
+		}
+
+		/// <summary>
+		/// Get range size<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DRange_Size")]
+		[return: NativeName(NativeNameType.Type, "double")]
+		public unsafe double Size()
+		{
+			double ret = ImPlot3D.SizeNative(Handle);
+			return ret;
 		}
 
 		/// <summary>
@@ -174,27 +195,6 @@ namespace Hexa.NET.ImPlot3D
 		public unsafe void Destroy()
 		{
 			ImPlot3D.DestroyNative(Handle);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DRange_Expand")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Expand([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "float")] float value)
-		{
-			ImPlot3D.ExpandNative(Handle, value);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DRange_Size")]
-		[return: NativeName(NativeNameType.Type, "float")]
-		public unsafe float Size()
-		{
-			float ret = ImPlot3D.SizeNative(Handle);
-			return ret;
 		}
 
 	}

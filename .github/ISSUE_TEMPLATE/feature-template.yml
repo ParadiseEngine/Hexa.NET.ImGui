@@ -17,7 +17,6 @@ body:
         - **Docking/Multi-viewport support** - Already included (docking branch is default)
         - **DockBuilder APIs** - Available via `ImGuiP` (see FAQ)
         - **ImGui internals** - Accessible via `ImGuiP` namespace
-        - **Multiple backends** - Available in `Hexa.NET.ImGui.Backends` package
 
   - type: checkboxes
     id: checklist

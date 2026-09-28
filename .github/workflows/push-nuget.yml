@@ -1,74 +1,109 @@
 name: Publish NuGet Packages
 
-on: 
+# Publishes Hexa.NET.X as the Paradise.X packages on nuget.org. The version comes from the v* tag or
+# the dispatch input; the csproj PackageVersion only applies to local packs.
+on:
   push:
     tags:
-      - 2.**
+      - "v*"
   workflow_dispatch:
-  
+    inputs:
+      version:
+        description: "Package version to publish, for example v3.1.0 or 3.1.1-beta.1"
+        required: true
+        type: string
 
 jobs:
+  natives:
+    uses: ./.github/workflows/natives.yml
+
   build:
+    needs: natives
     runs-on: ubuntu-latest
+    environment: production
+
+    permissions:
+      contents: read
+      id-token: write
+
+    env:
+      PROJECTS: >-
+        Hexa.NET.ImGui
+        Hexa.NET.ImGuizmo
+        Hexa.NET.ImNodes
+        Hexa.NET.ImPlot
+        Hexa.NET.ImPlot3D
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Native libraries are not committed; natives.yml built them from the pinned sources.
+      - name: Download native libraries
+        uses: actions/download-artifact@v4
+        with:
+          name: natives
+          path: .
+
+      - name: Verify every packed native pattern has files
+        run: mkdir -p no-artifacts && python3 scripts/place_natives.py no-artifacts .
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'  # Change this to your required .NET version
+          dotnet-version: '10.0.x'
 
-      - name: Restore dependencies
+      - name: Resolve package version
+        id: version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
         run: |
-          dotnet restore Hexa.NET.ImGui/Hexa.NET.ImGui.csproj
-          dotnet restore Hexa.NET.ImGui.Backends/Hexa.NET.ImGui.Backends.csproj
-          dotnet restore Hexa.NET.ImGui.Backends.GLFW/Hexa.NET.ImGui.Backends.GLFW.csproj
-          dotnet restore Hexa.NET.ImGui.Backends.SDL2/Hexa.NET.ImGui.Backends.SDL2.csproj
-          dotnet restore Hexa.NET.ImGui.Backends.SDL3/Hexa.NET.ImGui.Backends.SDL3.csproj
-          dotnet restore Hexa.NET.ImGuizmo/Hexa.NET.ImGuizmo.csproj
-          dotnet restore Hexa.NET.ImNodes/Hexa.NET.ImNodes.csproj
-          dotnet restore Hexa.NET.ImPlot/Hexa.NET.ImPlot.csproj
-          dotnet restore Hexa.NET.ImPlot3D/Hexa.NET.ImPlot3D.csproj
+          version="${INPUT_VERSION:-$GITHUB_REF_NAME}"
+          version="${version#v}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "::error::'$version' is not a package version"
+            exit 1
+          fi
+          echo "value=$version" >> "$GITHUB_OUTPUT"
 
-      - name: Build the project
+      - name: Pack
+        env:
+          PACKAGE_VERSION: ${{ steps.version.outputs.value }}
         run: |
-          dotnet build Hexa.NET.ImGui/Hexa.NET.ImGui.csproj --configuration Release
-          dotnet build Hexa.NET.ImGui.Backends/Hexa.NET.ImGui.Backends.csproj --configuration Release
-          dotnet build Hexa.NET.ImGui.Backends.GLFW/Hexa.NET.ImGui.Backends.GLFW.csproj --configuration Release
-          dotnet build Hexa.NET.ImGui.Backends.SDL2/Hexa.NET.ImGui.Backends.SDL2.csproj --configuration Release
-          dotnet build Hexa.NET.ImGui.Backends.SDL3/Hexa.NET.ImGui.Backends.SDL3.csproj --configuration Release
-          dotnet build Hexa.NET.ImGuizmo/Hexa.NET.ImGuizmo.csproj --configuration Release
-          dotnet build Hexa.NET.ImNodes/Hexa.NET.ImNodes.csproj --configuration Release
-          dotnet build Hexa.NET.ImPlot/Hexa.NET.ImPlot.csproj --configuration Release
-          dotnet build Hexa.NET.ImPlot3D/Hexa.NET.ImPlot3D.csproj --configuration Release
-
-      - name: Pack the project
-        run: |
-          dotnet pack Hexa.NET.ImGui/Hexa.NET.ImGui.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImGui.Backends/Hexa.NET.ImGui.Backends.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImGui.Backends.GLFW/Hexa.NET.ImGui.Backends.GLFW.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImGui.Backends.SDL2/Hexa.NET.ImGui.Backends.SDL2.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImGui.Backends.SDL3/Hexa.NET.ImGui.Backends.SDL3.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImGuizmo/Hexa.NET.ImGuizmo.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImNodes/Hexa.NET.ImNodes.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImPlot/Hexa.NET.ImPlot.csproj --configuration Release --output ./nupkgs
-          dotnet pack Hexa.NET.ImPlot3D/Hexa.NET.ImPlot3D.csproj --configuration Release --output ./nupkgs
-
-      - name: Exclude unwanted packages
-        run: |
-          # Exclude packages that don't start with "Hexa.NET."
-          for package in ./nupkgs/*.nupkg; do
-              package_name=$(basename "$package")
-              if [[ ! $package_name == Hexa.NET* ]]; then
-                  echo "Removing $package_name as it does not start with Hexa.NET."
-                  rm -f "$package"
-              fi
+          projects=($PROJECTS)
+          # GeneratePackageOnBuild keeps dotnet pack from building, so build every TFM first,
+          # without the extra package the build would otherwise write under bin/.
+          for project in "${projects[@]}"; do
+            dotnet build "$project/$project.csproj" -c Release \
+              -p:GeneratePackageOnBuild=false \
+              -p:ContinuousIntegrationBuild=true \
+              -p:PackageVersion="$PACKAGE_VERSION"
+            dotnet pack "$project/$project.csproj" -c Release -o nupkgs --no-build \
+              -p:ContinuousIntegrationBuild=true \
+              -p:PackageVersion="$PACKAGE_VERSION"
           done
-          
-      - name: List packages
-        run: ls ./nupkgs/
+          ls nupkgs
+          count=$(ls nupkgs/Paradise.*."$PACKAGE_VERSION".nupkg | wc -l)
+          if [[ "$count" -ne "${#projects[@]}" ]]; then
+            echo "::error::Expected ${#projects[@]} packages, found $count"
+            exit 1
+          fi
 
-      - name: Publish the package
-        run: dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nupkgs
+          path: nupkgs/*.nupkg
+          if-no-files-found: error
+
+      - name: NuGet login (OIDC -> temp API key)
+        id: nuget-login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ vars.NUGET_USER }}
+
+      - name: Publish to NuGet
+        run: >
+          dotnet nuget push "nupkgs/*.nupkg"
+          --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}"
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate

@@ -1,0 +1,33 @@
+<Project>
+	<!-- Fork package identity. LICENSE.txt's Naming Clause forbids the "Hexa.NET" name or prefix for
+	     redistributed or modified packages without Juna Meinhold's written permission, and requires
+	     other uses of the name to say they are not official. The published projects are therefore
+	     packed as Paradise.ImGui and Paradise.ImGui.<Addon>, marked unofficial. Assembly names and
+	     namespaces stay upstream's identifiers so code compiles unchanged. Set here, after each
+	     project body, so upstream's csproj files stay untouched and merge cleanly. -->
+	<PropertyGroup>
+		<ParadisePackageId Condition="'$(MSBuildProjectName)' == 'Hexa.NET.ImGui'">Paradise.ImGui</ParadisePackageId>
+		<ParadisePackageId Condition="'$(MSBuildProjectName)' == 'Hexa.NET.ImGuizmo'">Paradise.ImGui.Guizmo</ParadisePackageId>
+		<ParadisePackageId Condition="'$(MSBuildProjectName)' == 'Hexa.NET.ImNodes'">Paradise.ImGui.Nodes</ParadisePackageId>
+		<ParadisePackageId Condition="'$(MSBuildProjectName)' == 'Hexa.NET.ImPlot'">Paradise.ImGui.Plot</ParadisePackageId>
+		<ParadisePackageId Condition="'$(MSBuildProjectName)' == 'Hexa.NET.ImPlot3D'">Paradise.ImGui.Plot3D</ParadisePackageId>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(ParadisePackageId)' != ''">
+		<PackageId>$(ParadisePackageId)</PackageId>
+		<Authors>ParadiseEngine</Authors>
+		<Description>Not an official Hexa.NET package: ParadiseEngine's fork of $(MSBuildProjectName) by Juna Meinhold, with natives built at -O3 from pinned sources. $(Description)</Description>
+		<PackageProjectUrl>https://github.com/ParadiseEngine/Paradise.ImGui</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ParadiseEngine/Paradise.ImGui</RepositoryUrl>
+	</PropertyGroup>
+	<!-- Every other upstream project (the backends, the node editor) is neither built into natives nor
+	     published by this fork; never pack it under upstream's Hexa.NET name. -->
+	<PropertyGroup Condition="'$(ParadisePackageId)' == '' and $(MSBuildProjectName.StartsWith('Hexa.NET.'))">
+		<IsPackable>false</IsPackable>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<!-- NuGet imports buildTransitive/<PackageId>.targets only, so the renamed package must carry
+	     the upstream targets file under its own id. -->
+	<ItemGroup Condition="'$(ParadisePackageId)' != ''">
+		<Content Update="buildTransitive\$(MSBuildProjectName).targets" PackagePath="buildTransitive/$(PackageId).targets" />
+	</ItemGroup>
+</Project>

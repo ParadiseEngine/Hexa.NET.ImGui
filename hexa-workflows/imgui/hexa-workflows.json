@@ -3,5 +3,10 @@
   "cimplot": "Hexa.NET.ImPlot/native",
   "cimnodes": "Hexa.NET.ImNodes/native",
   "cimguizmo": "Hexa.NET.ImGuizmo/native",
-  "cimplot3d": "Hexa.NET.ImPlot3D/native"
+  "cimplot3d": "Hexa.NET.ImPlot3D/native",
+  "cimgui-static": "Hexa.NET.ImGui/native",
+  "cimplot-static": "Hexa.NET.ImPlot/native",
+  "cimnodes-static": "Hexa.NET.ImNodes/native",
+  "cimguizmo-static": "Hexa.NET.ImGuizmo/native",
+  "cimplot3d-static": "Hexa.NET.ImPlot3D/native"
 }

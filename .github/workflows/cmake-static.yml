@@ -1,15 +1,23 @@
 name: Build ImGui and Addons Libraries (Static)
 
-on: [workflow_dispatch]
+on:
+  workflow_call:
 
 jobs:
   build-cimgui:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimgui
+      lib-name: cimgui-static
       repo: JunaMeinhold/cimgui
-      repo-tag: docking_inter
-      cmake-flags: -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      # Pinned to the cimgui commit the checked-in binding (Generator/cimgui) was generated from
+      # (Dear ImGui 1.92.9b docking); it only adds *_Construct exports the binding does not use.
+      repo-tag: 576040c4bd36894113d1c1c6ae52c4ffd928cf28
+      # Without CMAKE_BUILD_TYPE the single-config generators (Linux, macOS, Android) compile at -O0.
+      # MSVC has no -O3; its multi-config Release build already uses /O2 /Ob2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       use-vcpkg: true
       vcpkg-packages: freetype
       vcpkg-triplet-windows: "{arch}-windows-static"
@@ -26,10 +34,15 @@ jobs:
   build-cimplot:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimplot
+      lib-name: cimplot-static
       repo: JunaMeinhold/cimplot
-      repo-tag: master
-      cmake-flags: -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      # Pinned to the cimplot commit Generator/cimplot was generated from.
+      repo-tag: eb05976dca29780f7aa98d462b1e905784109a1f
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       bin-name-linux: cimplot.a
       bin-name-linux-normalized: cimplot.a
       bin-name-windows: Release/cimplot.lib
@@ -45,10 +58,15 @@ jobs:
   build-cimnodes:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimnodes
+      lib-name: cimnodes-static
       repo: JunaMeinhold/cimnodes
-      repo-tag: master
-      cmake-flags: -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      # Pinned to the cimnodes commit Generator/cimnodes was generated from.
+      repo-tag: 9544ec8b3d20aa8280d8802cfe2c6dd08b49e61d
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       bin-name-linux: cimnodes.a
       bin-name-linux-normalized: cimnodes.a
       bin-name-windows: Release/cimnodes.lib
@@ -64,10 +82,15 @@ jobs:
   build-cimguizmo:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimguizmo
+      lib-name: cimguizmo-static
       repo: JunaMeinhold/cimguizmo
-      repo-tag: master
-      cmake-flags: -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      # Pinned to the cimguizmo commit Generator/cimguizmo was generated from.
+      repo-tag: 7a7dc6bfdd2d9d0e85186834671bfcd275cb9adc
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       bin-name-linux: cimguizmo.a
       bin-name-linux-normalized: cimguizmo.a
       bin-name-windows: Release/cimguizmo.lib
@@ -83,10 +106,15 @@ jobs:
   build-cimplot3d:
     uses: JunaMeinhold/cmake-actions/.github/workflows/cmake.yml@v1.x.x
     with:
-      lib-name: cimplot3d
+      lib-name: cimplot3d-static
       repo: JunaMeinhold/cimplot3d
-      repo-tag: main
-      cmake-flags: -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      # Pinned to the cimplot3d commit Generator/cimplot3d was generated from (ImPlot3D 0.4).
+      repo-tag: a6fb3a5ae461fd3af3a594a729b944b446571d1b
+      # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
+      cmake-flags: -DCMAKE_BUILD_TYPE=Release -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1 -DIMGUI_STATIC=ON
+      cmake-flags-linux: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-macos: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
+      cmake-flags-android: -DCMAKE_C_FLAGS_RELEASE="-O3 -DNDEBUG" -DCMAKE_CXX_FLAGS_RELEASE="-O3 -DNDEBUG"
       bin-name-linux: cimplot3d.a
       bin-name-linux-normalized: cimplot3d.a
       bin-name-windows: Release/cimplot3d.lib
@@ -98,21 +126,3 @@ jobs:
       android-api: 23
       pre-configure-steps: "bash scripts/setup_addon_build.sh"
       checkout-self: true
-
-  create-pr:
-    needs:
-      [
-        build-cimgui,
-        build-cimplot,
-        build-cimnodes,
-        build-cimguizmo,
-        build-cimplot3d,
-      ]
-    uses: JunaMeinhold/cmake-actions/.github/workflows/create-pr.yml@v1.x.x
-    with:
-      lib-name: "ImGui"
-      lib-version: "v1.92.4"
-      pr-base-branch: "main"
-      pr-reviewers: JunaMeinhold
-      pr-branch: imgui-artifacts
-      pr-manifest-path: imgui

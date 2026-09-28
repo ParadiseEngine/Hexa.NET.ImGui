@@ -1,0 +1,59 @@
+name: Build Native Libraries
+
+# Native libraries are not committed. This workflow builds every published one from the sources
+# pinned in the cmake*.yml workflows and uploads the project native/ folders as one "natives"
+# artifact, which push-nuget.yml packs and scripts/fetch_natives.sh downloads for local work.
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [HexaGen-Mainline]
+    paths:
+      - .github/workflows/natives.yml
+      - .github/workflows/cmake*.yml
+      - hexa-workflows/**
+      - scripts/**
+      - "*/*.csproj"
+  pull_request:
+    paths:
+      - .github/workflows/natives.yml
+      - .github/workflows/cmake*.yml
+      - hexa-workflows/**
+      - scripts/**
+      - "*/*.csproj"
+
+jobs:
+  shared:
+    uses: ./.github/workflows/cmake.yml
+  static:
+    uses: ./.github/workflows/cmake-static.yml
+  browser-wasm:
+    uses: ./.github/workflows/cmake-wasm.yml
+
+  collect:
+    needs: [shared, static, browser-wasm]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Place and verify natives
+        run: python3 scripts/place_natives.py artifacts .
+
+      - name: Stage the native folders
+        run: |
+          mkdir staging
+          for dir in */native; do
+            mkdir -p "staging/$dir"
+            cp -R "$dir/." "staging/$dir/"
+          done
+          find staging -type f | sort
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: natives
+          path: staging/
+          if-no-files-found: error

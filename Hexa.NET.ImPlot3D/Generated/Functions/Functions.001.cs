@@ -20,11 +20,1085 @@ namespace Hexa.NET.ImPlot3D
 	{
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				fixed (byte* pzLabel = &zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			byte* pStr1 = null;
+			int pStrSize1 = 0;
+			if (zLabel != null)
+			{
+				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
+				if (pStrSize1 >= Utils.MaxStackallocSize)
+				{
+					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
+				}
+				else
+				{
+					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
+					pStr1 = pStrStack1;
+				}
+				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
+				pStr1[pStrOffset1] = 0;
+			}
+			SetupAxesNative(xLabel, pStr0, pStr1, xFlags, yFlags, zFlags);
+			if (pStrSize1 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr1);
+			}
+			if (pStrSize0 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr0);
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			byte* pStr1 = null;
+			int pStrSize1 = 0;
+			if (zLabel != null)
+			{
+				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
+				if (pStrSize1 >= Utils.MaxStackallocSize)
+				{
+					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
+				}
+				else
+				{
+					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
+					pStr1 = pStrStack1;
+				}
+				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
+				pStr1[pStrOffset1] = 0;
+			}
+			SetupAxesNative(xLabel, pStr0, pStr1, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+			if (pStrSize1 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr1);
+			}
+			if (pStrSize0 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr0);
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			byte* pStr1 = null;
+			int pStrSize1 = 0;
+			if (zLabel != null)
+			{
+				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
+				if (pStrSize1 >= Utils.MaxStackallocSize)
+				{
+					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
+				}
+				else
+				{
+					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
+					pStr1 = pStrStack1;
+				}
+				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
+				pStr1[pStrOffset1] = 0;
+			}
+			SetupAxesNative(xLabel, pStr0, pStr1, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+			if (pStrSize1 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr1);
+			}
+			if (pStrSize0 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr0);
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			byte* pStr1 = null;
+			int pStrSize1 = 0;
+			if (zLabel != null)
+			{
+				pStrSize1 = Utils.GetByteCountUTF8(zLabel);
+				if (pStrSize1 >= Utils.MaxStackallocSize)
+				{
+					pStr1 = Utils.Alloc<byte>(pStrSize1 + 1);
+				}
+				else
+				{
+					byte* pStrStack1 = stackalloc byte[pStrSize1 + 1];
+					pStr1 = pStrStack1;
+				}
+				int pStrOffset1 = Utils.EncodeStringUTF8(zLabel, pStr1, pStrSize1);
+				pStr1[pStrOffset1] = 0;
+			}
+			SetupAxesNative(xLabel, pStr0, pStr1, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+			if (pStrSize1 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr1);
+			}
+			if (pStrSize0 >= Utils.MaxStackallocSize)
+			{
+				Utils.Free(pStr0);
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				fixed (byte* pzLabel = zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, zFlags);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
+		{
+			fixed (byte* pyLabel = &yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = &zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = &zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = &zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				fixed (byte* pzLabel = &zLabel)
+				{
+					SetupAxesNative(xLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, zFlags);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
+		{
+			fixed (byte* pyLabel = yLabel)
+			{
+				byte* pStr0 = null;
+				int pStrSize0 = 0;
+				if (zLabel != null)
+				{
+					pStrSize0 = Utils.GetByteCountUTF8(zLabel);
+					if (pStrSize0 >= Utils.MaxStackallocSize)
+					{
+						pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+					}
+					else
+					{
+						byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+						pStr0 = pStrStack0;
+					}
+					int pStrOffset0 = Utils.EncodeStringUTF8(zLabel, pStr0, pStrSize0);
+					pStr0[pStrOffset0] = 0;
+				}
+				SetupAxesNative(xLabel, (byte*)pyLabel, pStr0, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = &zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, zFlags);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = &zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = &zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = &zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, zFlags);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] byte* xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
+		{
+			byte* pStr0 = null;
+			int pStrSize0 = 0;
+			if (yLabel != null)
+			{
+				pStrSize0 = Utils.GetByteCountUTF8(yLabel);
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
+				}
+				else
+				{
+					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
+					pStr0 = pStrStack0;
+				}
+				int pStrOffset0 = Utils.EncodeStringUTF8(yLabel, pStr0, pStrSize0);
+				pStr0[pStrOffset0] = 0;
+			}
+			fixed (byte* pzLabel = zLabel)
+			{
+				SetupAxesNative(xLabel, pStr0, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+				if (pStrSize0 >= Utils.MaxStackallocSize)
+				{
+					Utils.Free(pStr0);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pxLabel = &xLabel)
+			{
+				fixed (byte* pyLabel = &yLabel)
+				{
+					fixed (byte* pzLabel = &zLabel)
+					{
+						SetupAxesNative((byte*)pxLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pxLabel = &xLabel)
+			{
+				fixed (byte* pyLabel = &yLabel)
+				{
+					fixed (byte* pzLabel = &zLabel)
+					{
+						SetupAxesNative((byte*)pxLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		{
+			fixed (byte* pxLabel = &xLabel)
+			{
+				fixed (byte* pyLabel = &yLabel)
+				{
+					fixed (byte* pzLabel = &zLabel)
+					{
+						SetupAxesNative((byte*)pxLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
+		{
+			fixed (byte* pxLabel = &xLabel)
+			{
+				fixed (byte* pyLabel = &yLabel)
+				{
+					fixed (byte* pzLabel = &zLabel)
+					{
+						SetupAxesNative((byte*)pxLabel, (byte*)pyLabel, (byte*)pzLabel, (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0), (ImPlot3DAxisFlags)(0));
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		{
+			fixed (byte* pxLabel = xLabel)
+			{
+				fixed (byte* pyLabel = yLabel)
+				{
+					fixed (byte* pzLabel = zLabel)
+					{
+						SetupAxesNative((byte*)pxLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, zFlags);
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		{
+			fixed (byte* pxLabel = xLabel)
+			{
+				fixed (byte* pyLabel = yLabel)
+				{
+					fixed (byte* pzLabel = zLabel)
+					{
+						SetupAxesNative((byte*)pxLabel, (byte*)pyLabel, (byte*)pzLabel, xFlags, yFlags, (ImPlot3DAxisFlags)(0));
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -39,11 +1113,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -58,11 +1132,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -131,11 +1205,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -204,11 +1278,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -277,11 +1351,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -350,11 +1424,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -369,11 +1443,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -388,11 +1462,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -407,11 +1481,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -426,11 +1500,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -463,11 +1537,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -500,11 +1574,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -537,11 +1611,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -574,11 +1648,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -593,11 +1667,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -612,11 +1686,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -631,11 +1705,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -650,11 +1724,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -669,11 +1743,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -688,11 +1762,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -707,11 +1781,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -726,11 +1800,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -763,11 +1837,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -800,11 +1874,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -837,11 +1911,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -874,11 +1948,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -911,11 +1985,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -948,11 +2022,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -985,11 +2059,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1022,11 +2096,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1059,11 +2133,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1096,11 +2170,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1133,11 +2207,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1170,11 +2244,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1225,11 +2299,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1280,11 +2354,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1335,11 +2409,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] in byte xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			fixed (byte* pxLabel = &xLabel)
 			{
@@ -1390,11 +2464,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1409,11 +2483,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1428,11 +2502,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1447,11 +2521,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1466,11 +2540,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1485,11 +2559,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1504,11 +2578,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1523,11 +2597,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1542,11 +2616,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1579,11 +2653,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1616,11 +2690,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1653,11 +2727,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1690,11 +2764,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1709,11 +2783,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1728,11 +2802,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1747,11 +2821,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1766,11 +2840,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1803,11 +2877,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1840,11 +2914,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1877,11 +2951,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1914,11 +2988,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1951,11 +3025,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -1988,11 +3062,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2025,11 +3099,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2062,11 +3136,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2099,11 +3173,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2136,11 +3210,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2173,11 +3247,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2210,11 +3284,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2265,11 +3339,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2320,11 +3394,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2375,11 +3449,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			fixed (byte* pxLabel = xLabel)
 			{
@@ -2430,11 +3504,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2467,11 +3541,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2504,11 +3578,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2541,11 +3615,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2578,11 +3652,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2615,11 +3689,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2652,11 +3726,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2689,11 +3763,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2726,11 +3800,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2781,11 +3855,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2836,11 +3910,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2891,11 +3965,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] in byte yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2946,11 +4020,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -2983,11 +4057,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3020,11 +4094,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3057,11 +4131,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3094,11 +4168,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3131,11 +4205,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3168,11 +4242,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3205,11 +4279,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3242,11 +4316,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3297,11 +4371,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3352,11 +4426,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3407,11 +4481,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] string zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] string zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3462,11 +4536,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3517,11 +4591,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3572,11 +4646,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3627,11 +4701,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ref byte zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] in byte zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3682,11 +4756,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags, [NativeName(NativeNameType.Param, "z_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags zFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3737,11 +4811,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags, [NativeName(NativeNameType.Param, "y_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags yFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3792,11 +4866,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel, [NativeName(NativeNameType.Param, "x_flags")] [NativeName(NativeNameType.Type, "ImPlot3DAxisFlags")] ImPlot3DAxisFlags xFlags)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3847,11 +4921,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the label andor flags for primary XYZ axes (shorthand for three calls to SetupAxis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxes")]
 		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "const char*")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "const char*")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> zLabel)
+		public static void SetupAxes([NativeName(NativeNameType.Param, "x_label")] [NativeName(NativeNameType.Type, "char const *")] string xLabel, [NativeName(NativeNameType.Param, "y_label")] [NativeName(NativeNameType.Type, "char const *")] string yLabel, [NativeName(NativeNameType.Param, "z_label")] [NativeName(NativeNameType.Type, "char const *")] ReadOnlySpan<byte> zLabel)
 		{
 			byte* pStr0 = null;
 			int pStrSize0 = 0;
@@ -3902,7 +4976,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the XYZ axes range limits. If ImPlot3DCond_Always is used, the axes limits will be locked (shorthand for three calls to SetupAxisLimits)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxesLimits")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3910,14 +4984,14 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxesLimitsNative([NativeName(NativeNameType.Param, "x_min")] [NativeName(NativeNameType.Type, "double")] double xMin, [NativeName(NativeNameType.Param, "x_max")] [NativeName(NativeNameType.Type, "double")] double xMax, [NativeName(NativeNameType.Param, "y_min")] [NativeName(NativeNameType.Type, "double")] double yMin, [NativeName(NativeNameType.Param, "y_max")] [NativeName(NativeNameType.Type, "double")] double yMax, [NativeName(NativeNameType.Param, "z_min")] [NativeName(NativeNameType.Type, "double")] double zMin, [NativeName(NativeNameType.Param, "z_max")] [NativeName(NativeNameType.Type, "double")] double zMax, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[18])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[35])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
 			#else
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[18])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[35])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
 			#endif
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the XYZ axes range limits. If ImPlot3DCond_Always is used, the axes limits will be locked (shorthand for three calls to SetupAxisLimits)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxesLimits")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3927,7 +5001,7 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the XYZ axes range limits. If ImPlot3DCond_Always is used, the axes limits will be locked (shorthand for three calls to SetupAxisLimits)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3D_SetupAxesLimits")]
 		[return: NativeName(NativeNameType.Type, "void")]
@@ -3937,1114 +5011,18 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Sets the plot box rotation given the elevation and azimuth angles in degrees. If ImPlot3DCond_Always is used, the rotation will be locked<br/>
 		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Float")]
+		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_double")]
 		[return: NativeName(NativeNameType.Type, "void")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupBoxRotationNative([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] byte animate, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
+		internal static void SetupBoxRotationNative([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "double")] double elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "double")] double azimuth, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] byte animate, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, byte, ImPlot3DCond, void>)funcTable[19])(elevation, azimuth, animate, cond);
+			((delegate* unmanaged[Cdecl]<double, double, byte, ImPlot3DCond, void>)funcTable[36])(elevation, azimuth, animate, cond);
 			#else
-			((delegate* unmanaged[Cdecl]<float, float, byte, ImPlot3DCond, void>)funcTable[19])(elevation, azimuth, animate, cond);
+			((delegate* unmanaged[Cdecl]<double, double, byte, ImPlot3DCond, void>)funcTable[36])(elevation, azimuth, animate, cond);
 			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Float")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] bool animate, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
-		{
-			SetupBoxRotationNative(elevation, azimuth, animate ? (byte)1 : (byte)0, cond);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Float")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] bool animate)
-		{
-			SetupBoxRotationNative(elevation, azimuth, animate ? (byte)1 : (byte)0, (ImPlot3DCond)(ImPlot3DCond.Once));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Float")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth)
-		{
-			SetupBoxRotationNative(elevation, azimuth, (byte)(0), (ImPlot3DCond)(ImPlot3DCond.Once));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Float")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
-		{
-			SetupBoxRotationNative(elevation, azimuth, (byte)(0), cond);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupBoxRotationNative([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] byte animate, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DQuat, byte, ImPlot3DCond, void>)funcTable[20])(rotation, animate, cond);
-			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DQuat, byte, ImPlot3DCond, void>)funcTable[20])(rotation, animate, cond);
-			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] bool animate, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
-		{
-			SetupBoxRotationNative(rotation, animate ? (byte)1 : (byte)0, cond);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] bool animate)
-		{
-			SetupBoxRotationNative(rotation, animate ? (byte)1 : (byte)0, (ImPlot3DCond)(ImPlot3DCond.Once));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation)
-		{
-			SetupBoxRotationNative(rotation, (byte)(0), (ImPlot3DCond)(ImPlot3DCond.Once));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxRotation([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
-		{
-			SetupBoxRotationNative(rotation, (byte)(0), cond);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxInitialRotation_Float")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupBoxInitialRotationNative([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[21])(elevation, azimuth);
-			#else
-			((delegate* unmanaged[Cdecl]<float, float, void>)funcTable[21])(elevation, azimuth);
-			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxInitialRotation_Float")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxInitialRotation([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth)
-		{
-			SetupBoxInitialRotationNative(elevation, azimuth);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxInitialRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupBoxInitialRotationNative([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DQuat, void>)funcTable[22])(rotation);
-			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DQuat, void>)funcTable[22])(rotation);
-			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxInitialRotation_Plot3DQuat")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxInitialRotation([NativeName(NativeNameType.Param, "rotation")] [NativeName(NativeNameType.Type, "ImPlot3DQuat")] ImPlot3DQuat rotation)
-		{
-			SetupBoxInitialRotationNative(rotation);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxScale")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupBoxScaleNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[23])(x, y, z);
-			#else
-			((delegate* unmanaged[Cdecl]<float, float, float, void>)funcTable[23])(x, y, z);
-			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupBoxScale")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupBoxScale([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "float")] float x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "float")] float y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "float")] float z)
-		{
-			SetupBoxScaleNative(x, y, z);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupLegend")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void SetupLegendNative([NativeName(NativeNameType.Param, "location")] [NativeName(NativeNameType.Type, "ImPlot3DLocation")] ImPlot3DLocation location, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DLegendFlags")] ImPlot3DLegendFlags flags)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DLocation, ImPlot3DLegendFlags, void>)funcTable[24])(location, flags);
-			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DLocation, ImPlot3DLegendFlags, void>)funcTable[24])(location, flags);
-			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupLegend")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupLegend([NativeName(NativeNameType.Param, "location")] [NativeName(NativeNameType.Type, "ImPlot3DLocation")] ImPlot3DLocation location, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DLegendFlags")] ImPlot3DLegendFlags flags)
-		{
-			SetupLegendNative(location, flags);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_SetupLegend")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void SetupLegend([NativeName(NativeNameType.Param, "location")] [NativeName(NativeNameType.Type, "ImPlot3DLocation")] ImPlot3DLocation location)
-		{
-			SetupLegendNative(location, (ImPlot3DLegendFlags)(0));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal static void PlotScatterNative([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, float*, float*, float*, int, ImPlot3DScatterFlags, int, int, void>)funcTable[25])(labelId, xs, ys, zs, count, flags, offset, stride);
-			#else
-			((delegate* unmanaged[Cdecl]<nint, nint, nint, nint, int, ImPlot3DScatterFlags, int, int, void>)funcTable[25])((nint)labelId, (nint)xs, (nint)ys, (nint)zs, count, flags, offset, stride);
-			#endif
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			PlotScatterNative(labelId, xs, ys, zs, count, flags, offset, stride);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			PlotScatterNative(labelId, xs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			PlotScatterNative(labelId, xs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			PlotScatterNative(labelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			PlotScatterNative(labelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			PlotScatterNative(labelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, flags, offset, stride);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, flags, offset, stride);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				PlotScatterNative((byte*)plabelId, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			PlotScatterNative(pStr0, xs, ys, zs, count, flags, offset, stride);
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			PlotScatterNative(pStr0, xs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			PlotScatterNative(pStr0, xs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			PlotScatterNative(pStr0, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			PlotScatterNative(pStr0, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] float* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			PlotScatterNative(pStr0, xs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-			if (pStrSize0 >= Utils.MaxStackallocSize)
-			{
-				Utils.Free(pStr0);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(labelId, (float*)pxs, ys, zs, count, flags, offset, stride);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(labelId, (float*)pxs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(labelId, (float*)pxs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(labelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(labelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(labelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, flags, offset, stride);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ref byte labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = &labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, flags, offset, stride);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] ReadOnlySpan<byte> labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			fixed (byte* plabelId = labelId)
-			{
-				fixed (float* pxs = &xs)
-				{
-					PlotScatterNative((byte*)plabelId, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(pStr0, (float*)pxs, ys, zs, count, flags, offset, stride);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(pStr0, (float*)pxs, ys, zs, count, flags, offset, (int)(sizeof(float)));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "flags")] [NativeName(NativeNameType.Type, "ImPlot3DScatterFlags")] ImPlot3DScatterFlags flags)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(pStr0, (float*)pxs, ys, zs, count, flags, (int)(0), (int)(sizeof(float)));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(pStr0, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), (int)(0), (int)(sizeof(float)));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(pStr0, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, (int)(sizeof(float)));
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3D_PlotScatter_FloatPtr")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public static void PlotScatter([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "const char*")] string labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "const float*")] ref float xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "const float*")] float* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "const float*")] float* zs, [NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count, [NativeName(NativeNameType.Param, "offset")] [NativeName(NativeNameType.Type, "int")] int offset, [NativeName(NativeNameType.Param, "stride")] [NativeName(NativeNameType.Type, "int")] int stride)
-		{
-			byte* pStr0 = null;
-			int pStrSize0 = 0;
-			if (labelId != null)
-			{
-				pStrSize0 = Utils.GetByteCountUTF8(labelId);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					pStr0 = Utils.Alloc<byte>(pStrSize0 + 1);
-				}
-				else
-				{
-					byte* pStrStack0 = stackalloc byte[pStrSize0 + 1];
-					pStr0 = pStrStack0;
-				}
-				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
-				pStr0[pStrOffset0] = 0;
-			}
-			fixed (float* pxs = &xs)
-			{
-				PlotScatterNative(pStr0, (float*)pxs, ys, zs, count, (ImPlot3DScatterFlags)(0), offset, stride);
-				if (pStrSize0 >= Utils.MaxStackallocSize)
-				{
-					Utils.Free(pStr0);
-				}
-			}
 		}
 	}
 }

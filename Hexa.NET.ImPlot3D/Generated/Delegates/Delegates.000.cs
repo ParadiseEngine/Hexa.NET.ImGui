@@ -23,7 +23,7 @@ namespace Hexa.NET.ImPlot3D
 	/// </summary>
 	[NativeName(NativeNameType.Delegate, "ImPlot3DFormatter")]
 	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-	public unsafe delegate int ImPlot3DFormatter([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "float")] float value, [NativeName(NativeNameType.Param, "buff")] [NativeName(NativeNameType.Type, "char*")] byte* buff, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size, [NativeName(NativeNameType.Param, "user_data")] [NativeName(NativeNameType.Type, "void*")] void* userData);
+	public unsafe delegate int ImPlot3DFormatter([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value, [NativeName(NativeNameType.Param, "buff")] [NativeName(NativeNameType.Type, "char *")] byte* buff, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size, [NativeName(NativeNameType.Param, "user_data")] [NativeName(NativeNameType.Type, "void *")] void* userData);
 
 	#else
 	/// <summary>
@@ -31,7 +31,25 @@ namespace Hexa.NET.ImPlot3D
 	/// </summary>
 	[NativeName(NativeNameType.Delegate, "ImPlot3DFormatter")]
 	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-	public unsafe delegate int ImPlot3DFormatter([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "float")] float value, [NativeName(NativeNameType.Param, "buff")] [NativeName(NativeNameType.Type, "char*")] nint buff, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size, [NativeName(NativeNameType.Param, "user_data")] [NativeName(NativeNameType.Type, "void*")] nint userData);
+	public unsafe delegate int ImPlot3DFormatter([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value, [NativeName(NativeNameType.Param, "buff")] [NativeName(NativeNameType.Type, "char *")] nint buff, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size, [NativeName(NativeNameType.Param, "user_data")] [NativeName(NativeNameType.Type, "void *")] nint userData);
+
+	#endif
+
+	#if NET5_0_OR_GREATER
+	/// <summary>
+	/// To be documented.
+	/// </summary>
+	[NativeName(NativeNameType.Delegate, "ImPlot3DTransform")]
+	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+	public unsafe delegate double ImPlot3DTransform([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value, [NativeName(NativeNameType.Param, "user_data")] [NativeName(NativeNameType.Type, "void *")] void* userData);
+
+	#else
+	/// <summary>
+	/// To be documented.
+	/// </summary>
+	[NativeName(NativeNameType.Delegate, "ImPlot3DTransform")]
+	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+	public unsafe delegate double ImPlot3DTransform([NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value, [NativeName(NativeNameType.Param, "user_data")] [NativeName(NativeNameType.Type, "void *")] nint userData);
 
 	#endif
 

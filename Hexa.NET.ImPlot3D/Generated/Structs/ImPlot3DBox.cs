@@ -18,7 +18,7 @@ using Hexa.NET.ImGui;
 namespace Hexa.NET.ImPlot3D
 {
 	/// <summary>
-	/// To be documented.
+	/// ImPlot3DBox: Axis-aligned bounding box in 3D space<br/>
 	/// </summary>
 	[NativeName(NativeNameType.StructOrClass, "ImPlot3DBox")]
 	[StructLayout(LayoutKind.Sequential)]
@@ -28,14 +28,14 @@ namespace Hexa.NET.ImPlot3D
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Min")]
-		[NativeName(NativeNameType.Type, "ImPlot3DPoint")]
+		[NativeName(NativeNameType.Type, "ImPlot3DPoint_c")]
 		public ImPlot3DPoint Min;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "Max")]
-		[NativeName(NativeNameType.Type, "ImPlot3DPoint")]
+		[NativeName(NativeNameType.Type, "ImPlot3DPoint_c")]
 		public ImPlot3DPoint Max;
 
 
@@ -50,11 +50,11 @@ namespace Hexa.NET.ImPlot3D
 
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p1Clipped)
 		{
 			fixed (ImPlot3DBox* @this = &this)
 			{
@@ -64,11 +64,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p1Clipped)
 		{
 			fixed (ImPlot3DBox* @this = &this)
 			{
@@ -81,11 +81,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p1Clipped)
 		{
 			fixed (ImPlot3DBox* @this = &this)
 			{
@@ -98,11 +98,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p1Clipped)
 		{
 			fixed (ImPlot3DBox* @this = &this)
 			{
@@ -118,16 +118,29 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to check if a point is inside the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_Contains")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool Contains([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint point)
+		public unsafe bool Contains([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
 		{
 			fixed (ImPlot3DBox* @this = &this)
 			{
 				byte ret = ImPlot3D.ContainsNative(@this, point);
 				return ret != 0;
+			}
+		}
+
+		/// <summary>
+		/// Method to expand the box to include a point<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DBox_Expand")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public unsafe void Expand([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
+		{
+			fixed (ImPlot3DBox* @this = &this)
+			{
+				ImPlot3D.ExpandNative(@this, point);
 			}
 		}
 
@@ -141,19 +154,6 @@ namespace Hexa.NET.ImPlot3D
 			fixed (ImPlot3DBox* @this = &this)
 			{
 				ImPlot3D.DestroyNative(@this);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DBox_Expand")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Expand([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint point)
-		{
-			fixed (ImPlot3DBox* @this = &this)
-			{
-				ImPlot3D.ExpandNative(@this, point);
 			}
 		}
 
@@ -210,22 +210,22 @@ namespace Hexa.NET.ImPlot3D
 		/// </summary>
 		public ref ImPlot3DPoint Max => ref Unsafe.AsRef<ImPlot3DPoint>(&Handle->Max);
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p1Clipped)
 		{
 			byte ret = ImPlot3D.ClipLineSegmentNative(Handle, p0, p1, p0Clipped, p1Clipped);
 			return ret != 0;
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p1Clipped)
 		{
 			fixed (ImPlot3DPoint* pp0Clipped = &p0Clipped)
 			{
@@ -235,11 +235,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ImPlot3DPointPtr p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p1Clipped)
 		{
 			fixed (ImPlot3DPoint* pp1Clipped = &p1Clipped)
 			{
@@ -249,11 +249,11 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to clip a line segment against the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_ClipLineSegment")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint*")] ref ImPlot3DPoint p1Clipped)
+		public unsafe bool ClipLineSegment([NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ref ImPlot3DPoint p1Clipped)
 		{
 			fixed (ImPlot3DPoint* pp0Clipped = &p0Clipped)
 			{
@@ -266,14 +266,24 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 		/// <summary>
-		/// To be documented.
+		/// Method to check if a point is inside the box<br/>
 		/// </summary>
 		[NativeName(NativeNameType.Func, "ImPlot3DBox_Contains")]
 		[return: NativeName(NativeNameType.Type, "bool")]
-		public unsafe bool Contains([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint point)
+		public unsafe bool Contains([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
 		{
 			byte ret = ImPlot3D.ContainsNative(Handle, point);
 			return ret != 0;
+		}
+
+		/// <summary>
+		/// Method to expand the box to include a point<br/>
+		/// </summary>
+		[NativeName(NativeNameType.Func, "ImPlot3DBox_Expand")]
+		[return: NativeName(NativeNameType.Type, "void")]
+		public unsafe void Expand([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
+		{
+			ImPlot3D.ExpandNative(Handle, point);
 		}
 
 		/// <summary>
@@ -284,16 +294,6 @@ namespace Hexa.NET.ImPlot3D
 		public unsafe void Destroy()
 		{
 			ImPlot3D.DestroyNative(Handle);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DBox_Expand")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Expand([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "const ImPlot3DPoint")] ImPlot3DPoint point)
-		{
-			ImPlot3D.ExpandNative(Handle, point);
 		}
 
 	}

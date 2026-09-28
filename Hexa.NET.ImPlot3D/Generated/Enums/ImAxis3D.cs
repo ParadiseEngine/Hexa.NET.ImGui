@@ -18,25 +18,24 @@ namespace Hexa.NET.ImPlot3D
 	/// To be documented.
 	/// </summary>
 	[NativeName(NativeNameType.Enum, "ImAxis3D_")]
-	[Flags]
 	public enum ImAxis3D : int
 	{
 		/// <summary>
-		/// To be documented.
+		/// X-axis<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImAxis3D_X")]
 		[NativeName(NativeNameType.Value, "0")]
 		X = unchecked(0),
 
 		/// <summary>
-		/// To be documented.
+		/// Y-axis<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImAxis3D_Y")]
 		[NativeName(NativeNameType.Value, "1")]
 		Y = unchecked(1),
 
 		/// <summary>
-		/// To be documented.
+		/// Z-axis<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImAxis3D_Z")]
 		[NativeName(NativeNameType.Value, "2")]
