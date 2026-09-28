@@ -17,7 +17,6 @@ body:
         - "Missing" functions → Check `ImGuiP` namespace (see FAQ)
         - Docking/DockBuilder → Already included, see FAQ for examples
         - Multi-viewport → Included by default
-        - Backends → Available in separate `Hexa.NET.ImGui.Backends` package
 
   - type: checkboxes
     id: checklist

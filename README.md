@@ -5,7 +5,7 @@
 
 > **Not an official Hexa.NET package.** Paradise.ImGui is a ParadiseEngine fork of [Hexa.NET.ImGui](https://github.com/HexaEngine/Hexa.NET.ImGui) by Juna Meinhold. It is not affiliated with or endorsed by HexaEngine. Report issues with these packages here, not upstream.
 
-Differences from upstream: all native libraries are built in CI at `-O3` from pinned sources (none are committed), and `Paradise.ImGui` supports `browser-wasm`. The rest of this README is upstream's documentation, adjusted where the fork differs.
+Differences from upstream: all native libraries are built in CI at `-O3` from pinned sources (none are committed), `Paradise.ImGui` supports `browser-wasm`, the ImPlot3D binding is regenerated for the ImPlot3D 0.4 natives it ships with, and the backends packages are not published. The rest of this README is upstream's documentation, adjusted where the fork differs.
 
 Welcome to Hexa.NET.ImGui! This custom wrapper is designed to be a high-performance, API-compatible alternative to ImGuiNET, offering enhanced speed, additional functionality, and comprehensive access to ImGui's internal structures. With optimizations that bring near C performance and significantly reduced startup times, Hexa.NET.ImGui provides the best of both worlds: the power of C and the productivity of C#.
 
@@ -14,7 +14,7 @@ Welcome to Hexa.NET.ImGui! This custom wrapper is designed to be a high-performa
 ## Features
 
 - **Comprehensive Wrapper**: Integrates the core Dear ImGui library along with essential addons such as ImGuizmo, ImNodes, and ImPlot.
-- **Backends**: Includes a collection of native backends in the Paradise.ImGui.Backends package. (incl. Android, Win32, OSX, D3D9, D3D10, D3D11, D3D12, Metal, OpenGL2, OpenGL3, Vulkan and extra packages for SDL2 and GLFW)
+- **Backends**: Upstream ships native platform/renderer backends as `Hexa.NET.ImGui.Backends*`. This fork does not build or publish them; bring your own renderer (Paradise Engine renders ImGui through WebGPU itself).
 - **FreeType Fonts**: Allows better text rendering and colored fonts to be loaded.
 - **Docking Support**: Full docking branch integration with access to DockBuilder APIs (via ImGuiP for internals)
 - **Multi Viewport Support**: Enables seamless multi-viewport rendering for advanced UI scenarios.
@@ -37,23 +37,20 @@ Welcome to Hexa.NET.ImGui! This custom wrapper is designed to be a high-performa
 Upstream's [LICENSE.txt](LICENSE.txt) is MIT with a **Naming Clause**: the "Hexa.NET" name, prefix, or any derivative of it may not be used to name derivative projects, redistributed packages, or modified versions without explicit written permission from Juna Meinhold, and any use of the Hexa.NET name outside the official projects must clearly say it is not an official Hexa.NET package. So this fork uses:
 
 - repository: `ParadiseEngine/Paradise.ImGui`, not a `Hexa.NET` name;
-- packages: `Hexa.NET.X` becomes `Paradise.X`, set in `Directory.Build.targets` so upstream's project files stay unchanged:
+- packages: `Hexa.NET.ImGui` becomes `Paradise.ImGui` and each addon `Hexa.NET.ImX` becomes `Paradise.ImGui.X`, set in `Directory.Build.targets` so upstream's project files stay unchanged:
 
 | Upstream package | This fork |
 |---|---|
 | `Hexa.NET.ImGui` | [`Paradise.ImGui`](https://www.nuget.org/packages/Paradise.ImGui) |
-| `Hexa.NET.ImGui.Backends` | [`Paradise.ImGui.Backends`](https://www.nuget.org/packages/Paradise.ImGui.Backends) |
-| `Hexa.NET.ImGui.Backends.GLFW` | [`Paradise.ImGui.Backends.GLFW`](https://www.nuget.org/packages/Paradise.ImGui.Backends.GLFW) |
-| `Hexa.NET.ImGui.Backends.SDL2` | [`Paradise.ImGui.Backends.SDL2`](https://www.nuget.org/packages/Paradise.ImGui.Backends.SDL2) |
-| `Hexa.NET.ImGui.Backends.SDL3` | [`Paradise.ImGui.Backends.SDL3`](https://www.nuget.org/packages/Paradise.ImGui.Backends.SDL3) |
-| `Hexa.NET.ImGuizmo` | [`Paradise.ImGuizmo`](https://www.nuget.org/packages/Paradise.ImGuizmo) |
-| `Hexa.NET.ImNodes` | [`Paradise.ImNodes`](https://www.nuget.org/packages/Paradise.ImNodes) |
-| `Hexa.NET.ImPlot` | [`Paradise.ImPlot`](https://www.nuget.org/packages/Paradise.ImPlot) |
-| `Hexa.NET.ImPlot3D` | [`Paradise.ImPlot3D`](https://www.nuget.org/packages/Paradise.ImPlot3D) |
+| `Hexa.NET.ImGuizmo` | [`Paradise.ImGui.Guizmo`](https://www.nuget.org/packages/Paradise.ImGui.Guizmo) |
+| `Hexa.NET.ImNodes` | [`Paradise.ImGui.Nodes`](https://www.nuget.org/packages/Paradise.ImGui.Nodes) |
+| `Hexa.NET.ImPlot` | [`Paradise.ImGui.Plot`](https://www.nuget.org/packages/Paradise.ImGui.Plot) |
+| `Hexa.NET.ImPlot3D` | [`Paradise.ImGui.Plot3D`](https://www.nuget.org/packages/Paradise.ImGui.Plot3D) |
+| `Hexa.NET.ImGui.Backends*` | not published |
 
 The assemblies and C# namespaces keep upstream's `Hexa.NET.*` names (`using Hexa.NET.ImGui;`), so code written against upstream compiles unchanged. They are identifiers inside upstream's source; each package's description and this README state that the package is not an official Hexa.NET package.
 
-Version 3.1.0 was briefly published as `Paradise.Hexa.NET.*`, which the Naming Clause does not allow. Those packages are deprecated and unlisted in favor of the IDs above; use 3.1.1 or later.
+Earlier IDs are unlisted: 3.1.0 as `Paradise.Hexa.NET.*`, which the Naming Clause does not allow, and 3.1.1 as `Paradise.ImGuizmo`, `Paradise.ImNodes`, `Paradise.ImPlot`, `Paradise.ImPlot3D` and `Paradise.ImGui.Backends*`. Use the IDs above at 3.1.2 or later.
 
 ### Publishing
 
@@ -79,17 +76,17 @@ To get started with Paradise.ImGui, follow these steps:
 
     For ImGuizmo addon:
     ```bash
-    dotnet add package Paradise.ImGuizmo
+    dotnet add package Paradise.ImGui.Guizmo
     ```
 
     For ImNodes addon:
     ```bash
-    dotnet add package Paradise.ImNodes
+    dotnet add package Paradise.ImGui.Nodes
     ```
 
     For ImPlot addon:
     ```bash
-    dotnet add package Paradise.ImPlot
+    dotnet add package Paradise.ImGui.Plot
     ```
 
 2. **Initialize the library** in your project:
@@ -114,7 +111,7 @@ For a comprehensive example of how to use the library, refer to the [ExampleGLFW
 
 ### Native Libraries
 
-Native libraries are not committed. `.github/workflows/natives.yml` builds all of them (cimgui, the addons, the backends, shared and static, and `browser-wasm`) at `-O3` from the source commits pinned in the `cmake*.yml` workflows and `scripts/`, then uploads the project `native/` folders as one `natives` artifact. It runs on pull requests and pushes that change those inputs, and `push-nuget.yml` runs it before packing.
+Native libraries are not committed. `.github/workflows/natives.yml` builds every published one (cimgui and the addons, shared and static, and `browser-wasm`) at `-O3` from the source commits pinned in the `cmake*.yml` workflows and `scripts/`, then uploads the project `native/` folders as one `natives` artifact. It runs on pull requests and pushes that change those inputs, and `push-nuget.yml` runs it before packing.
 
 - For local builds, examples, and tests, run `scripts/fetch_natives.sh` (needs an authenticated `gh`). It downloads the latest successful `natives` artifact from `HexaGen-Mainline`, or pass a run id. Artifacts expire; if none is left, dispatch `natives.yml`.
 - `scripts/place_natives.py` maps artifacts to projects through `hexa-workflows/*/hexa-workflows.json`. It fails if any `native\<rid>\*` pattern a project packs has no files, because an empty glob would silently drop that runtime from the package.

@@ -6,8 +6,9 @@ Usage: place_natives.py <artifacts-dir> <repo-root>
 <artifacts-dir> holds one directory per artifact, named <library>-<os>-<arch> as uploaded by the
 native build workflows (e.g. cimgui-linux-x64, cimgui-static-win-x64, cimgui-browser-wasm). The
 library part is looked up in hexa-workflows/*/hexa-workflows.json. Afterwards every
-native\\<rid>\\*.<ext> pattern the package projects pack must match at least one file, because
-an unmatched glob silently yields a package without that runtime.
+native\\<rid>\\*.<ext> pattern packed by a project those manifests build natives for must match
+at least one file, because an unmatched glob silently yields a package without that runtime.
+Projects without a manifest entry (the unpublished upstream backends) are not checked.
 """
 
 import glob
@@ -49,7 +50,10 @@ def place(artifacts_dir: str, repo_root: str) -> int:
 
 def verify(repo_root: str) -> list:
     missing = []
+    built = {os.path.normpath(d).split(os.sep)[0] for d in load_destinations(repo_root).values()}
     for project in sorted(glob.glob(os.path.join(repo_root, "*", "*.csproj"))):
+        if os.path.basename(os.path.dirname(project)) not in built:
+            continue
         with open(project, encoding="utf-8-sig") as f:
             patterns = PACKED_NATIVE.findall(f.read())
         project_dir = os.path.dirname(project)

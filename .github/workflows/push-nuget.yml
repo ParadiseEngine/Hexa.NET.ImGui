@@ -29,10 +29,6 @@ jobs:
     env:
       PROJECTS: >-
         Hexa.NET.ImGui
-        Hexa.NET.ImGui.Backends
-        Hexa.NET.ImGui.Backends.GLFW
-        Hexa.NET.ImGui.Backends.SDL2
-        Hexa.NET.ImGui.Backends.SDL3
         Hexa.NET.ImGuizmo
         Hexa.NET.ImNodes
         Hexa.NET.ImPlot
