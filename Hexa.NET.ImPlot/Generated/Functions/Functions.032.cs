@@ -28,7 +28,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pneg = &neg)
 				{
-					PlotErrorBarsNative(labelId, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -61,7 +61,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -95,7 +95,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -162,7 +162,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pneg = &neg)
 				{
-					PlotErrorBarsNative(pStr0, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, (double*)pxs, ys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -194,7 +194,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pneg = &neg)
 				{
-					PlotErrorBarsNative(labelId, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -227,7 +227,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -261,7 +261,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -328,7 +328,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pneg = &neg)
 				{
-					PlotErrorBarsNative(pStr0, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, xs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -365,7 +365,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* pneg = &neg)
 					{
-						PlotErrorBarsNative(labelId, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -404,7 +404,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* pneg = &neg)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -444,7 +444,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* pneg = &neg)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -517,7 +517,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* pneg = &neg)
 					{
-						PlotErrorBarsNative(pStr0, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, (double*)pxs, (double*)pys, (double*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -545,7 +545,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (double* ppos = &pos)
 			{
-				PlotErrorBarsNative(labelId, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -572,7 +572,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -600,7 +600,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -661,7 +661,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* ppos = &pos)
 			{
-				PlotErrorBarsNative(pStr0, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, xs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -692,7 +692,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative(labelId, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -725,7 +725,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -759,7 +759,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -826,7 +826,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative(pStr0, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, (double*)pxs, ys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -858,7 +858,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative(labelId, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -891,7 +891,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -925,7 +925,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -992,7 +992,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative(pStr0, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, xs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1029,7 +1029,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative(labelId, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1068,7 +1068,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1108,7 +1108,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1181,7 +1181,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative(pStr0, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, (double*)pxs, (double*)pys, neg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -1214,7 +1214,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative(labelId, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1247,7 +1247,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1281,7 +1281,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1348,7 +1348,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* ppos = &pos)
 				{
-					PlotErrorBarsNative(pStr0, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, xs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1385,7 +1385,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative(labelId, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1424,7 +1424,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1464,7 +1464,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1537,7 +1537,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative(pStr0, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, (double*)pxs, ys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -1575,7 +1575,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative(labelId, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1614,7 +1614,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1654,7 +1654,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1727,7 +1727,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (double* ppos = &pos)
 					{
-						PlotErrorBarsNative(pStr0, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, xs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -1770,7 +1770,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative(labelId, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative(labelId, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1815,7 +1815,7 @@ namespace Hexa.NET.ImPlot
 						{
 							fixed (double* ppos = &pos)
 							{
-								PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+								PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 							}
 						}
 					}
@@ -1861,7 +1861,7 @@ namespace Hexa.NET.ImPlot
 						{
 							fixed (double* ppos = &pos)
 							{
-								PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+								PlotErrorBarsNative((byte*)plabelId, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 							}
 						}
 					}
@@ -1940,7 +1940,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (double* ppos = &pos)
 						{
-							PlotErrorBarsNative(pStr0, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative(pStr0, (double*)pxs, (double*)pys, (double*)pneg, (double*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 							if (pStrSize0 >= Utils.MaxStackallocSize)
 							{
 								Utils.Free(pStr0);
@@ -1977,7 +1977,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotErrorBars(byte* labelId, sbyte* xs, sbyte* ys, sbyte* neg, sbyte* pos, int count)
 		{
-			PlotErrorBarsNative(labelId, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotErrorBarsNative(labelId, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1998,7 +1998,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2020,7 +2020,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2075,7 +2075,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotErrorBarsNative(pStr0, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotErrorBarsNative(pStr0, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2100,7 +2100,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pxs = &xs)
 			{
-				PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2127,7 +2127,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pxs = &xs)
 				{
-					PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2155,7 +2155,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pxs = &xs)
 				{
-					PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2216,7 +2216,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pxs = &xs)
 			{
-				PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2242,7 +2242,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pys = &ys)
 			{
-				PlotErrorBarsNative(labelId, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2269,7 +2269,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pys = &ys)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2297,7 +2297,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pys = &ys)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2358,7 +2358,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pys = &ys)
 			{
-				PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2389,7 +2389,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pys = &ys)
 				{
-					PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2422,7 +2422,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pys = &ys)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2456,7 +2456,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pys = &ys)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2523,7 +2523,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pys = &ys)
 				{
-					PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2550,7 +2550,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pneg = &neg)
 			{
-				PlotErrorBarsNative(labelId, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2577,7 +2577,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pneg = &neg)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2605,7 +2605,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pneg = &neg)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2666,7 +2666,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pneg = &neg)
 			{
-				PlotErrorBarsNative(pStr0, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, xs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2697,7 +2697,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pneg = &neg)
 				{
-					PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2730,7 +2730,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2764,7 +2764,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2831,7 +2831,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pneg = &neg)
 				{
-					PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2863,7 +2863,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pneg = &neg)
 				{
-					PlotErrorBarsNative(labelId, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2896,7 +2896,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2930,7 +2930,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pneg = &neg)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2997,7 +2997,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pneg = &neg)
 				{
-					PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3034,7 +3034,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pneg = &neg)
 					{
-						PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3073,7 +3073,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* pneg = &neg)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -3113,7 +3113,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* pneg = &neg)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -3186,7 +3186,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* pneg = &neg)
 					{
-						PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -3214,7 +3214,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* ppos = &pos)
 			{
-				PlotErrorBarsNative(labelId, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3241,7 +3241,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3269,7 +3269,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3330,7 +3330,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* ppos = &pos)
 			{
-				PlotErrorBarsNative(pStr0, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, xs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3361,7 +3361,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3394,7 +3394,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3428,7 +3428,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3495,7 +3495,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3527,7 +3527,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative(labelId, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3560,7 +3560,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3594,7 +3594,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3661,7 +3661,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3698,7 +3698,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3737,7 +3737,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -3777,7 +3777,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -3850,7 +3850,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, neg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -3883,7 +3883,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative(labelId, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(labelId, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3916,7 +3916,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3950,7 +3950,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative((byte*)plabelId, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -4017,7 +4017,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* ppos = &pos)
 				{
-					PlotErrorBarsNative(pStr0, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative(pStr0, xs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -4054,7 +4054,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -4093,7 +4093,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -4133,7 +4133,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -4206,7 +4206,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, (sbyte*)pxs, ys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -4244,7 +4244,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative(labelId, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(labelId, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -4283,7 +4283,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -4323,7 +4323,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative((byte*)plabelId, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -4396,7 +4396,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (sbyte* ppos = &pos)
 					{
-						PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotErrorBarsNative(pStr0, xs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -4439,7 +4439,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative(labelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -4484,7 +4484,7 @@ namespace Hexa.NET.ImPlot
 						{
 							fixed (sbyte* ppos = &pos)
 							{
-								PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+								PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 							}
 						}
 					}
@@ -4530,7 +4530,7 @@ namespace Hexa.NET.ImPlot
 						{
 							fixed (sbyte* ppos = &pos)
 							{
-								PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+								PlotErrorBarsNative((byte*)plabelId, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 							}
 						}
 					}
@@ -4609,7 +4609,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (sbyte* ppos = &pos)
 						{
-							PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotErrorBarsNative(pStr0, (sbyte*)pxs, (sbyte*)pys, (sbyte*)pneg, (sbyte*)ppos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 							if (pStrSize0 >= Utils.MaxStackallocSize)
 							{
 								Utils.Free(pStr0);
@@ -4646,7 +4646,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotErrorBars(byte* labelId, byte* xs, byte* ys, byte* neg, byte* pos, int count)
 		{
-			PlotErrorBarsNative(labelId, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotErrorBarsNative(labelId, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4667,7 +4667,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4689,7 +4689,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative((byte*)plabelId, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4744,7 +4744,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotErrorBarsNative(pStr0, xs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotErrorBarsNative(pStr0, xs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4769,7 +4769,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pxs = &xs)
 			{
-				PlotErrorBarsNative(labelId, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4796,7 +4796,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pxs = &xs)
 				{
-					PlotErrorBarsNative((byte*)plabelId, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4824,7 +4824,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pxs = &xs)
 				{
-					PlotErrorBarsNative((byte*)plabelId, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4885,7 +4885,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pxs = &xs)
 			{
-				PlotErrorBarsNative(pStr0, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, (byte*)pxs, ys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4911,7 +4911,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pys = &ys)
 			{
-				PlotErrorBarsNative(labelId, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(labelId, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4938,7 +4938,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pys = &ys)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4966,7 +4966,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pys = &ys)
 				{
-					PlotErrorBarsNative((byte*)plabelId, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotErrorBarsNative((byte*)plabelId, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -5027,7 +5027,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pys = &ys)
 			{
-				PlotErrorBarsNative(pStr0, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotErrorBarsNative(pStr0, xs, (byte*)pys, neg, pos, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);

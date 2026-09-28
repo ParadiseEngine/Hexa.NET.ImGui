@@ -1,4 +1,4 @@
-{
+﻿{
   "BaseConfig": {
     "Url": "file://config.base.json"
   },
@@ -30,7 +30,7 @@
     "sizeof(ImU32)": "sizeof(uint)",
     "sizeof(ImS64)": "sizeof(long)",
     "sizeof(ImU64)": "sizeof(ulong)",
-    "ImPlot3DSpec()": "new ImPlot3DSpec()"
+    "ImPlot3DSpec()": "global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default"
   },
   "IgnoredParts": [ "ImPlot3D" ],
   "Usings": [ "Hexa.NET.ImGui" ]

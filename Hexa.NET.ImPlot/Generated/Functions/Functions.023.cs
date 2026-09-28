@@ -24,7 +24,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShaded(byte* labelId, uint* xs, uint* ys1, uint* ys2, int count)
 		{
-			PlotShadedNative(labelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedNative(labelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -45,7 +45,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -67,7 +67,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -122,7 +122,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedNative(pStr0, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedNative(pStr0, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -147,7 +147,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pxs = &xs)
 			{
-				PlotShadedNative(labelId, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -174,7 +174,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -202,7 +202,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -263,7 +263,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pxs = &xs)
 			{
-				PlotShadedNative(pStr0, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, (uint*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -289,7 +289,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pys1 = &ys1)
 			{
-				PlotShadedNative(labelId, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -316,7 +316,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys1 = &ys1)
 				{
-					PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -344,7 +344,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys1 = &ys1)
 				{
-					PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -405,7 +405,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pys1 = &ys1)
 			{
-				PlotShadedNative(pStr0, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, xs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -436,7 +436,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys1 = &ys1)
 				{
-					PlotShadedNative(labelId, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -469,7 +469,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys1 = &ys1)
 					{
-						PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -503,7 +503,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys1 = &ys1)
 					{
-						PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -570,7 +570,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys1 = &ys1)
 				{
-					PlotShadedNative(pStr0, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, (uint*)pxs, (uint*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -597,7 +597,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pys2 = &ys2)
 			{
-				PlotShadedNative(labelId, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -624,7 +624,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys2 = &ys2)
 				{
-					PlotShadedNative((byte*)plabelId, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -652,7 +652,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys2 = &ys2)
 				{
-					PlotShadedNative((byte*)plabelId, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -713,7 +713,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pys2 = &ys2)
 			{
-				PlotShadedNative(pStr0, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, xs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -744,7 +744,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys2 = &ys2)
 				{
-					PlotShadedNative(labelId, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -777,7 +777,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -811,7 +811,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -878,7 +878,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys2 = &ys2)
 				{
-					PlotShadedNative(pStr0, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, (uint*)pxs, ys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -910,7 +910,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys2 = &ys2)
 				{
-					PlotShadedNative(labelId, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -943,7 +943,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -977,7 +977,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1044,7 +1044,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pys2 = &ys2)
 				{
-					PlotShadedNative(pStr0, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, xs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1081,7 +1081,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys2 = &ys2)
 					{
-						PlotShadedNative(labelId, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative(labelId, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1120,7 +1120,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (uint* pys2 = &ys2)
 						{
-							PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1160,7 +1160,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (uint* pys2 = &ys2)
 						{
-							PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotShadedNative((byte*)plabelId, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -1233,7 +1233,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (uint* pys2 = &ys2)
 					{
-						PlotShadedNative(pStr0, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative(pStr0, (uint*)pxs, (uint*)pys1, (uint*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -1269,7 +1269,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShaded(byte* labelId, long* xs, long* ys1, long* ys2, int count)
 		{
-			PlotShadedNative(labelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedNative(labelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1290,7 +1290,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1312,7 +1312,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1367,7 +1367,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedNative(pStr0, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedNative(pStr0, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1392,7 +1392,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (long* pxs = &xs)
 			{
-				PlotShadedNative(labelId, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1419,7 +1419,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pxs = &xs)
 				{
-					PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1447,7 +1447,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pxs = &xs)
 				{
-					PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1508,7 +1508,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (long* pxs = &xs)
 			{
-				PlotShadedNative(pStr0, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, (long*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1534,7 +1534,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (long* pys1 = &ys1)
 			{
-				PlotShadedNative(labelId, xs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, xs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1561,7 +1561,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys1 = &ys1)
 				{
-					PlotShadedNative((byte*)plabelId, xs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1589,7 +1589,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys1 = &ys1)
 				{
-					PlotShadedNative((byte*)plabelId, xs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1650,7 +1650,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (long* pys1 = &ys1)
 			{
-				PlotShadedNative(pStr0, xs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, xs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1681,7 +1681,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys1 = &ys1)
 				{
-					PlotShadedNative(labelId, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1714,7 +1714,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys1 = &ys1)
 					{
-						PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1748,7 +1748,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys1 = &ys1)
 					{
-						PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -1815,7 +1815,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys1 = &ys1)
 				{
-					PlotShadedNative(pStr0, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, (long*)pxs, (long*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1842,7 +1842,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (long* pys2 = &ys2)
 			{
-				PlotShadedNative(labelId, xs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, xs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1869,7 +1869,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys2 = &ys2)
 				{
-					PlotShadedNative((byte*)plabelId, xs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1897,7 +1897,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys2 = &ys2)
 				{
-					PlotShadedNative((byte*)plabelId, xs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1958,7 +1958,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (long* pys2 = &ys2)
 			{
-				PlotShadedNative(pStr0, xs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, xs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1989,7 +1989,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys2 = &ys2)
 				{
-					PlotShadedNative(labelId, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2022,7 +2022,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2056,7 +2056,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2123,7 +2123,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys2 = &ys2)
 				{
-					PlotShadedNative(pStr0, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, (long*)pxs, ys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2155,7 +2155,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys2 = &ys2)
 				{
-					PlotShadedNative(labelId, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2188,7 +2188,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2222,7 +2222,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2289,7 +2289,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (long* pys2 = &ys2)
 				{
-					PlotShadedNative(pStr0, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, xs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2326,7 +2326,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys2 = &ys2)
 					{
-						PlotShadedNative(labelId, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative(labelId, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2365,7 +2365,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (long* pys2 = &ys2)
 						{
-							PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -2405,7 +2405,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (long* pys2 = &ys2)
 						{
-							PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotShadedNative((byte*)plabelId, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -2478,7 +2478,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (long* pys2 = &ys2)
 					{
-						PlotShadedNative(pStr0, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative(pStr0, (long*)pxs, (long*)pys1, (long*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -2514,7 +2514,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShaded(byte* labelId, ulong* xs, ulong* ys1, ulong* ys2, int count)
 		{
-			PlotShadedNative(labelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedNative(labelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2535,7 +2535,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2557,7 +2557,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative((byte*)plabelId, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2612,7 +2612,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedNative(pStr0, xs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedNative(pStr0, xs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2637,7 +2637,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ulong* pxs = &xs)
 			{
-				PlotShadedNative(labelId, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2664,7 +2664,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pxs = &xs)
 				{
-					PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2692,7 +2692,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pxs = &xs)
 				{
-					PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2753,7 +2753,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ulong* pxs = &xs)
 			{
-				PlotShadedNative(pStr0, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, (ulong*)pxs, ys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2779,7 +2779,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ulong* pys1 = &ys1)
 			{
-				PlotShadedNative(labelId, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2806,7 +2806,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys1 = &ys1)
 				{
-					PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2834,7 +2834,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys1 = &ys1)
 				{
-					PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2895,7 +2895,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ulong* pys1 = &ys1)
 			{
-				PlotShadedNative(pStr0, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, xs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2926,7 +2926,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys1 = &ys1)
 				{
-					PlotShadedNative(labelId, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2959,7 +2959,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys1 = &ys1)
 					{
-						PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -2993,7 +2993,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys1 = &ys1)
 					{
-						PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3060,7 +3060,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys1 = &ys1)
 				{
-					PlotShadedNative(pStr0, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, (ulong*)pxs, (ulong*)pys1, ys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3087,7 +3087,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ulong* pys2 = &ys2)
 			{
-				PlotShadedNative(labelId, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(labelId, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3114,7 +3114,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys2 = &ys2)
 				{
-					PlotShadedNative((byte*)plabelId, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3142,7 +3142,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys2 = &ys2)
 				{
-					PlotShadedNative((byte*)plabelId, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative((byte*)plabelId, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3203,7 +3203,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ulong* pys2 = &ys2)
 			{
-				PlotShadedNative(pStr0, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedNative(pStr0, xs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3234,7 +3234,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys2 = &ys2)
 				{
-					PlotShadedNative(labelId, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3267,7 +3267,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3301,7 +3301,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3368,7 +3368,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys2 = &ys2)
 				{
-					PlotShadedNative(pStr0, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, (ulong*)pxs, ys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3400,7 +3400,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys2 = &ys2)
 				{
-					PlotShadedNative(labelId, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(labelId, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3433,7 +3433,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3467,7 +3467,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys2 = &ys2)
 					{
-						PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative((byte*)plabelId, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3534,7 +3534,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ulong* pys2 = &ys2)
 				{
-					PlotShadedNative(pStr0, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+					PlotShadedNative(pStr0, xs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3571,7 +3571,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys2 = &ys2)
 					{
-						PlotShadedNative(labelId, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative(labelId, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 					}
 				}
 			}
@@ -3610,7 +3610,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (ulong* pys2 = &ys2)
 						{
-							PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -3650,7 +3650,7 @@ namespace Hexa.NET.ImPlot
 					{
 						fixed (ulong* pys2 = &ys2)
 						{
-							PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+							PlotShadedNative((byte*)plabelId, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						}
 					}
 				}
@@ -3723,7 +3723,7 @@ namespace Hexa.NET.ImPlot
 				{
 					fixed (ulong* pys2 = &ys2)
 					{
-						PlotShadedNative(pStr0, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(new ImPlotSpec()));
+						PlotShadedNative(pStr0, (ulong*)pxs, (ulong*)pys1, (ulong*)pys2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -3759,7 +3759,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, delegate*<void*, int, ImPlotPoint*, void*> getter1, void* data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, getter1, data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, getter1, data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3780,7 +3780,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3802,7 +3802,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3857,7 +3857,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, getter1, data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, getter1, data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3877,7 +3877,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, ImPlotPointGetter getter1, void* data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3898,7 +3898,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3920,7 +3920,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3975,7 +3975,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3995,7 +3995,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, delegate*<void*, int, ImPlotPoint*, void*> getter1, nint data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4016,7 +4016,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4038,7 +4038,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4093,7 +4093,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, getter1, (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4113,7 +4113,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, ImPlotPointGetter getter1, nint data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4134,7 +4134,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4156,7 +4156,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4211,7 +4211,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, getter2, data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4231,7 +4231,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, delegate*<void*, int, ImPlotPoint*, void*> getter1, void* data1, ImPlotPointGetter getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4252,7 +4252,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4274,7 +4274,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4329,7 +4329,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, getter1, data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4349,7 +4349,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, ImPlotPointGetter getter1, void* data1, ImPlotPointGetter getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4370,7 +4370,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4392,7 +4392,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4447,7 +4447,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4467,7 +4467,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, delegate*<void*, int, ImPlotPoint*, void*> getter1, nint data1, ImPlotPointGetter getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4488,7 +4488,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4510,7 +4510,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4565,7 +4565,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, getter1, (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4585,7 +4585,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, ImPlotPointGetter getter1, nint data1, ImPlotPointGetter getter2, void* data2, int count)
 		{
-			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4606,7 +4606,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4628,7 +4628,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4683,7 +4683,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), (void*)data1, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter2), data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4703,7 +4703,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, delegate*<void*, int, ImPlotPoint*, void*> getter1, void* data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, nint data2, int count)
 		{
-			PlotShadedGNative(labelId, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4724,7 +4724,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4746,7 +4746,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4801,7 +4801,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, getter1, data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4821,7 +4821,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, ImPlotPointGetter getter1, void* data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, nint data2, int count)
 		{
-			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4842,7 +4842,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4864,7 +4864,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4919,7 +4919,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, (delegate*<void*, int, ImPlotPoint*, void*>)Utils.GetFunctionPointerForDelegate(getter1), data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4939,7 +4939,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotShadedG(byte* labelId, delegate*<void*, int, ImPlotPoint*, void*> getter1, nint data1, delegate*<void*, int, ImPlotPoint*, void*> getter2, nint data2, int count)
 		{
-			PlotShadedGNative(labelId, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(labelId, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4960,7 +4960,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4982,7 +4982,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+				PlotShadedGNative((byte*)plabelId, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -5037,7 +5037,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotShadedGNative(pStr0, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(new ImPlotSpec()));
+			PlotShadedGNative(pStr0, getter1, (void*)data1, getter2, (void*)data2, count, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);

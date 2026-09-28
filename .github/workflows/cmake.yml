@@ -108,8 +108,7 @@ jobs:
     with:
       lib-name: cimplot3d
       repo: JunaMeinhold/cimplot3d
-      # Pinned to the cimplot3d commit the shipped natives were built from (ImPlot3D 0.4). Note that
-      # Generator/cimplot3d still describes ImPlot3D 0.3 WIP (dc046a1).
+      # Pinned to the cimplot3d commit Generator/cimplot3d was generated from (ImPlot3D 0.4).
       repo-tag: a6fb3a5ae461fd3af3a594a729b944b446571d1b
       # Single-config generators (Linux, macOS, Android) otherwise compile at -O0; MSVC Release uses /O2.
       cmake-flags: -DCMAKE_BUILD_TYPE=Release -DIMGUI_WCHAR32=ON -DIMGUI_FREETYPE=ON -DCIMGUI_VARGS0=1

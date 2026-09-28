@@ -28,7 +28,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (double*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (double*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -131,7 +131,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (double*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (double*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -163,7 +163,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (double*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (double*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -195,7 +195,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (double*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (double*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -227,7 +227,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (double*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (double*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -357,7 +357,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, sbyte* values, int count, double reference, double scale, double start)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -365,7 +365,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, sbyte* values, int count, double reference, double scale)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -373,7 +373,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, sbyte* values, int count, double reference)
 		{
-			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -381,7 +381,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, sbyte* values, int count)
 		{
-			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -426,7 +426,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -437,7 +437,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -448,7 +448,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -459,7 +459,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -514,7 +514,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -525,7 +525,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -536,7 +536,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -547,7 +547,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -635,7 +635,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -664,7 +664,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -693,7 +693,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -722,7 +722,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -834,7 +834,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -845,7 +845,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -856,7 +856,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -867,7 +867,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -927,7 +927,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -941,7 +941,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -955,7 +955,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -969,7 +969,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1039,7 +1039,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1053,7 +1053,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1067,7 +1067,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1081,7 +1081,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1184,7 +1184,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (sbyte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1216,7 +1216,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (sbyte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1248,7 +1248,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (sbyte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1280,7 +1280,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (sbyte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1410,7 +1410,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, byte* values, int count, double reference, double scale, double start)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1418,7 +1418,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, byte* values, int count, double reference, double scale)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1426,7 +1426,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, byte* values, int count, double reference)
 		{
-			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1434,7 +1434,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, byte* values, int count)
 		{
-			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1479,7 +1479,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1490,7 +1490,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1501,7 +1501,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1512,7 +1512,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1567,7 +1567,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1578,7 +1578,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1589,7 +1589,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1600,7 +1600,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1688,7 +1688,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1717,7 +1717,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1746,7 +1746,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1775,7 +1775,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1887,7 +1887,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1898,7 +1898,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1909,7 +1909,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1920,7 +1920,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1980,7 +1980,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1994,7 +1994,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2008,7 +2008,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2022,7 +2022,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2092,7 +2092,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2106,7 +2106,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2120,7 +2120,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2134,7 +2134,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2237,7 +2237,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (byte*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2269,7 +2269,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (byte*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2301,7 +2301,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (byte*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2333,7 +2333,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (byte*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2463,7 +2463,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, short* values, int count, double reference, double scale, double start)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2471,7 +2471,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, short* values, int count, double reference, double scale)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2479,7 +2479,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, short* values, int count, double reference)
 		{
-			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2487,7 +2487,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, short* values, int count)
 		{
-			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2532,7 +2532,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2543,7 +2543,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2554,7 +2554,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2565,7 +2565,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2620,7 +2620,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2631,7 +2631,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2642,7 +2642,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2653,7 +2653,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2741,7 +2741,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2770,7 +2770,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2799,7 +2799,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2828,7 +2828,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2940,7 +2940,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2951,7 +2951,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2962,7 +2962,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2973,7 +2973,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3033,7 +3033,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3047,7 +3047,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3061,7 +3061,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3075,7 +3075,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3145,7 +3145,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3159,7 +3159,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3173,7 +3173,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3187,7 +3187,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3290,7 +3290,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (short*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3322,7 +3322,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (short*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3354,7 +3354,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (short*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3386,7 +3386,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (short*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3516,7 +3516,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, ushort* values, int count, double reference, double scale, double start)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3524,7 +3524,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, ushort* values, int count, double reference, double scale)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3532,7 +3532,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, ushort* values, int count, double reference)
 		{
-			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3540,7 +3540,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, ushort* values, int count)
 		{
-			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3585,7 +3585,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3596,7 +3596,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3607,7 +3607,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3618,7 +3618,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3673,7 +3673,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3684,7 +3684,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3695,7 +3695,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3706,7 +3706,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3794,7 +3794,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3823,7 +3823,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3852,7 +3852,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3881,7 +3881,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3993,7 +3993,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4004,7 +4004,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4015,7 +4015,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4026,7 +4026,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(labelId, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(labelId, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4086,7 +4086,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4100,7 +4100,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4114,7 +4114,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4128,7 +4128,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4198,7 +4198,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4212,7 +4212,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4226,7 +4226,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4240,7 +4240,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStemsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4343,7 +4343,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (ushort*)pvalues, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4375,7 +4375,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (ushort*)pvalues, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4407,7 +4407,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (ushort*)pvalues, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4439,7 +4439,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStemsNative(pStr0, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative(pStr0, (ushort*)pvalues, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4569,7 +4569,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, int* values, int count, double reference, double scale, double start)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4577,7 +4577,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, int* values, int count, double reference, double scale)
 		{
-			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4585,7 +4585,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, int* values, int count, double reference)
 		{
-			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4593,7 +4593,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStems(byte* labelId, int* values, int count)
 		{
-			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(labelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4638,7 +4638,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4649,7 +4649,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4660,7 +4660,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4671,7 +4671,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4726,7 +4726,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4737,7 +4737,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4748,7 +4748,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4759,7 +4759,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStemsNative((byte*)plabelId, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4847,7 +4847,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, start, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4876,7 +4876,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, scale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4905,7 +4905,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, reference, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4934,7 +4934,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStemsNative(pStr0, values, count, (double)(0), (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);

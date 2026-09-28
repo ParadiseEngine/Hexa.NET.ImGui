@@ -26,7 +26,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -37,7 +37,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -48,7 +48,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -122,7 +122,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -136,7 +136,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -150,7 +150,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -259,7 +259,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -296,7 +296,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -333,7 +333,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -370,7 +370,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -506,7 +506,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, ImPlotFormatter fmt, void* fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -514,7 +514,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, ImPlotFormatter fmt, void* fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -522,7 +522,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, ImPlotFormatter fmt)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -530,7 +530,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, ImPlotFormatter fmt, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -575,7 +575,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -586,7 +586,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -597,7 +597,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -608,7 +608,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -702,7 +702,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -736,7 +736,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -770,7 +770,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -804,7 +804,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -935,7 +935,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -946,7 +946,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -957,7 +957,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -968,7 +968,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1028,7 +1028,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1042,7 +1042,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1056,7 +1056,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1070,7 +1070,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1179,7 +1179,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -1216,7 +1216,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -1253,7 +1253,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -1290,7 +1290,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -1426,7 +1426,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, nint fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1434,7 +1434,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, nint fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1463,7 +1463,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1474,7 +1474,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1546,7 +1546,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -1580,7 +1580,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -1643,7 +1643,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1654,7 +1654,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1692,7 +1692,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1706,7 +1706,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1787,7 +1787,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -1824,7 +1824,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -1886,7 +1886,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, ImPlotFormatter fmt, nint fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1894,7 +1894,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, int* values, int count, double x, double y, double radius, ImPlotFormatter fmt, nint fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1923,7 +1923,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1934,7 +1934,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2006,7 +2006,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -2040,7 +2040,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -2103,7 +2103,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2114,7 +2114,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2152,7 +2152,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2166,7 +2166,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2247,7 +2247,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -2284,7 +2284,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (int* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (int*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -2359,7 +2359,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, void* fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2367,7 +2367,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, void* fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2375,7 +2375,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2383,7 +2383,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2428,7 +2428,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2439,7 +2439,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2450,7 +2450,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2461,7 +2461,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2555,7 +2555,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -2589,7 +2589,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -2623,7 +2623,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -2657,7 +2657,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -2788,7 +2788,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2799,7 +2799,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2810,7 +2810,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2821,7 +2821,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2881,7 +2881,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2895,7 +2895,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2909,7 +2909,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2923,7 +2923,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3032,7 +3032,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -3069,7 +3069,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -3106,7 +3106,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -3143,7 +3143,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -3279,7 +3279,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, ImPlotFormatter fmt, void* fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3287,7 +3287,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, ImPlotFormatter fmt, void* fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3295,7 +3295,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, ImPlotFormatter fmt)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3303,7 +3303,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, ImPlotFormatter fmt, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3348,7 +3348,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3359,7 +3359,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3370,7 +3370,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3381,7 +3381,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3475,7 +3475,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -3509,7 +3509,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -3543,7 +3543,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -3577,7 +3577,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -3708,7 +3708,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3719,7 +3719,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3730,7 +3730,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3741,7 +3741,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3801,7 +3801,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3815,7 +3815,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3829,7 +3829,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3843,7 +3843,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3952,7 +3952,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -3989,7 +3989,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -4026,7 +4026,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -4063,7 +4063,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)(default), angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -4199,7 +4199,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, nint fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4207,7 +4207,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, delegate*<double, byte*, int, void*, int> fmt, nint fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4236,7 +4236,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4247,7 +4247,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4319,7 +4319,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -4353,7 +4353,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -4416,7 +4416,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4427,7 +4427,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4465,7 +4465,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4479,7 +4479,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4560,7 +4560,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -4597,7 +4597,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, fmt, (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);
@@ -4659,7 +4659,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, ImPlotFormatter fmt, nint fmtData, double angle0)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4667,7 +4667,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotPieChart(byte** labelIds, uint* values, int count, double x, double y, double radius, ImPlotFormatter fmt, nint fmtData)
 		{
-			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(labelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4696,7 +4696,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4707,7 +4707,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte** plabelIds = &labelIds)
 			{
-				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative((byte**)plabelIds, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4779,7 +4779,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -4813,7 +4813,7 @@ namespace Hexa.NET.ImPlot
 			{
 				pStrArray0[i] = (byte*)Utils.StringToUTF8Ptr(labelIds[i]);
 			}
-			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+			PlotPieChartNative(pStrArray0, values, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			for (int i = 0; i < labelIds.Length; i++)
 			{
 				Utils.Free(pStrArray0[i]);
@@ -4876,7 +4876,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4887,7 +4887,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(labelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4925,7 +4925,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4939,7 +4939,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (uint* pvalues = &values)
 				{
-					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(new ImPlotSpec()));
+					PlotPieChartNative((byte**)plabelIds, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, (double)(90), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -5020,7 +5020,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (uint* pvalues = &values)
 			{
-				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(new ImPlotSpec()));
+				PlotPieChartNative(pStrArray0, (uint*)pvalues, count, x, y, radius, (delegate*<double, byte*, int, void*, int>)Utils.GetFunctionPointerForDelegate(fmt), (void*)fmtData, angle0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				for (int i = 0; i < labelIds.Length; i++)
 				{
 					Utils.Free(pStrArray0[i]);

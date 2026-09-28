@@ -41,7 +41,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pxs = &xs)
 			{
-				PlotSurfaceNative(labelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -54,7 +54,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pxs = &xs)
 			{
-				PlotSurfaceNative(labelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -67,7 +67,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pxs = &xs)
 			{
-				PlotSurfaceNative(labelId, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -124,7 +124,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -140,7 +140,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -156,7 +156,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -220,7 +220,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -236,7 +236,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -252,7 +252,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -349,7 +349,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pxs = &xs)
 			{
-				PlotSurfaceNative(pStr0, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, (int*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -383,7 +383,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pxs = &xs)
 			{
-				PlotSurfaceNative(pStr0, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, (int*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -417,7 +417,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pxs = &xs)
 			{
-				PlotSurfaceNative(pStr0, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, (int*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -515,7 +515,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pys = &ys)
 			{
-				PlotSurfaceNative(labelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -528,7 +528,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pys = &ys)
 			{
-				PlotSurfaceNative(labelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -541,7 +541,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pys = &ys)
 			{
-				PlotSurfaceNative(labelId, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -598,7 +598,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -614,7 +614,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -630,7 +630,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -694,7 +694,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -710,7 +710,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -726,7 +726,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -823,7 +823,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pys = &ys)
 			{
-				PlotSurfaceNative(pStr0, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -857,7 +857,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pys = &ys)
 			{
-				PlotSurfaceNative(pStr0, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -891,7 +891,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pys = &ys)
 			{
-				PlotSurfaceNative(pStr0, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -994,7 +994,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1010,7 +1010,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1026,7 +1026,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1095,7 +1095,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pys = &ys)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -1114,7 +1114,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pys = &ys)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -1133,7 +1133,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pys = &ys)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -1209,7 +1209,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pys = &ys)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -1228,7 +1228,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pys = &ys)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -1247,7 +1247,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pys = &ys)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -1356,7 +1356,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1393,7 +1393,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1430,7 +1430,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pys = &ys)
 				{
-					PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -1535,7 +1535,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pzs = &zs)
 			{
-				PlotSurfaceNative(labelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1548,7 +1548,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pzs = &zs)
 			{
-				PlotSurfaceNative(labelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1561,7 +1561,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (int* pzs = &zs)
 			{
-				PlotSurfaceNative(labelId, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1618,7 +1618,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1634,7 +1634,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1650,7 +1650,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1714,7 +1714,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1730,7 +1730,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1746,7 +1746,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -1843,7 +1843,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pzs = &zs)
 			{
-				PlotSurfaceNative(pStr0, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1877,7 +1877,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pzs = &zs)
 			{
-				PlotSurfaceNative(pStr0, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1911,7 +1911,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (int* pzs = &zs)
 			{
-				PlotSurfaceNative(pStr0, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2014,7 +2014,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(labelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -2030,7 +2030,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(labelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -2046,7 +2046,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(labelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -2115,7 +2115,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2134,7 +2134,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2153,7 +2153,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2229,7 +2229,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2248,7 +2248,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2267,7 +2267,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2376,7 +2376,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(pStr0, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2413,7 +2413,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(pStr0, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, (int*)pxs, ys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2450,7 +2450,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(pStr0, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, (int*)pxs, ys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2560,7 +2560,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(labelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -2576,7 +2576,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(labelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -2592,7 +2592,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(labelId, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(labelId, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -2661,7 +2661,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2680,7 +2680,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2699,7 +2699,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2775,7 +2775,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2794,7 +2794,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2813,7 +2813,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative((byte*)plabelId, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -2922,7 +2922,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(pStr0, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2959,7 +2959,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(pStr0, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, xs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -2996,7 +2996,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (int* pzs = &zs)
 				{
-					PlotSurfaceNative(pStr0, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative(pStr0, xs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					if (pStrSize0 >= Utils.MaxStackallocSize)
 					{
 						Utils.Free(pStr0);
@@ -3111,7 +3111,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -3130,7 +3130,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -3149,7 +3149,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative(labelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 					}
 				}
 			}
@@ -3230,7 +3230,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (int* pzs = &zs)
 						{
-							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						}
 					}
 				}
@@ -3252,7 +3252,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (int* pzs = &zs)
 						{
-							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						}
 					}
 				}
@@ -3274,7 +3274,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (int* pzs = &zs)
 						{
-							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						}
 					}
 				}
@@ -3362,7 +3362,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (int* pzs = &zs)
 						{
-							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						}
 					}
 				}
@@ -3384,7 +3384,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (int* pzs = &zs)
 						{
-							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						}
 					}
 				}
@@ -3406,7 +3406,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (int* pzs = &zs)
 						{
-							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotSurfaceNative((byte*)plabelId, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						}
 					}
 				}
@@ -3527,7 +3527,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -3567,7 +3567,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -3607,7 +3607,7 @@ namespace Hexa.NET.ImPlot3D
 				{
 					fixed (int* pzs = &zs)
 					{
-						PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+						PlotSurfaceNative(pStr0, (int*)pxs, (int*)pys, (int*)pzs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 						if (pStrSize0 >= Utils.MaxStackallocSize)
 						{
 							Utils.Free(pStr0);
@@ -3706,9 +3706,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PlotSurfaceNative([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* zs, [NativeName(NativeNameType.Param, "x_count")] [NativeName(NativeNameType.Type, "int")] int xCount, [NativeName(NativeNameType.Param, "y_count")] [NativeName(NativeNameType.Type, "int")] int yCount, [NativeName(NativeNameType.Param, "scale_min")] [NativeName(NativeNameType.Type, "double")] double scaleMin, [NativeName(NativeNameType.Param, "scale_max")] [NativeName(NativeNameType.Type, "double")] double scaleMax, [NativeName(NativeNameType.Param, "spec")] [NativeName(NativeNameType.Type, "ImPlot3DSpec_c const")] ImPlot3DSpec spec)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, uint*, uint*, uint*, int, int, double, double, ImPlot3DSpec, void>)funcTable[86])(labelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, spec);
+			((delegate* unmanaged[Cdecl]<byte*, uint*, uint*, uint*, int, int, double, double, ImPlot3DSpec, void>)funcTable[89])(labelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, spec);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, nint, nint, nint, int, int, double, double, ImPlot3DSpec, void>)funcTable[86])((nint)labelId, (nint)xs, (nint)ys, (nint)zs, xCount, yCount, scaleMin, scaleMax, spec);
+			((delegate* unmanaged[Cdecl]<nint, nint, nint, nint, int, int, double, double, ImPlot3DSpec, void>)funcTable[89])((nint)labelId, (nint)xs, (nint)ys, (nint)zs, xCount, yCount, scaleMin, scaleMax, spec);
 			#endif
 		}
 
@@ -3729,7 +3729,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotSurface([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* zs, [NativeName(NativeNameType.Param, "x_count")] [NativeName(NativeNameType.Type, "int")] int xCount, [NativeName(NativeNameType.Param, "y_count")] [NativeName(NativeNameType.Type, "int")] int yCount, [NativeName(NativeNameType.Param, "scale_min")] [NativeName(NativeNameType.Type, "double")] double scaleMin, [NativeName(NativeNameType.Param, "scale_max")] [NativeName(NativeNameType.Type, "double")] double scaleMax)
 		{
-			PlotSurfaceNative(labelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotSurfaceNative(labelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -3739,7 +3739,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotSurface([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* zs, [NativeName(NativeNameType.Param, "x_count")] [NativeName(NativeNameType.Type, "int")] int xCount, [NativeName(NativeNameType.Param, "y_count")] [NativeName(NativeNameType.Type, "int")] int yCount, [NativeName(NativeNameType.Param, "scale_min")] [NativeName(NativeNameType.Type, "double")] double scaleMin)
 		{
-			PlotSurfaceNative(labelId, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotSurfaceNative(labelId, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -3749,7 +3749,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotSurface([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "xs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* xs, [NativeName(NativeNameType.Param, "ys")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* ys, [NativeName(NativeNameType.Param, "zs")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* zs, [NativeName(NativeNameType.Param, "x_count")] [NativeName(NativeNameType.Type, "int")] int xCount, [NativeName(NativeNameType.Param, "y_count")] [NativeName(NativeNameType.Type, "int")] int yCount)
 		{
-			PlotSurfaceNative(labelId, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotSurfaceNative(labelId, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -3794,7 +3794,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3807,7 +3807,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3820,7 +3820,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3872,7 +3872,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3885,7 +3885,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3898,7 +3898,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative((byte*)plabelId, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3983,7 +3983,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotSurfaceNative(pStr0, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotSurfaceNative(pStr0, xs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4014,7 +4014,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotSurfaceNative(pStr0, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotSurfaceNative(pStr0, xs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4045,7 +4045,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotSurfaceNative(pStr0, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotSurfaceNative(pStr0, xs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4136,7 +4136,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (uint* pxs = &xs)
 			{
-				PlotSurfaceNative(labelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -4149,7 +4149,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (uint* pxs = &xs)
 			{
-				PlotSurfaceNative(labelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -4162,7 +4162,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (uint* pxs = &xs)
 			{
-				PlotSurfaceNative(labelId, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -4219,7 +4219,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4235,7 +4235,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4251,7 +4251,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4315,7 +4315,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4331,7 +4331,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4347,7 +4347,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pxs = &xs)
 				{
-					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4444,7 +4444,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (uint* pxs = &xs)
 			{
-				PlotSurfaceNative(pStr0, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4478,7 +4478,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (uint* pxs = &xs)
 			{
-				PlotSurfaceNative(pStr0, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, (uint*)pxs, ys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4512,7 +4512,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (uint* pxs = &xs)
 			{
-				PlotSurfaceNative(pStr0, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, (uint*)pxs, ys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4610,7 +4610,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (uint* pys = &ys)
 			{
-				PlotSurfaceNative(labelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -4623,7 +4623,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (uint* pys = &ys)
 			{
-				PlotSurfaceNative(labelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -4636,7 +4636,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (uint* pys = &ys)
 			{
-				PlotSurfaceNative(labelId, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(labelId, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -4693,7 +4693,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4709,7 +4709,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4725,7 +4725,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4789,7 +4789,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4805,7 +4805,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4821,7 +4821,7 @@ namespace Hexa.NET.ImPlot3D
 			{
 				fixed (uint* pys = &ys)
 				{
-					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+					PlotSurfaceNative((byte*)plabelId, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				}
 			}
 		}
@@ -4918,7 +4918,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (uint* pys = &ys)
 			{
-				PlotSurfaceNative(pStr0, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, (uint*)pys, zs, xCount, yCount, scaleMin, scaleMax, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4952,7 +4952,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (uint* pys = &ys)
 			{
-				PlotSurfaceNative(pStr0, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, (uint*)pys, zs, xCount, yCount, scaleMin, (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4986,7 +4986,7 @@ namespace Hexa.NET.ImPlot3D
 			}
 			fixed (uint* pys = &ys)
 			{
-				PlotSurfaceNative(pStr0, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotSurfaceNative(pStr0, xs, (uint*)pys, zs, xCount, yCount, (double)(0.0), (double)(0.0), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);

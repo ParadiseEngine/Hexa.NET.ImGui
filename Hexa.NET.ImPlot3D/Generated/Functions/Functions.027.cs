@@ -36,7 +36,7 @@ namespace Hexa.NET.ImPlot3D
 						{
 							fixed (uint* pidxs = &idxs)
 							{
-								PlotMeshNative((byte*)plabelId, (ulong*)pvtxXs, (ulong*)pvtxYs, (ulong*)pvtxZs, (uint*)pidxs, vtxCount, idxCount, (ImPlot3DSpec)(new ImPlot3DSpec()));
+								PlotMeshNative((byte*)plabelId, (ulong*)pvtxXs, (ulong*)pvtxYs, (ulong*)pvtxZs, (uint*)pidxs, vtxCount, idxCount, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 							}
 						}
 					}
@@ -119,7 +119,7 @@ namespace Hexa.NET.ImPlot3D
 					{
 						fixed (uint* pidxs = &idxs)
 						{
-							PlotMeshNative(pStr0, (ulong*)pvtxXs, (ulong*)pvtxYs, (ulong*)pvtxZs, (uint*)pidxs, vtxCount, idxCount, (ImPlot3DSpec)(new ImPlot3DSpec()));
+							PlotMeshNative(pStr0, (ulong*)pvtxXs, (ulong*)pvtxYs, (ulong*)pvtxZs, (uint*)pidxs, vtxCount, idxCount, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 							if (pStrSize0 >= Utils.MaxStackallocSize)
 							{
 								Utils.Free(pStr0);
@@ -144,9 +144,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PlotImageNative([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol, [NativeName(NativeNameType.Param, "spec")] [NativeName(NativeNameType.Type, "ImPlot3DSpec_c const")] ImPlot3DSpec spec)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[99])(labelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, spec);
+			((delegate* unmanaged[Cdecl]<byte*, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[102])(labelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, spec);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[99])((nint)labelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, spec);
+			((delegate* unmanaged[Cdecl]<nint, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[102])((nint)labelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, spec);
 			#endif
 		}
 
@@ -177,7 +177,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -192,7 +192,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1)
 		{
-			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -207,7 +207,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0)
 		{
-			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -222,7 +222,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV)
 		{
-			PlotImageNative(labelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -237,7 +237,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -252,7 +252,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "center")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint center, [NativeName(NativeNameType.Param, "axis_u")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisU, [NativeName(NativeNameType.Param, "axis_v")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axisV, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -362,7 +362,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -380,7 +380,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -398,7 +398,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -416,7 +416,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -434,7 +434,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -452,7 +452,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -578,7 +578,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -596,7 +596,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -614,7 +614,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -632,7 +632,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -650,7 +650,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -668,7 +668,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -827,7 +827,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, uv1, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -863,7 +863,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -899,7 +899,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -935,7 +935,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -971,7 +971,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, center, axisU, axisV, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1007,7 +1007,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, center, axisU, axisV, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1208,9 +1208,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PlotImageNative([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "uv2")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv2, [NativeName(NativeNameType.Param, "uv3")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv3, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol, [NativeName(NativeNameType.Param, "spec")] [NativeName(NativeNameType.Type, "ImPlot3DSpec_c const")] ImPlot3DSpec spec)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[100])(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, spec);
+			((delegate* unmanaged[Cdecl]<byte*, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[103])(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, spec);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[100])((nint)labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, spec);
+			((delegate* unmanaged[Cdecl]<nint, ImTextureRef, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint, Vector2, Vector2, Vector2, Vector2, Vector4, ImPlot3DSpec, void>)funcTable[103])((nint)labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, spec);
 			#endif
 		}
 
@@ -1239,7 +1239,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "uv2")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv2, [NativeName(NativeNameType.Param, "uv3")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv3, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1253,7 +1253,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "uv2")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv2, [NativeName(NativeNameType.Param, "uv3")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv3)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1267,7 +1267,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "uv2")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv2)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1281,7 +1281,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1295,7 +1295,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1309,7 +1309,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1323,7 +1323,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "uv2")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv2, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1337,7 +1337,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "uv1")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv1, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1351,7 +1351,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "uv0")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 uv0, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1365,7 +1365,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotImage([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "tex_ref")] [NativeName(NativeNameType.Type, "ImTextureRef_c")] ImTextureRef texRef, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p2")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p2, [NativeName(NativeNameType.Param, "p3")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p3, [NativeName(NativeNameType.Param, "tint_col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 tintCol)
 		{
-			PlotImageNative(labelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(labelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -1524,7 +1524,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1541,7 +1541,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1558,7 +1558,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1575,7 +1575,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1592,7 +1592,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1609,7 +1609,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1626,7 +1626,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1643,7 +1643,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1660,7 +1660,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1677,7 +1677,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1864,7 +1864,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1881,7 +1881,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1898,7 +1898,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1915,7 +1915,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1932,7 +1932,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1949,7 +1949,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1966,7 +1966,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -1983,7 +1983,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -2000,7 +2000,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -2017,7 +2017,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotImageNative((byte*)plabelId, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -2237,7 +2237,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2272,7 +2272,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, uv3, (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2307,7 +2307,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2342,7 +2342,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2377,7 +2377,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2412,7 +2412,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2447,7 +2447,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, uv2, (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2482,7 +2482,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, uv1, (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2517,7 +2517,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, uv0, (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2552,7 +2552,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotImageNative(pStr0, texRef, p0, p1, p2, p3, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,0)), (Vector2)(new Vector2(1,1)), (Vector2)(new Vector2(0,1)), tintCol, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2883,9 +2883,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PlotTextNative([NativeName(NativeNameType.Param, "text")] [NativeName(NativeNameType.Type, "char const *")] byte* text, [NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "double")] double x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "double")] double y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "double")] double z, [NativeName(NativeNameType.Param, "angle")] [NativeName(NativeNameType.Type, "double")] double angle, [NativeName(NativeNameType.Param, "pix_offset")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 pixOffset)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, double, double, double, double, Vector2, void>)funcTable[101])(text, x, y, z, angle, pixOffset);
+			((delegate* unmanaged[Cdecl]<byte*, double, double, double, double, Vector2, void>)funcTable[104])(text, x, y, z, angle, pixOffset);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, double, double, double, double, Vector2, void>)funcTable[101])((nint)text, x, y, z, angle, pixOffset);
+			((delegate* unmanaged[Cdecl]<nint, double, double, double, double, Vector2, void>)funcTable[104])((nint)text, x, y, z, angle, pixOffset);
 			#endif
 		}
 
@@ -3166,9 +3166,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PlotDummyNative([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId, [NativeName(NativeNameType.Param, "spec")] [NativeName(NativeNameType.Type, "ImPlot3DSpec_c const")] ImPlot3DSpec spec)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, ImPlot3DSpec, void>)funcTable[102])(labelId, spec);
+			((delegate* unmanaged[Cdecl]<byte*, ImPlot3DSpec, void>)funcTable[105])(labelId, spec);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, ImPlot3DSpec, void>)funcTable[102])((nint)labelId, spec);
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DSpec, void>)funcTable[105])((nint)labelId, spec);
 			#endif
 		}
 
@@ -3189,7 +3189,7 @@ namespace Hexa.NET.ImPlot3D
 		[return: NativeName(NativeNameType.Type, "void")]
 		public static void PlotDummy([NativeName(NativeNameType.Param, "label_id")] [NativeName(NativeNameType.Type, "char const *")] byte* labelId)
 		{
-			PlotDummyNative(labelId, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotDummyNative(labelId, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 		}
 
 		/// <summary>
@@ -3214,7 +3214,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotDummyNative((byte*)plabelId, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotDummyNative((byte*)plabelId, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3240,7 +3240,7 @@ namespace Hexa.NET.ImPlot3D
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotDummyNative((byte*)plabelId, (ImPlot3DSpec)(new ImPlot3DSpec()));
+				PlotDummyNative((byte*)plabelId, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			}
 		}
 
@@ -3299,7 +3299,7 @@ namespace Hexa.NET.ImPlot3D
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotDummyNative(pStr0, (ImPlot3DSpec)(new ImPlot3DSpec()));
+			PlotDummyNative(pStr0, (ImPlot3DSpec)(global::Hexa.NET.ImPlot3D.ImPlot3DSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3315,9 +3315,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector2 PlotToPixelsNative([NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint, Vector2>)funcTable[103])(point);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint, Vector2>)funcTable[106])(point);
 			#else
-			return (Vector2)((delegate* unmanaged[Cdecl]<ImPlot3DPoint, Vector2>)funcTable[103])(point);
+			return (Vector2)((delegate* unmanaged[Cdecl]<ImPlot3DPoint, Vector2>)funcTable[106])(point);
 			#endif
 		}
 
@@ -3341,9 +3341,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector2 PlotToPixelsNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "double")] double x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "double")] double y, [NativeName(NativeNameType.Param, "z")] [NativeName(NativeNameType.Type, "double")] double z)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, double, Vector2>)funcTable[104])(x, y, z);
+			return ((delegate* unmanaged[Cdecl]<double, double, double, Vector2>)funcTable[107])(x, y, z);
 			#else
-			return (Vector2)((delegate* unmanaged[Cdecl]<double, double, double, Vector2>)funcTable[104])(x, y, z);
+			return (Vector2)((delegate* unmanaged[Cdecl]<double, double, double, Vector2>)funcTable[107])(x, y, z);
 			#endif
 		}
 
@@ -3367,9 +3367,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DRay PixelsToPlotRayNative([NativeName(NativeNameType.Param, "pix")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 pix)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Vector2, ImPlot3DRay>)funcTable[105])(pix);
+			return ((delegate* unmanaged[Cdecl]<Vector2, ImPlot3DRay>)funcTable[108])(pix);
 			#else
-			return (ImPlot3DRay)((delegate* unmanaged[Cdecl]<Vector2, ImPlot3DRay>)funcTable[105])(pix);
+			return (ImPlot3DRay)((delegate* unmanaged[Cdecl]<Vector2, ImPlot3DRay>)funcTable[108])(pix);
 			#endif
 		}
 
@@ -3393,9 +3393,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DRay PixelsToPlotRayNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "double")] double x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "double")] double y)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, ImPlot3DRay>)funcTable[106])(x, y);
+			return ((delegate* unmanaged[Cdecl]<double, double, ImPlot3DRay>)funcTable[109])(x, y);
 			#else
-			return (ImPlot3DRay)((delegate* unmanaged[Cdecl]<double, double, ImPlot3DRay>)funcTable[106])(x, y);
+			return (ImPlot3DRay)((delegate* unmanaged[Cdecl]<double, double, ImPlot3DRay>)funcTable[109])(x, y);
 			#endif
 		}
 
@@ -3421,9 +3421,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DPoint PixelsToPlotPlaneNative([NativeName(NativeNameType.Param, "pix")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 pix, [NativeName(NativeNameType.Param, "plane")] [NativeName(NativeNameType.Type, "ImPlane3D")] ImPlane3D plane, [NativeName(NativeNameType.Param, "mask")] [NativeName(NativeNameType.Type, "bool")] byte mask)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Vector2, ImPlane3D, byte, ImPlot3DPoint>)funcTable[107])(pix, plane, mask);
+			return ((delegate* unmanaged[Cdecl]<Vector2, ImPlane3D, byte, ImPlot3DPoint>)funcTable[110])(pix, plane, mask);
 			#else
-			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<Vector2, ImPlane3D, byte, ImPlot3DPoint>)funcTable[107])(pix, plane, mask);
+			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<Vector2, ImPlane3D, byte, ImPlot3DPoint>)funcTable[110])(pix, plane, mask);
 			#endif
 		}
 
@@ -3464,9 +3464,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DPoint PixelsToPlotPlaneNative([NativeName(NativeNameType.Param, "x")] [NativeName(NativeNameType.Type, "double")] double x, [NativeName(NativeNameType.Param, "y")] [NativeName(NativeNameType.Type, "double")] double y, [NativeName(NativeNameType.Param, "plane")] [NativeName(NativeNameType.Type, "ImPlane3D")] ImPlane3D plane, [NativeName(NativeNameType.Param, "mask")] [NativeName(NativeNameType.Type, "bool")] byte mask)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, ImPlane3D, byte, ImPlot3DPoint>)funcTable[108])(x, y, plane, mask);
+			return ((delegate* unmanaged[Cdecl]<double, double, ImPlane3D, byte, ImPlot3DPoint>)funcTable[111])(x, y, plane, mask);
 			#else
-			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<double, double, ImPlane3D, byte, ImPlot3DPoint>)funcTable[108])(x, y, plane, mask);
+			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<double, double, ImPlane3D, byte, ImPlot3DPoint>)funcTable[111])(x, y, plane, mask);
 			#endif
 		}
 
@@ -3505,9 +3505,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector2 GetPlotRectPosNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Vector2>)funcTable[109])();
+			return ((delegate* unmanaged[Cdecl]<Vector2>)funcTable[112])();
 			#else
-			return (Vector2)((delegate* unmanaged[Cdecl]<Vector2>)funcTable[109])();
+			return (Vector2)((delegate* unmanaged[Cdecl]<Vector2>)funcTable[112])();
 			#endif
 		}
 
@@ -3531,9 +3531,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector2 GetPlotRectSizeNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Vector2>)funcTable[110])();
+			return ((delegate* unmanaged[Cdecl]<Vector2>)funcTable[113])();
 			#else
-			return (Vector2)((delegate* unmanaged[Cdecl]<Vector2>)funcTable[110])();
+			return (Vector2)((delegate* unmanaged[Cdecl]<Vector2>)funcTable[113])();
 			#endif
 		}
 
@@ -3557,9 +3557,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImDrawList* GetPlotDrawListNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImDrawList*>)funcTable[111])();
+			return ((delegate* unmanaged[Cdecl]<ImDrawList*>)funcTable[114])();
 			#else
-			return (ImDrawList*)((delegate* unmanaged[Cdecl]<nint>)funcTable[111])();
+			return (ImDrawList*)((delegate* unmanaged[Cdecl]<nint>)funcTable[114])();
 			#endif
 		}
 
@@ -3583,9 +3583,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DStyle* GetStyleNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle*>)funcTable[112])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle*>)funcTable[115])();
 			#else
-			return (ImPlot3DStyle*)((delegate* unmanaged[Cdecl]<nint>)funcTable[112])();
+			return (ImPlot3DStyle*)((delegate* unmanaged[Cdecl]<nint>)funcTable[115])();
 			#endif
 		}
 
@@ -3609,9 +3609,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetStyleNative([NativeName(NativeNameType.Param, "style")] [NativeName(NativeNameType.Type, "ImPlot3DStyle_c const")] ImPlot3DStyle style)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle, void>)funcTable[113])(style);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle, void>)funcTable[116])(style);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle, void>)funcTable[113])(style);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle, void>)funcTable[116])(style);
 			#endif
 		}
 
@@ -3634,9 +3634,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void StyleColorsAutoNative([NativeName(NativeNameType.Param, "dst")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* dst)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[114])(dst);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[117])(dst);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[114])((nint)dst);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[117])((nint)dst);
 			#endif
 		}
 
@@ -3682,9 +3682,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void StyleColorsDarkNative([NativeName(NativeNameType.Param, "dst")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* dst)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[115])(dst);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[118])(dst);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[115])((nint)dst);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[118])((nint)dst);
 			#endif
 		}
 
@@ -3730,9 +3730,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void StyleColorsLightNative([NativeName(NativeNameType.Param, "dst")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* dst)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[116])(dst);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[119])(dst);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[116])((nint)dst);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[119])((nint)dst);
 			#endif
 		}
 
@@ -3778,9 +3778,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void StyleColorsClassicNative([NativeName(NativeNameType.Param, "dst")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* dst)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[117])(dst);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[120])(dst);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[117])((nint)dst);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[120])((nint)dst);
 			#endif
 		}
 
@@ -3826,9 +3826,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushStyleColorNative([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx, [NativeName(NativeNameType.Param, "col")] [NativeName(NativeNameType.Type, "ImU32")] uint col)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint, void>)funcTable[118])(idx, col);
+			((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint, void>)funcTable[121])(idx, col);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint, void>)funcTable[118])(idx, col);
+			((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint, void>)funcTable[121])(idx, col);
 			#endif
 		}
 
@@ -3851,9 +3851,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushStyleColorNative([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx, [NativeName(NativeNameType.Param, "col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 col)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4, void>)funcTable[119])(idx, col);
+			((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4, void>)funcTable[122])(idx, col);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4, void>)funcTable[119])(idx, col);
+			((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4, void>)funcTable[122])(idx, col);
 			#endif
 		}
 
@@ -3876,9 +3876,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PopStyleColorNative([NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[120])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[123])(count);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[120])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[123])(count);
 			#endif
 		}
 
@@ -3911,9 +3911,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushStyleVarNative([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DStyleVar")] ImPlot3DStyleVar idx, [NativeName(NativeNameType.Param, "val")] [NativeName(NativeNameType.Type, "float")] float val)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, float, void>)funcTable[121])(idx, val);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, float, void>)funcTable[124])(idx, val);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, float, void>)funcTable[121])(idx, val);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, float, void>)funcTable[124])(idx, val);
 			#endif
 		}
 
@@ -3936,9 +3936,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushStyleVarNative([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DStyleVar")] ImPlot3DStyleVar idx, [NativeName(NativeNameType.Param, "val")] [NativeName(NativeNameType.Type, "int")] int val)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, int, void>)funcTable[122])(idx, val);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, int, void>)funcTable[125])(idx, val);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, int, void>)funcTable[122])(idx, val);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, int, void>)funcTable[125])(idx, val);
 			#endif
 		}
 
@@ -3961,9 +3961,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushStyleVarNative([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DStyleVar")] ImPlot3DStyleVar idx, [NativeName(NativeNameType.Param, "val")] [NativeName(NativeNameType.Type, "ImVec2_c const")] Vector2 val)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, Vector2, void>)funcTable[123])(idx, val);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, Vector2, void>)funcTable[126])(idx, val);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, Vector2, void>)funcTable[123])(idx, val);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyleVar, Vector2, void>)funcTable[126])(idx, val);
 			#endif
 		}
 
@@ -3986,9 +3986,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PopStyleVarNative([NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[124])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[127])(count);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[124])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[127])(count);
 			#endif
 		}
 
@@ -4021,9 +4021,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector4 GetStyleColorVec4Native([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4>)funcTable[125])(idx);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4>)funcTable[128])(idx);
 			#else
-			return (Vector4)((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4>)funcTable[125])(idx);
+			return (Vector4)((delegate* unmanaged[Cdecl]<ImPlot3DCol, Vector4>)funcTable[128])(idx);
 			#endif
 		}
 
@@ -4047,9 +4047,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static uint GetStyleColorU32Native([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint>)funcTable[126])(idx);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint>)funcTable[129])(idx);
 			#else
-			return (uint)((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint>)funcTable[126])(idx);
+			return (uint)((delegate* unmanaged[Cdecl]<ImPlot3DCol, uint>)funcTable[129])(idx);
 			#endif
 		}
 
@@ -4073,9 +4073,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DMarker NextMarkerNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DMarker>)funcTable[127])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DMarker>)funcTable[130])();
 			#else
-			return (ImPlot3DMarker)((delegate* unmanaged[Cdecl]<ImPlot3DMarker>)funcTable[127])();
+			return (ImPlot3DMarker)((delegate* unmanaged[Cdecl]<ImPlot3DMarker>)funcTable[130])();
 			#endif
 		}
 
@@ -4099,9 +4099,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DColormap AddColormapNative([NativeName(NativeNameType.Param, "name")] [NativeName(NativeNameType.Type, "char const *")] byte* name, [NativeName(NativeNameType.Param, "cols")] [NativeName(NativeNameType.Type, "ImVec4 const *")] Vector4* cols, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size, [NativeName(NativeNameType.Param, "qual")] [NativeName(NativeNameType.Type, "bool")] byte qual)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, Vector4*, int, byte, ImPlot3DColormap>)funcTable[128])(name, cols, size, qual);
+			return ((delegate* unmanaged[Cdecl]<byte*, Vector4*, int, byte, ImPlot3DColormap>)funcTable[131])(name, cols, size, qual);
 			#else
-			return (ImPlot3DColormap)((delegate* unmanaged[Cdecl]<nint, nint, int, byte, ImPlot3DColormap>)funcTable[128])((nint)name, (nint)cols, size, qual);
+			return (ImPlot3DColormap)((delegate* unmanaged[Cdecl]<nint, nint, int, byte, ImPlot3DColormap>)funcTable[131])((nint)name, (nint)cols, size, qual);
 			#endif
 		}
 
@@ -4422,9 +4422,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DColormap AddColormapNative([NativeName(NativeNameType.Param, "name")] [NativeName(NativeNameType.Type, "char const *")] byte* name, [NativeName(NativeNameType.Param, "cols")] [NativeName(NativeNameType.Type, "ImU32 const *")] uint* cols, [NativeName(NativeNameType.Param, "size")] [NativeName(NativeNameType.Type, "int")] int size, [NativeName(NativeNameType.Param, "qual")] [NativeName(NativeNameType.Type, "bool")] byte qual)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, uint*, int, byte, ImPlot3DColormap>)funcTable[129])(name, cols, size, qual);
+			return ((delegate* unmanaged[Cdecl]<byte*, uint*, int, byte, ImPlot3DColormap>)funcTable[132])(name, cols, size, qual);
 			#else
-			return (ImPlot3DColormap)((delegate* unmanaged[Cdecl]<nint, nint, int, byte, ImPlot3DColormap>)funcTable[129])((nint)name, (nint)cols, size, qual);
+			return (ImPlot3DColormap)((delegate* unmanaged[Cdecl]<nint, nint, int, byte, ImPlot3DColormap>)funcTable[132])((nint)name, (nint)cols, size, qual);
 			#endif
 		}
 
@@ -4745,9 +4745,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static int GetColormapCountNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<int>)funcTable[130])();
+			return ((delegate* unmanaged[Cdecl]<int>)funcTable[133])();
 			#else
-			return (int)((delegate* unmanaged[Cdecl]<int>)funcTable[130])();
+			return (int)((delegate* unmanaged[Cdecl]<int>)funcTable[133])();
 			#endif
 		}
 
@@ -4771,9 +4771,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte* GetColormapNameNative([NativeName(NativeNameType.Param, "cmap")] [NativeName(NativeNameType.Type, "ImPlot3DColormap")] ImPlot3DColormap cmap)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DColormap, byte*>)funcTable[131])(cmap);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DColormap, byte*>)funcTable[134])(cmap);
 			#else
-			return (byte*)((delegate* unmanaged[Cdecl]<ImPlot3DColormap, nint>)funcTable[131])(cmap);
+			return (byte*)((delegate* unmanaged[Cdecl]<ImPlot3DColormap, nint>)funcTable[134])(cmap);
 			#endif
 		}
 
@@ -4808,9 +4808,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DColormap GetColormapIndexNative([NativeName(NativeNameType.Param, "name")] [NativeName(NativeNameType.Type, "char const *")] byte* name)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, ImPlot3DColormap>)funcTable[132])(name);
+			return ((delegate* unmanaged[Cdecl]<byte*, ImPlot3DColormap>)funcTable[135])(name);
 			#else
-			return (ImPlot3DColormap)((delegate* unmanaged[Cdecl]<nint, ImPlot3DColormap>)funcTable[132])((nint)name);
+			return (ImPlot3DColormap)((delegate* unmanaged[Cdecl]<nint, ImPlot3DColormap>)funcTable[135])((nint)name);
 			#endif
 		}
 
@@ -4895,9 +4895,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushColormapNative([NativeName(NativeNameType.Param, "cmap")] [NativeName(NativeNameType.Type, "ImPlot3DColormap")] ImPlot3DColormap cmap)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DColormap, void>)funcTable[133])(cmap);
+			((delegate* unmanaged[Cdecl]<ImPlot3DColormap, void>)funcTable[136])(cmap);
 			#else
-			((delegate* unmanaged[Cdecl]<ImPlot3DColormap, void>)funcTable[133])(cmap);
+			((delegate* unmanaged[Cdecl]<ImPlot3DColormap, void>)funcTable[136])(cmap);
 			#endif
 		}
 
@@ -4922,9 +4922,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PushColormapNative([NativeName(NativeNameType.Param, "name")] [NativeName(NativeNameType.Type, "char const *")] byte* name)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<byte*, void>)funcTable[134])(name);
+			((delegate* unmanaged[Cdecl]<byte*, void>)funcTable[137])(name);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[134])((nint)name);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[137])((nint)name);
 			#endif
 		}
 
@@ -5008,9 +5008,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void PopColormapNative([NativeName(NativeNameType.Param, "count")] [NativeName(NativeNameType.Type, "int")] int count)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[135])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[138])(count);
 			#else
-			((delegate* unmanaged[Cdecl]<int, void>)funcTable[135])(count);
+			((delegate* unmanaged[Cdecl]<int, void>)funcTable[138])(count);
 			#endif
 		}
 

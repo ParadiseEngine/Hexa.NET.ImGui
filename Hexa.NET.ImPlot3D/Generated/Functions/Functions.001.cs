@@ -4984,9 +4984,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupAxesLimitsNative([NativeName(NativeNameType.Param, "x_min")] [NativeName(NativeNameType.Type, "double")] double xMin, [NativeName(NativeNameType.Param, "x_max")] [NativeName(NativeNameType.Type, "double")] double xMax, [NativeName(NativeNameType.Param, "y_min")] [NativeName(NativeNameType.Type, "double")] double yMin, [NativeName(NativeNameType.Param, "y_max")] [NativeName(NativeNameType.Type, "double")] double yMax, [NativeName(NativeNameType.Param, "z_min")] [NativeName(NativeNameType.Type, "double")] double zMin, [NativeName(NativeNameType.Param, "z_max")] [NativeName(NativeNameType.Type, "double")] double zMax, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[32])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[35])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
 			#else
-			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[32])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
+			((delegate* unmanaged[Cdecl]<double, double, double, double, double, double, ImPlot3DCond, void>)funcTable[35])(xMin, xMax, yMin, yMax, zMin, zMax, cond);
 			#endif
 		}
 
@@ -5019,9 +5019,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetupBoxRotationNative([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "double")] double elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "double")] double azimuth, [NativeName(NativeNameType.Param, "animate")] [NativeName(NativeNameType.Type, "bool")] byte animate, [NativeName(NativeNameType.Param, "cond")] [NativeName(NativeNameType.Type, "ImPlot3DCond")] ImPlot3DCond cond)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<double, double, byte, ImPlot3DCond, void>)funcTable[33])(elevation, azimuth, animate, cond);
+			((delegate* unmanaged[Cdecl]<double, double, byte, ImPlot3DCond, void>)funcTable[36])(elevation, azimuth, animate, cond);
 			#else
-			((delegate* unmanaged[Cdecl]<double, double, byte, ImPlot3DCond, void>)funcTable[33])(elevation, azimuth, animate, cond);
+			((delegate* unmanaged[Cdecl]<double, double, byte, ImPlot3DCond, void>)funcTable[36])(elevation, azimuth, animate, cond);
 			#endif
 		}
 	}

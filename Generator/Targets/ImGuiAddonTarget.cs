@@ -122,8 +122,12 @@
         {
             builder.AlterConfig(c =>
             {
+                // ImPlot3D.cs and ImPlot3D.Manual.cs call these through fixed slots 0-3.
                 FunctionTableBuilder tableBuilder = new();
                 tableBuilder.Add("igSetCurrentContext");
+                tableBuilder.Add("igGetCurrentContext");
+                tableBuilder.Add("igSetAllocatorFunctions");
+                tableBuilder.Add("igGetAllocatorFunctions");
                 c.FunctionTableEntries = tableBuilder.Entries;
             });
         }

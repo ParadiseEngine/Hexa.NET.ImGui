@@ -5,7 +5,7 @@
 
 > **Not an official Hexa.NET package.** Paradise.ImGui is a ParadiseEngine fork of [Hexa.NET.ImGui](https://github.com/HexaEngine/Hexa.NET.ImGui) by Juna Meinhold. It is not affiliated with or endorsed by HexaEngine. Report issues with these packages here, not upstream.
 
-Differences from upstream: all native libraries are built in CI at `-O3` from pinned sources (none are committed), `Paradise.ImGui` supports `browser-wasm`, the ImPlot3D binding is regenerated for the ImPlot3D 0.4 natives it ships with, and the backends packages are not published. The rest of this README is upstream's documentation, adjusted where the fork differs.
+Differences from upstream: all native libraries are built in CI at `-O3` from pinned sources (none are committed), `Paradise.ImGui` supports `browser-wasm`, the ImPlot3D binding is regenerated for the ImPlot3D 0.4 natives it ships with, ImPlot/ImPlot3D calls that omit the spec pass the C++ default (`ImPlotSpec.Default`/`ImPlot3DSpec.Default`) instead of an all-zero one, and the backends packages are not published. The rest of this README is upstream's documentation, adjusted where the fork differs.
 
 Welcome to Hexa.NET.ImGui! This custom wrapper is designed to be a high-performance, API-compatible alternative to ImGuiNET, offering enhanced speed, additional functionality, and comprehensive access to ImGui's internal structures. With optimizations that bring near C performance and significantly reduced startup times, Hexa.NET.ImGui provides the best of both worlds: the power of C and the productivity of C#.
 
@@ -87,6 +87,11 @@ To get started with Paradise.ImGui, follow these steps:
     For ImPlot addon:
     ```bash
     dotnet add package Paradise.ImGui.Plot
+    ```
+
+    For ImPlot3D addon:
+    ```bash
+    dotnet add package Paradise.ImGui.Plot3D
     ```
 
 2. **Initialize the library** in your project:

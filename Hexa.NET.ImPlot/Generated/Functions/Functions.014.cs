@@ -37,7 +37,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (float* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -48,7 +48,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (float* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -59,7 +59,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (float* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (float* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -122,7 +122,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (float* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -136,7 +136,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (float* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -192,7 +192,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (float* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -206,7 +206,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (float* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -220,7 +220,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (float* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -309,7 +309,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (float* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (float*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -341,7 +341,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (float* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (float*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -373,7 +373,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (float* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (float*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -471,7 +471,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, double* values, int count, double xscale, double xstart)
 		{
-			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -479,7 +479,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, double* values, int count, double xscale)
 		{
-			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -487,7 +487,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, double* values, int count)
 		{
-			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -524,7 +524,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -535,7 +535,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -546,7 +546,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -590,7 +590,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -601,7 +601,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -612,7 +612,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -689,7 +689,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -718,7 +718,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -747,7 +747,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -830,7 +830,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (double* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -841,7 +841,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (double* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -852,7 +852,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (double* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -901,7 +901,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -915,7 +915,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -929,7 +929,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -985,7 +985,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -999,7 +999,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1013,7 +1013,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (double* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1102,7 +1102,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (double*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1134,7 +1134,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (double*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1166,7 +1166,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (double* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (double*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1264,7 +1264,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, sbyte* values, int count, double xscale, double xstart)
 		{
-			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1272,7 +1272,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, sbyte* values, int count, double xscale)
 		{
-			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1280,7 +1280,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, sbyte* values, int count)
 		{
-			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -1317,7 +1317,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1328,7 +1328,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1339,7 +1339,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1383,7 +1383,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1394,7 +1394,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1405,7 +1405,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1482,7 +1482,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1511,7 +1511,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1540,7 +1540,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1623,7 +1623,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1634,7 +1634,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1645,7 +1645,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -1694,7 +1694,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1708,7 +1708,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1722,7 +1722,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1778,7 +1778,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1792,7 +1792,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1806,7 +1806,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (sbyte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -1895,7 +1895,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (sbyte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1927,7 +1927,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (sbyte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -1959,7 +1959,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (sbyte* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (sbyte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2057,7 +2057,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, byte* values, int count, double xscale, double xstart)
 		{
-			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2065,7 +2065,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, byte* values, int count, double xscale)
 		{
-			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2073,7 +2073,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, byte* values, int count)
 		{
-			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2110,7 +2110,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2121,7 +2121,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2132,7 +2132,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2176,7 +2176,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2187,7 +2187,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2198,7 +2198,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2275,7 +2275,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2304,7 +2304,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2333,7 +2333,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -2416,7 +2416,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2427,7 +2427,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2438,7 +2438,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2487,7 +2487,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2501,7 +2501,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2515,7 +2515,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2571,7 +2571,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2585,7 +2585,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2599,7 +2599,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (byte* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -2688,7 +2688,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (byte*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2720,7 +2720,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (byte*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2752,7 +2752,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (byte* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (byte*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -2850,7 +2850,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, short* values, int count, double xscale, double xstart)
 		{
-			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2858,7 +2858,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, short* values, int count, double xscale)
 		{
-			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2866,7 +2866,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, short* values, int count)
 		{
-			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -2903,7 +2903,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2914,7 +2914,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2925,7 +2925,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2969,7 +2969,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2980,7 +2980,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -2991,7 +2991,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3068,7 +3068,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3097,7 +3097,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3126,7 +3126,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3209,7 +3209,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3220,7 +3220,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3231,7 +3231,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (short* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3280,7 +3280,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3294,7 +3294,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3308,7 +3308,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3364,7 +3364,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3378,7 +3378,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3392,7 +3392,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (short* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -3481,7 +3481,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (short*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3513,7 +3513,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (short*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3545,7 +3545,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (short* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (short*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -3643,7 +3643,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, ushort* values, int count, double xscale, double xstart)
 		{
-			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3651,7 +3651,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, ushort* values, int count, double xscale)
 		{
-			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3659,7 +3659,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, ushort* values, int count)
 		{
-			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -3696,7 +3696,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3707,7 +3707,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3718,7 +3718,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3762,7 +3762,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3773,7 +3773,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3784,7 +3784,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -3861,7 +3861,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3890,7 +3890,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -3919,7 +3919,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4002,7 +4002,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4013,7 +4013,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4024,7 +4024,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4073,7 +4073,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4087,7 +4087,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4101,7 +4101,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4157,7 +4157,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4171,7 +4171,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4185,7 +4185,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (ushort* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4274,7 +4274,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (ushort*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4306,7 +4306,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (ushort*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4338,7 +4338,7 @@ namespace Hexa.NET.ImPlot
 			}
 			fixed (ushort* pvalues = &values)
 			{
-				PlotStairsNative(pStr0, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(pStr0, (ushort*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				if (pStrSize0 >= Utils.MaxStackallocSize)
 				{
 					Utils.Free(pStr0);
@@ -4436,7 +4436,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, int* values, int count, double xscale, double xstart)
 		{
-			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4444,7 +4444,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, int* values, int count, double xscale)
 		{
-			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4452,7 +4452,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotStairs(byte* labelId, int* values, int count)
 		{
-			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(labelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -4489,7 +4489,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4500,7 +4500,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4511,7 +4511,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4555,7 +4555,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4566,7 +4566,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4577,7 +4577,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative((byte*)plabelId, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4654,7 +4654,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4683,7 +4683,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4712,7 +4712,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+			PlotStairsNative(pStr0, values, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -4795,7 +4795,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (int*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (int*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4806,7 +4806,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (int*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (int*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4817,7 +4817,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (int* pvalues = &values)
 			{
-				PlotStairsNative(labelId, (int*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+				PlotStairsNative(labelId, (int*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -4866,7 +4866,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4880,7 +4880,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4894,7 +4894,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4950,7 +4950,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, xstart, (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, xstart, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4964,7 +4964,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, xscale, (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}
@@ -4978,7 +4978,7 @@ namespace Hexa.NET.ImPlot
 			{
 				fixed (int* pvalues = &values)
 				{
-					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(new ImPlotSpec()));
+					PlotStairsNative((byte*)plabelId, (int*)pvalues, count, (double)(1), (double)(0), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 				}
 			}
 		}

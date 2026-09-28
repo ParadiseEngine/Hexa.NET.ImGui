@@ -39,9 +39,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector4 NextColormapColorNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<Vector4>)funcTable[136])();
+			return ((delegate* unmanaged[Cdecl]<Vector4>)funcTable[139])();
 			#else
-			return (Vector4)((delegate* unmanaged[Cdecl]<Vector4>)funcTable[136])();
+			return (Vector4)((delegate* unmanaged[Cdecl]<Vector4>)funcTable[139])();
 			#endif
 		}
 
@@ -66,9 +66,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static int GetColormapSizeNative([NativeName(NativeNameType.Param, "cmap")] [NativeName(NativeNameType.Type, "ImPlot3DColormap")] ImPlot3DColormap cmap)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DColormap, int>)funcTable[137])(cmap);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DColormap, int>)funcTable[140])(cmap);
 			#else
-			return (int)((delegate* unmanaged[Cdecl]<ImPlot3DColormap, int>)funcTable[137])(cmap);
+			return (int)((delegate* unmanaged[Cdecl]<ImPlot3DColormap, int>)funcTable[140])(cmap);
 			#endif
 		}
 
@@ -103,9 +103,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector4 GetColormapColorNative([NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "int")] int idx, [NativeName(NativeNameType.Param, "cmap")] [NativeName(NativeNameType.Type, "ImPlot3DColormap")] ImPlot3DColormap cmap)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<int, ImPlot3DColormap, Vector4>)funcTable[138])(idx, cmap);
+			return ((delegate* unmanaged[Cdecl]<int, ImPlot3DColormap, Vector4>)funcTable[141])(idx, cmap);
 			#else
-			return (Vector4)((delegate* unmanaged[Cdecl]<int, ImPlot3DColormap, Vector4>)funcTable[138])(idx, cmap);
+			return (Vector4)((delegate* unmanaged[Cdecl]<int, ImPlot3DColormap, Vector4>)funcTable[141])(idx, cmap);
 			#endif
 		}
 
@@ -140,9 +140,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector4 SampleColormapNative([NativeName(NativeNameType.Param, "t")] [NativeName(NativeNameType.Type, "float")] float t, [NativeName(NativeNameType.Param, "cmap")] [NativeName(NativeNameType.Type, "ImPlot3DColormap")] ImPlot3DColormap cmap)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<float, ImPlot3DColormap, Vector4>)funcTable[139])(t, cmap);
+			return ((delegate* unmanaged[Cdecl]<float, ImPlot3DColormap, Vector4>)funcTable[142])(t, cmap);
 			#else
-			return (Vector4)((delegate* unmanaged[Cdecl]<float, ImPlot3DColormap, Vector4>)funcTable[139])(t, cmap);
+			return (Vector4)((delegate* unmanaged[Cdecl]<float, ImPlot3DColormap, Vector4>)funcTable[142])(t, cmap);
 			#endif
 		}
 
@@ -177,9 +177,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ShowDemoWindowNative([NativeName(NativeNameType.Param, "p_open")] [NativeName(NativeNameType.Type, "bool *")] bool* pOpen)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<bool*, void>)funcTable[140])(pOpen);
+			((delegate* unmanaged[Cdecl]<bool*, void>)funcTable[143])(pOpen);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[140])((nint)pOpen);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[143])((nint)pOpen);
 			#endif
 		}
 
@@ -225,9 +225,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ShowAllDemosNative()
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<void>)funcTable[141])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[144])();
 			#else
-			((delegate* unmanaged[Cdecl]<void>)funcTable[141])();
+			((delegate* unmanaged[Cdecl]<void>)funcTable[144])();
 			#endif
 		}
 
@@ -250,9 +250,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ShowStyleEditorNative([NativeName(NativeNameType.Param, "ref")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* reference)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[142])(reference);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[145])(reference);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[142])((nint)reference);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[145])((nint)reference);
 			#endif
 		}
 
@@ -298,9 +298,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte ShowStyleSelectorNative([NativeName(NativeNameType.Param, "label")] [NativeName(NativeNameType.Type, "char const *")] byte* label)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, byte>)funcTable[143])(label);
+			return ((delegate* unmanaged[Cdecl]<byte*, byte>)funcTable[146])(label);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, byte>)funcTable[143])((nint)label);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, byte>)funcTable[146])((nint)label);
 			#endif
 		}
 
@@ -384,9 +384,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte ShowColormapSelectorNative([NativeName(NativeNameType.Param, "label")] [NativeName(NativeNameType.Type, "char const *")] byte* label)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<byte*, byte>)funcTable[144])(label);
+			return ((delegate* unmanaged[Cdecl]<byte*, byte>)funcTable[147])(label);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, byte>)funcTable[144])((nint)label);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, byte>)funcTable[147])((nint)label);
 			#endif
 		}
 
@@ -470,9 +470,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ShowMetricsWindowNative([NativeName(NativeNameType.Param, "p_popen")] [NativeName(NativeNameType.Type, "bool *")] bool* pPopen)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<bool*, void>)funcTable[145])(pPopen);
+			((delegate* unmanaged[Cdecl]<bool*, void>)funcTable[148])(pPopen);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[145])((nint)pPopen);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[148])((nint)pPopen);
 			#endif
 		}
 
@@ -518,9 +518,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ShowAboutWindowNative([NativeName(NativeNameType.Param, "p_open")] [NativeName(NativeNameType.Type, "bool *")] bool* pOpen)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<bool*, void>)funcTable[146])(pOpen);
+			((delegate* unmanaged[Cdecl]<bool*, void>)funcTable[149])(pOpen);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[146])((nint)pOpen);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[149])((nint)pOpen);
 			#endif
 		}
 
@@ -566,9 +566,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DPoint* ImPlot3DPointNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*>)funcTable[147])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*>)funcTable[150])();
 			#else
-			return (ImPlot3DPoint*)((delegate* unmanaged[Cdecl]<nint>)funcTable[147])();
+			return (ImPlot3DPoint*)((delegate* unmanaged[Cdecl]<nint>)funcTable[150])();
 			#endif
 		}
 
@@ -592,9 +592,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void DestroyNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, void>)funcTable[148])(self);
+			((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, void>)funcTable[151])(self);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[148])((nint)self);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[151])((nint)self);
 			#endif
 		}
 
@@ -630,9 +630,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DPoint* ImPlot3DPointNative([NativeName(NativeNameType.Param, "_x")] [NativeName(NativeNameType.Type, "double")] double x, [NativeName(NativeNameType.Param, "_y")] [NativeName(NativeNameType.Type, "double")] double y, [NativeName(NativeNameType.Param, "_z")] [NativeName(NativeNameType.Type, "double")] double z)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, double, ImPlot3DPoint*>)funcTable[149])(x, y, z);
+			return ((delegate* unmanaged[Cdecl]<double, double, double, ImPlot3DPoint*>)funcTable[152])(x, y, z);
 			#else
-			return (ImPlot3DPoint*)((delegate* unmanaged[Cdecl]<double, double, double, nint>)funcTable[149])(x, y, z);
+			return (ImPlot3DPoint*)((delegate* unmanaged[Cdecl]<double, double, double, nint>)funcTable[152])(x, y, z);
 			#endif
 		}
 
@@ -656,9 +656,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static double DotNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self, [NativeName(NativeNameType.Param, "rhs")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint rhs)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, ImPlot3DPoint, double>)funcTable[150])(self, rhs);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, ImPlot3DPoint, double>)funcTable[153])(self, rhs);
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, double>)funcTable[150])((nint)self, rhs);
+			return (double)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, double>)funcTable[153])((nint)self, rhs);
 			#endif
 		}
 
@@ -696,9 +696,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DPoint CrossNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self, [NativeName(NativeNameType.Param, "rhs")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint rhs)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, ImPlot3DPoint, ImPlot3DPoint>)funcTable[151])(self, rhs);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, ImPlot3DPoint, ImPlot3DPoint>)funcTable[154])(self, rhs);
 			#else
-			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, ImPlot3DPoint>)funcTable[151])((nint)self, rhs);
+			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, ImPlot3DPoint>)funcTable[154])((nint)self, rhs);
 			#endif
 		}
 
@@ -736,9 +736,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static double LengthNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, double>)funcTable[152])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, double>)funcTable[155])(self);
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[152])((nint)self);
+			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[155])((nint)self);
 			#endif
 		}
 
@@ -776,9 +776,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static double LengthSquaredNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, double>)funcTable[153])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, double>)funcTable[156])(self);
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[153])((nint)self);
+			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[156])((nint)self);
 			#endif
 		}
 
@@ -816,9 +816,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void NormalizeNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, void>)funcTable[154])(self);
+			((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, void>)funcTable[157])(self);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[154])((nint)self);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[157])((nint)self);
 			#endif
 		}
 
@@ -854,9 +854,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DPoint NormalizedNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, ImPlot3DPoint>)funcTable[155])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, ImPlot3DPoint>)funcTable[158])(self);
 			#else
-			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint>)funcTable[155])((nint)self);
+			return (ImPlot3DPoint)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint>)funcTable[158])((nint)self);
 			#endif
 		}
 
@@ -894,9 +894,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte IsNaNNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, byte>)funcTable[156])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint*, byte>)funcTable[159])(self);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, byte>)funcTable[156])((nint)self);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, byte>)funcTable[159])((nint)self);
 			#endif
 		}
 
@@ -934,9 +934,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DBox* ImPlot3DBoxNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DBox*>)funcTable[157])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DBox*>)funcTable[160])();
 			#else
-			return (ImPlot3DBox*)((delegate* unmanaged[Cdecl]<nint>)funcTable[157])();
+			return (ImPlot3DBox*)((delegate* unmanaged[Cdecl]<nint>)funcTable[160])();
 			#endif
 		}
 
@@ -960,9 +960,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void DestroyNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DBox *")] ImPlot3DBox* self)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DBox*, void>)funcTable[158])(self);
+			((delegate* unmanaged[Cdecl]<ImPlot3DBox*, void>)funcTable[161])(self);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[158])((nint)self);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[161])((nint)self);
 			#endif
 		}
 
@@ -998,9 +998,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DBox* ImPlot3DBoxNative([NativeName(NativeNameType.Param, "min")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint min, [NativeName(NativeNameType.Param, "max")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint max)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, ImPlot3DBox*>)funcTable[159])(min, max);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, ImPlot3DBox*>)funcTable[162])(min, max);
 			#else
-			return (ImPlot3DBox*)((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, nint>)funcTable[159])(min, max);
+			return (ImPlot3DBox*)((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, nint>)funcTable[162])(min, max);
 			#endif
 		}
 
@@ -1024,9 +1024,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ExpandNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DBox *")] ImPlot3DBox* self, [NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DBox*, ImPlot3DPoint, void>)funcTable[160])(self, point);
+			((delegate* unmanaged[Cdecl]<ImPlot3DBox*, ImPlot3DPoint, void>)funcTable[163])(self, point);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, void>)funcTable[160])((nint)self, point);
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, void>)funcTable[163])((nint)self, point);
 			#endif
 		}
 
@@ -1062,9 +1062,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte ContainsNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DBox *")] ImPlot3DBox* self, [NativeName(NativeNameType.Param, "point")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint point)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DBox*, ImPlot3DPoint, byte>)funcTable[161])(self, point);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DBox*, ImPlot3DPoint, byte>)funcTable[164])(self, point);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, byte>)funcTable[161])((nint)self, point);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, byte>)funcTable[164])((nint)self, point);
 			#endif
 		}
 
@@ -1102,9 +1102,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte ClipLineSegmentNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DBox *")] ImPlot3DBox* self, [NativeName(NativeNameType.Param, "p0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p0, [NativeName(NativeNameType.Param, "p1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint p1, [NativeName(NativeNameType.Param, "p0_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p0Clipped, [NativeName(NativeNameType.Param, "p1_clipped")] [NativeName(NativeNameType.Type, "ImPlot3DPoint *")] ImPlot3DPoint* p1Clipped)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DBox*, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint*, ImPlot3DPoint*, byte>)funcTable[162])(self, p0, p1, p0Clipped, p1Clipped);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DBox*, ImPlot3DPoint, ImPlot3DPoint, ImPlot3DPoint*, ImPlot3DPoint*, byte>)funcTable[165])(self, p0, p1, p0Clipped, p1Clipped);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, ImPlot3DPoint, nint, nint, byte>)funcTable[162])((nint)self, p0, p1, (nint)p0Clipped, (nint)p1Clipped);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, ImPlot3DPoint, ImPlot3DPoint, nint, nint, byte>)funcTable[165])((nint)self, p0, p1, (nint)p0Clipped, (nint)p1Clipped);
 			#endif
 		}
 
@@ -1241,9 +1241,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DRange* ImPlot3DRangeNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DRange*>)funcTable[163])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DRange*>)funcTable[166])();
 			#else
-			return (ImPlot3DRange*)((delegate* unmanaged[Cdecl]<nint>)funcTable[163])();
+			return (ImPlot3DRange*)((delegate* unmanaged[Cdecl]<nint>)funcTable[166])();
 			#endif
 		}
 
@@ -1267,9 +1267,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void DestroyNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DRange *")] ImPlot3DRange* self)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DRange*, void>)funcTable[164])(self);
+			((delegate* unmanaged[Cdecl]<ImPlot3DRange*, void>)funcTable[167])(self);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[164])((nint)self);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[167])((nint)self);
 			#endif
 		}
 
@@ -1305,9 +1305,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DRange* ImPlot3DRangeNative([NativeName(NativeNameType.Param, "min")] [NativeName(NativeNameType.Type, "double")] double min, [NativeName(NativeNameType.Param, "max")] [NativeName(NativeNameType.Type, "double")] double max)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, ImPlot3DRange*>)funcTable[165])(min, max);
+			return ((delegate* unmanaged[Cdecl]<double, double, ImPlot3DRange*>)funcTable[168])(min, max);
 			#else
-			return (ImPlot3DRange*)((delegate* unmanaged[Cdecl]<double, double, nint>)funcTable[165])(min, max);
+			return (ImPlot3DRange*)((delegate* unmanaged[Cdecl]<double, double, nint>)funcTable[168])(min, max);
 			#endif
 		}
 
@@ -1331,9 +1331,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void ExpandNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DRange *")] ImPlot3DRange* self, [NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DRange*, double, void>)funcTable[166])(self, value);
+			((delegate* unmanaged[Cdecl]<ImPlot3DRange*, double, void>)funcTable[169])(self, value);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, double, void>)funcTable[166])((nint)self, value);
+			((delegate* unmanaged[Cdecl]<nint, double, void>)funcTable[169])((nint)self, value);
 			#endif
 		}
 
@@ -1369,9 +1369,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static byte ContainsNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DRange *")] ImPlot3DRange* self, [NativeName(NativeNameType.Param, "value")] [NativeName(NativeNameType.Type, "double")] double value)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DRange*, double, byte>)funcTable[167])(self, value);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DRange*, double, byte>)funcTable[170])(self, value);
 			#else
-			return (byte)((delegate* unmanaged[Cdecl]<nint, double, byte>)funcTable[167])((nint)self, value);
+			return (byte)((delegate* unmanaged[Cdecl]<nint, double, byte>)funcTable[170])((nint)self, value);
 			#endif
 		}
 
@@ -1409,9 +1409,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static double SizeNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DRange *")] ImPlot3DRange* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DRange*, double>)funcTable[168])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DRange*, double>)funcTable[171])(self);
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[168])((nint)self);
+			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[171])((nint)self);
 			#endif
 		}
 
@@ -1449,9 +1449,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat* ImPlot3DQuatNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*>)funcTable[169])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*>)funcTable[172])();
 			#else
-			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<nint>)funcTable[169])();
+			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<nint>)funcTable[172])();
 			#endif
 		}
 
@@ -1475,9 +1475,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void DestroyNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, void>)funcTable[170])(self);
+			((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, void>)funcTable[173])(self);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[170])((nint)self);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[173])((nint)self);
 			#endif
 		}
 
@@ -1513,9 +1513,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat* ImPlot3DQuatNative([NativeName(NativeNameType.Param, "_x")] [NativeName(NativeNameType.Type, "double")] double x, [NativeName(NativeNameType.Param, "_y")] [NativeName(NativeNameType.Type, "double")] double y, [NativeName(NativeNameType.Param, "_z")] [NativeName(NativeNameType.Type, "double")] double z, [NativeName(NativeNameType.Param, "_w")] [NativeName(NativeNameType.Type, "double")] double w)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, double, double, ImPlot3DQuat*>)funcTable[171])(x, y, z, w);
+			return ((delegate* unmanaged[Cdecl]<double, double, double, double, ImPlot3DQuat*>)funcTable[174])(x, y, z, w);
 			#else
-			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<double, double, double, double, nint>)funcTable[171])(x, y, z, w);
+			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<double, double, double, double, nint>)funcTable[174])(x, y, z, w);
 			#endif
 		}
 
@@ -1539,9 +1539,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat* ImPlot3DQuatNative([NativeName(NativeNameType.Param, "_angle")] [NativeName(NativeNameType.Type, "double")] double angle, [NativeName(NativeNameType.Param, "_axis")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint axis)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, ImPlot3DPoint, ImPlot3DQuat*>)funcTable[172])(angle, axis);
+			return ((delegate* unmanaged[Cdecl]<double, ImPlot3DPoint, ImPlot3DQuat*>)funcTable[175])(angle, axis);
 			#else
-			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<double, ImPlot3DPoint, nint>)funcTable[172])(angle, axis);
+			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<double, ImPlot3DPoint, nint>)funcTable[175])(angle, axis);
 			#endif
 		}
 
@@ -1565,9 +1565,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat FromTwoVectorsNative([NativeName(NativeNameType.Param, "v0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint v0, [NativeName(NativeNameType.Param, "v1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint_c const")] ImPlot3DPoint v1)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, ImPlot3DQuat>)funcTable[173])(v0, v1);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, ImPlot3DQuat>)funcTable[176])(v0, v1);
 			#else
-			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, ImPlot3DQuat>)funcTable[173])(v0, v1);
+			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<ImPlot3DPoint, ImPlot3DPoint, ImPlot3DQuat>)funcTable[176])(v0, v1);
 			#endif
 		}
 
@@ -1591,9 +1591,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat FromElAzNative([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "double")] double elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "double")] double azimuth)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<double, double, ImPlot3DQuat>)funcTable[174])(elevation, azimuth);
+			return ((delegate* unmanaged[Cdecl]<double, double, ImPlot3DQuat>)funcTable[177])(elevation, azimuth);
 			#else
-			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<double, double, ImPlot3DQuat>)funcTable[174])(elevation, azimuth);
+			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<double, double, ImPlot3DQuat>)funcTable[177])(elevation, azimuth);
 			#endif
 		}
 
@@ -1617,9 +1617,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static double LengthNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, double>)funcTable[175])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, double>)funcTable[178])(self);
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[175])((nint)self);
+			return (double)((delegate* unmanaged[Cdecl]<nint, double>)funcTable[178])((nint)self);
 			#endif
 		}
 
@@ -1657,9 +1657,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat NormalizedNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat>)funcTable[176])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat>)funcTable[179])(self);
 			#else
-			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat>)funcTable[176])((nint)self);
+			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat>)funcTable[179])((nint)self);
 			#endif
 		}
 
@@ -1697,9 +1697,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat ConjugateNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat>)funcTable[177])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat>)funcTable[180])(self);
 			#else
-			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat>)funcTable[177])((nint)self);
+			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat>)funcTable[180])((nint)self);
 			#endif
 		}
 
@@ -1737,9 +1737,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat InverseNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat>)funcTable[178])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat>)funcTable[181])(self);
 			#else
-			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat>)funcTable[178])((nint)self);
+			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat>)funcTable[181])((nint)self);
 			#endif
 		}
 
@@ -1777,9 +1777,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat* NormalizeNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat*>)funcTable[179])(self);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat*>)funcTable[182])(self);
 			#else
-			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<nint, nint>)funcTable[179])((nint)self);
+			return (ImPlot3DQuat*)((delegate* unmanaged[Cdecl]<nint, nint>)funcTable[182])((nint)self);
 			#endif
 		}
 
@@ -1817,9 +1817,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DQuat SlerpNative([NativeName(NativeNameType.Param, "q1")] [NativeName(NativeNameType.Type, "ImPlot3DQuat_c const")] ImPlot3DQuat q1, [NativeName(NativeNameType.Param, "q2")] [NativeName(NativeNameType.Type, "ImPlot3DQuat_c const")] ImPlot3DQuat q2, [NativeName(NativeNameType.Param, "t")] [NativeName(NativeNameType.Type, "double")] double t)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat, ImPlot3DQuat, double, ImPlot3DQuat>)funcTable[180])(q1, q2, t);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat, ImPlot3DQuat, double, ImPlot3DQuat>)funcTable[183])(q1, q2, t);
 			#else
-			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<ImPlot3DQuat, ImPlot3DQuat, double, ImPlot3DQuat>)funcTable[180])(q1, q2, t);
+			return (ImPlot3DQuat)((delegate* unmanaged[Cdecl]<ImPlot3DQuat, ImPlot3DQuat, double, ImPlot3DQuat>)funcTable[183])(q1, q2, t);
 			#endif
 		}
 
@@ -1843,9 +1843,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static double DotNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self, [NativeName(NativeNameType.Param, "rhs")] [NativeName(NativeNameType.Type, "ImPlot3DQuat_c const")] ImPlot3DQuat rhs)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat, double>)funcTable[181])(self, rhs);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DQuat*, ImPlot3DQuat, double>)funcTable[184])(self, rhs);
 			#else
-			return (double)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat, double>)funcTable[181])((nint)self, rhs);
+			return (double)((delegate* unmanaged[Cdecl]<nint, ImPlot3DQuat, double>)funcTable[184])((nint)self, rhs);
 			#endif
 		}
 
@@ -1883,9 +1883,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static Vector4 GetColorNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* self, [NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, ImPlot3DCol, Vector4>)funcTable[182])(self, idx);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, ImPlot3DCol, Vector4>)funcTable[185])(self, idx);
 			#else
-			return (Vector4)((delegate* unmanaged[Cdecl]<nint, ImPlot3DCol, Vector4>)funcTable[182])((nint)self, idx);
+			return (Vector4)((delegate* unmanaged[Cdecl]<nint, ImPlot3DCol, Vector4>)funcTable[185])((nint)self, idx);
 			#endif
 		}
 
@@ -1923,9 +1923,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void SetColorNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* self, [NativeName(NativeNameType.Param, "idx")] [NativeName(NativeNameType.Type, "ImPlot3DCol")] ImPlot3DCol idx, [NativeName(NativeNameType.Param, "col")] [NativeName(NativeNameType.Type, "ImVec4_c const")] Vector4 col)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, ImPlot3DCol, Vector4, void>)funcTable[183])(self, idx, col);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, ImPlot3DCol, Vector4, void>)funcTable[186])(self, idx, col);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, ImPlot3DCol, Vector4, void>)funcTable[183])((nint)self, idx, col);
+			((delegate* unmanaged[Cdecl]<nint, ImPlot3DCol, Vector4, void>)funcTable[186])((nint)self, idx, col);
 			#endif
 		}
 
@@ -1961,9 +1961,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DStyle* ImPlot3DStyleNative()
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle*>)funcTable[184])();
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle*>)funcTable[187])();
 			#else
-			return (ImPlot3DStyle*)((delegate* unmanaged[Cdecl]<nint>)funcTable[184])();
+			return (ImPlot3DStyle*)((delegate* unmanaged[Cdecl]<nint>)funcTable[187])();
 			#endif
 		}
 
@@ -1987,9 +1987,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static void DestroyNative([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DStyle *")] ImPlot3DStyle* self)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[185])(self);
+			((delegate* unmanaged[Cdecl]<ImPlot3DStyle*, void>)funcTable[188])(self);
 			#else
-			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[185])((nint)self);
+			((delegate* unmanaged[Cdecl]<nint, void>)funcTable[188])((nint)self);
 			#endif
 		}
 
@@ -2025,9 +2025,9 @@ namespace Hexa.NET.ImPlot3D
 		internal static ImPlot3DStyle* ImPlot3DStyleNative([NativeName(NativeNameType.Param, "other")] [NativeName(NativeNameType.Type, "ImPlot3DStyle_c const")] ImPlot3DStyle other)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle, ImPlot3DStyle*>)funcTable[186])(other);
+			return ((delegate* unmanaged[Cdecl]<ImPlot3DStyle, ImPlot3DStyle*>)funcTable[189])(other);
 			#else
-			return (ImPlot3DStyle*)((delegate* unmanaged[Cdecl]<ImPlot3DStyle, nint>)funcTable[186])(other);
+			return (ImPlot3DStyle*)((delegate* unmanaged[Cdecl]<ImPlot3DStyle, nint>)funcTable[189])(other);
 			#endif
 		}
 
