@@ -17,6 +17,7 @@
         protected override void OnConfigureGenerator()
         {
             FunctionGenerator = new ImGuiFunctionGenerator(config);
+            OverwriteGenerationStep<FunctionGenerationStep>(new Wasm.WasmSignatureGenerationStep(this, config));
             GetGenerationStep<FunctionGenerationStep>().OverwriteParameterWriter<StringParameterWriter>(new ImGuiStringParameterWriter());
         }
 

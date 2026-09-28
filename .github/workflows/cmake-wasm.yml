@@ -11,8 +11,31 @@ on:
       - Hexa.NET.ImGui/ImGui.cs
       - Hexa.NET.ImGui/buildTransitive/**
       - Examples/ExampleBrowserWasm/**
+      - Generator/**
 
 jobs:
+  # The export table and InterpToNativeSignatures.cs come from the Generator's metadata; a stale
+  # table fails to link or misses exports, and a stale signature file only shows up as an
+  # interpreter abort at the first unseen signature. The Generator's libclang is win-x64 only.
+  check-generated-wasm-glue:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+
+      - name: Regenerate the bindings
+        shell: bash
+        run: |
+          dotnet build Generator/Generator.csproj -c Release
+          cd Generator/bin/Release/net9.0 && dotnet Generator.dll
+
+      - name: Check the wasm glue matches the binding
+        shell: bash
+        run: git diff --exit-code -- Hexa.NET.ImGui/Browser
+
   build-cimgui-wasm:
     runs-on: ubuntu-latest
     steps:
@@ -33,13 +56,6 @@ jobs:
 
       - name: Install wasm-tools workload
         run: dotnet workload install wasm-tools
-
-      # A stale file only shows up as an interpreter abort at the first unseen signature.
-      - name: Check InterpToNativeSignatures.cs matches the binding
-        run: |
-          dotnet build Hexa.NET.ImGui/Hexa.NET.ImGui.csproj -c Release -f net10.0
-          dotnet run scripts/wasm/GenerateInterpToNativeSignatures.cs -- Hexa.NET.ImGui/bin/Release/net10.0/Hexa.NET.ImGui.dll Hexa.NET.ImGui Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs
-          git diff --exit-code Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs
 
       - name: Publish the smoke example against the new archive
         run: dotnet publish Examples/ExampleBrowserWasm/ExampleBrowserWasm.csproj -c Release -o smoke
