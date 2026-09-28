@@ -31,7 +31,10 @@
             File.Delete(Path.Combine(ImGuiOutputPath, "FunctionTable.cs")); // Delete base.
             File.Delete(Path.Combine(ImGuiInternalsOutputPath, "FunctionTable.cs")); // Delete intermediate.
 
-            Generate(metadata, CImGuiHeader, CImGuiManualConfig, ImGuiManualOutputPath, InternalsGenerationType.BothOrDontCare, out _);
+            // The manual functions are excluded from the main generation (IgnoredFunctions); merge their metadata so it describes
+            // every export the final FunctionTable.cs loads. WasmTarget builds the browser-wasm export table from it.
+            Generate(metadata, CImGuiHeader, CImGuiManualConfig, ImGuiManualOutputPath, InternalsGenerationType.BothOrDontCare, out var manualMetadata);
+            metadata.Merge(manualMetadata, new HexaGen.Metadata.MergeOptions() { MergeFunctionTable = true });
             File.Move(Path.Combine(ImGuiManualOutputPath, "FunctionTable.cs"), Path.Combine(ImGuiOutputPath, "FunctionTable.cs")); // Move latest to base.
 
             // Patch Functions

@@ -110,9 +110,9 @@ For a comprehensive example of how to use the library, refer to the [ExampleGLFW
 
 `Paradise.ImGui` (the core package only) runs on `browser-wasm` with the Mono interpreter and with `RunAOTCompilation`. Referencing the package from a `Microsoft.NET.Sdk.WebAssembly` app links `native/browser-wasm/cimgui.a` into `dotnet.wasm` through a `NativeFileReference`, so the app build needs the `wasm-tools` workload and relinks the runtime. No rendering backend is included; see [ExampleBrowserWasm](Examples/ExampleBrowserWasm/) for a headless smoke check of the binding.
 
-- `scripts/build_cimgui_wasm.sh` builds the archive with the Emscripten on `PATH`, which must match the workload's version (3.1.56 for .NET 9 and 10). It appends a generated name table (`scripts/wasm/gen_cimgui_exports.py`) because the browser runtime cannot look up native symbols by name.
-- After regenerating the binding, rerun `dotnet run scripts/wasm/GenerateInterpToNativeSignatures.cs -- Hexa.NET.ImGui/bin/Release/net10.0/Hexa.NET.ImGui.dll Hexa.NET.ImGui Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs`. The interpreter aborts on a native call whose signature that file lacks.
-- The archive is single-threaded and built without FreeType, so `ImGuiFreeType` functions are unavailable in the browser.
+- The Generator (`Generator/Targets/WasmTarget.cs`) emits the browser glue from the binding's function-table metadata alongside the bindings: `Hexa.NET.ImGui/Browser/cimgui_wasm_exports.c`, a name table behind `cimgui_wasm_get_proc_address` (the browser runtime cannot look up native symbols by name), and `Hexa.NET.ImGui/Browser/InterpToNativeSignatures.cs`, one delegate per native call signature (the interpreter aborts on a native call whose signature that file lacks). CI fails when they are stale.
+- `scripts/build_cimgui_wasm.sh` builds the archive with the Emscripten on `PATH`, which must match the workload's version (3.1.56 for .NET 9 and 10). It compiles cimgui with FreeType 2.13.3 (no libpng, bzip2, brotli or HarfBuzz) and the generated export table into one self-contained `cimgui.a`.
+- The archive is single-threaded.
 
 ### Native Libraries
 

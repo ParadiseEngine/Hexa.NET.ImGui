@@ -84,6 +84,10 @@ namespace ExampleBrowserWasm
 
                 Expect(statuses[0] == ImTextureStatus.WantCreate && statuses[2] == ImTextureStatus.Ok,
                     $"atlas texture protocol {string.Join(" -> ", statuses)}");
+
+                // The atlas initializes its loader on first build; FreeType rasterized the atlas checked above.
+                string fontLoader = new((sbyte*)io.Fonts.FontLoaderName);
+                Expect(fontLoader.StartsWith("FreeType", StringComparison.Ordinal), $"atlas built with the FreeType font loader (got '{fontLoader}')");
             }
             finally
             {

@@ -6,6 +6,7 @@ var builder =
    BuildSystemBuilder.Create()
     .WithArgs(args)
     .AddImGui()
+    .AddWasm()
     .AddImPlot()
     .AddImNodes()
     .AddImGuizmo()
