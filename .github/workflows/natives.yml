@@ -1,6 +1,6 @@
 name: Build Native Libraries
 
-# Native libraries are not committed. This workflow builds every one of them from the sources
+# Native libraries are not committed. This workflow builds every published one from the sources
 # pinned in the cmake*.yml workflows and uploads the project native/ folders as one "natives"
 # artifact, which push-nuget.yml packs and scripts/fetch_natives.sh downloads for local work.
 on:
@@ -27,15 +27,11 @@ jobs:
     uses: ./.github/workflows/cmake.yml
   static:
     uses: ./.github/workflows/cmake-static.yml
-  backends:
-    uses: ./.github/workflows/cmake-backends.yml
-  backends-static:
-    uses: ./.github/workflows/cmake-backends-static.yml
   browser-wasm:
     uses: ./.github/workflows/cmake-wasm.yml
 
   collect:
-    needs: [shared, static, backends, backends-static, browser-wasm]
+    needs: [shared, static, browser-wasm]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

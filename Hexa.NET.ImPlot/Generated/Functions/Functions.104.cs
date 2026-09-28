@@ -750,7 +750,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static bool BeginItem(byte* labelId)
 		{
-			byte ret = BeginItemNative(labelId, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
+			byte ret = BeginItemNative(labelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
 			return ret != 0;
 		}
 
@@ -759,7 +759,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static bool BeginItem(byte* labelId, Vector4 itemCol)
 		{
-			byte ret = BeginItemNative(labelId, (ImPlotSpec)(new ImPlotSpec()), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
+			byte ret = BeginItemNative(labelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
 			return ret != 0;
 		}
 
@@ -777,7 +777,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static bool BeginItem(byte* labelId, ImPlotMarker itemMkr)
 		{
-			byte ret = BeginItemNative(labelId, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
+			byte ret = BeginItemNative(labelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
 			return ret != 0;
 		}
 
@@ -786,7 +786,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static bool BeginItem(byte* labelId, Vector4 itemCol, ImPlotMarker itemMkr)
 		{
-			byte ret = BeginItemNative(labelId, (ImPlotSpec)(new ImPlotSpec()), itemCol, itemMkr);
+			byte ret = BeginItemNative(labelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, itemMkr);
 			return ret != 0;
 		}
 
@@ -833,7 +833,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
 				return ret != 0;
 			}
 		}
@@ -845,7 +845,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
 				return ret != 0;
 			}
 		}
@@ -869,7 +869,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
 				return ret != 0;
 			}
 		}
@@ -881,7 +881,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), itemCol, itemMkr);
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, itemMkr);
 				return ret != 0;
 			}
 		}
@@ -929,7 +929,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
 				return ret != 0;
 			}
 		}
@@ -941,7 +941,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
 				return ret != 0;
 			}
 		}
@@ -965,7 +965,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
 				return ret != 0;
 			}
 		}
@@ -977,7 +977,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()), itemCol, itemMkr);
+				byte ret = BeginItemNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, itemMkr);
 				return ret != 0;
 			}
 		}
@@ -1094,7 +1094,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
+			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), (ImPlotMarker)(ImPlotMarker.Auto));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1124,7 +1124,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(new ImPlotSpec()), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
+			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, (ImPlotMarker)(ImPlotMarker.Auto));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1184,7 +1184,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(new ImPlotSpec()), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
+			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), (Vector4)(IMPLOT_AUTO_COL), itemMkr);
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -1214,7 +1214,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(new ImPlotSpec()), itemCol, itemMkr);
+			byte ret = BeginItemNative(pStr0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default), itemCol, itemMkr);
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);

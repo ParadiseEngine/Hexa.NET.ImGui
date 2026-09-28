@@ -64,6 +64,41 @@ namespace Hexa.NET.ImPlot3D
 		NoMenus = unchecked(16),
 
 		/// <summary>
+		/// X, Y, and Z axes will be constrained to have the same unitspixel<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DFlags_Equal")]
+		[NativeName(NativeNameType.Value, "32")]
+		Equal = unchecked(32),
+
+		/// <summary>
+		/// Lock rotation interaction<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DFlags_NoRotate")]
+		[NativeName(NativeNameType.Value, "64")]
+		NoRotate = unchecked(64),
+
+		/// <summary>
+		/// Lock panningtranslation interaction<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DFlags_NoPan")]
+		[NativeName(NativeNameType.Value, "128")]
+		NoPan = unchecked(128),
+
+		/// <summary>
+		/// Lock zoom interaction<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DFlags_NoZoom")]
+		[NativeName(NativeNameType.Value, "256")]
+		NoZoom = unchecked(256),
+
+		/// <summary>
+		/// Disable all user inputs<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DFlags_NoInputs")]
+		[NativeName(NativeNameType.Value, "512")]
+		NoInputs = unchecked(512),
+
+		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DFlags_CanvasOnly")]

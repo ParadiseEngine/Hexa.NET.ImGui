@@ -15,6 +15,9 @@
     "ImPlot3DCond_": {
       "above": "// Represents a condition for SetupAxisLimits etc. (same as ImGuiCond, but we only support a subset of those enums)"
     },
+    "ImPlot3DDummyFlags_": {
+      "above": "// Flags for PlotDummy"
+    },
     "ImPlot3DFlags_": {
       "above": "// Flags for ImPlot3D::BeginPlot()"
     },
@@ -36,8 +39,14 @@
     "ImPlot3DMeshFlags_": {
       "above": "// Flags for PlotMesh"
     },
+    "ImPlot3DProp_": {
+      "above": "// Plotting properties. These provide syntactic sugar for creating ImPlot3DSpec from (ImPlot3DProp,value) pairs"
+    },
     "ImPlot3DQuadFlags_": {
       "above": "// Flags for PlotQuad"
+    },
+    "ImPlot3DScale_": {
+      "above": "// Axis scale"
     },
     "ImPlot3DScatterFlags_": {
       "above": "// Flags for PlotScatter"
@@ -56,16 +65,19 @@
     "ImAxis3D_": [
       {
         "calc_value": 0,
+        "comment": "// X-axis",
         "name": "ImAxis3D_X",
         "value": "0"
       },
       {
         "calc_value": 1,
+        "comment": "// Y-axis",
         "name": "ImAxis3D_Y",
         "value": "1"
       },
       {
         "calc_value": 2,
+        "comment": "// Z-axis",
         "name": "ImAxis3D_Z",
         "value": "2"
       },
@@ -78,16 +90,19 @@
     "ImPlane3D_": [
       {
         "calc_value": 0,
+        "comment": "// YZ plane (perpendicular to X-axis)",
         "name": "ImPlane3D_YZ",
         "value": "0"
       },
       {
         "calc_value": 1,
+        "comment": "// XZ plane (perpendicular to Y-axis)",
         "name": "ImPlane3D_XZ",
         "value": "1"
       },
       {
         "calc_value": 2,
+        "comment": "// XY plane (perpendicular to Z-axis)",
         "name": "ImPlane3D_XY",
         "value": "2"
       },
@@ -172,98 +187,92 @@
     "ImPlot3DCol_": [
       {
         "calc_value": 0,
-        "comment": "// Line color",
-        "name": "ImPlot3DCol_Line",
+        "comment": "// Title color",
+        "name": "ImPlot3DCol_TitleText",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": "// Fill color",
-        "name": "ImPlot3DCol_Fill",
+        "comment": "// Color for texts appearing inside of plots",
+        "name": "ImPlot3DCol_InlayText",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": "// Marker outline color",
-        "name": "ImPlot3DCol_MarkerOutline",
+        "comment": "// Frame background color",
+        "name": "ImPlot3DCol_FrameBg",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": "// Marker fill color",
-        "name": "ImPlot3DCol_MarkerFill",
+        "comment": "// Plot area background color",
+        "name": "ImPlot3DCol_PlotBg",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": "// Title color",
-        "name": "ImPlot3DCol_TitleText",
+        "comment": "// Plot area border color",
+        "name": "ImPlot3DCol_PlotBorder",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": "// Color for texts appearing inside of plots",
-        "name": "ImPlot3DCol_InlayText",
+        "comment": "// Legend background color",
+        "name": "ImPlot3DCol_LegendBg",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "comment": "// Frame background color",
-        "name": "ImPlot3DCol_FrameBg",
+        "comment": "// Legend border color",
+        "name": "ImPlot3DCol_LegendBorder",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "comment": "// Plot area background color",
-        "name": "ImPlot3DCol_PlotBg",
+        "comment": "// Legend text color",
+        "name": "ImPlot3DCol_LegendText",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "comment": "// Plot area border color",
-        "name": "ImPlot3DCol_PlotBorder",
+        "comment": "// Axis label and tick lables color",
+        "name": "ImPlot3DCol_AxisText",
         "value": "8"
       },
       {
         "calc_value": 9,
-        "comment": "// Legend background color",
-        "name": "ImPlot3DCol_LegendBg",
+        "comment": "// Axis grid color",
+        "name": "ImPlot3DCol_AxisGrid",
         "value": "9"
       },
       {
         "calc_value": 10,
-        "comment": "// Legend border color",
-        "name": "ImPlot3DCol_LegendBorder",
+        "comment": "// Axis tick color (defaults to AxisGrid)",
+        "name": "ImPlot3DCol_AxisTick",
         "value": "10"
       },
       {
         "calc_value": 11,
-        "comment": "// Legend text color",
-        "name": "ImPlot3DCol_LegendText",
+        "comment": "// Background color of axis hover region (defaults to transparent)",
+        "name": "ImPlot3DCol_AxisBg",
         "value": "11"
       },
       {
         "calc_value": 12,
-        "comment": "// Axis label and tick lables color",
-        "name": "ImPlot3DCol_AxisText",
+        "comment": "// Axis hover color (defaults to ImGuiCol_ButtonHovered)",
+        "name": "ImPlot3DCol_AxisBgHovered",
         "value": "12"
       },
       {
         "calc_value": 13,
-        "comment": "// Axis grid color",
-        "name": "ImPlot3DCol_AxisGrid",
+        "comment": "// Axis active color (defaults to ImGuiCol_ButtonActive)",
+        "name": "ImPlot3DCol_AxisBgActive",
         "value": "13"
       },
       {
         "calc_value": 14,
-        "comment": "// Axis tick color (defaults to AxisGrid)",
-        "name": "ImPlot3DCol_AxisTick",
-        "value": "14"
-      },
-      {
-        "calc_value": 15,
         "name": "ImPlot3DCol_COUNT",
-        "value": "15"
+        "value": "14"
       }
     ],
     "ImPlot3DColormap_": [
@@ -384,6 +393,14 @@
         "value": "ImGuiCond_Once"
       }
     ],
+    "ImPlot3DDummyFlags_": [
+      {
+        "calc_value": 0,
+        "comment": "// Default",
+        "name": "ImPlot3DDummyFlags_None",
+        "value": "0"
+      }
+    ],
     "ImPlot3DFlags_": [
       {
         "calc_value": 0,
@@ -420,6 +437,36 @@
         "comment": "// The user will not be able to open context menus",
         "name": "ImPlot3DFlags_NoMenus",
         "value": "1 << 4"
+      },
+      {
+        "calc_value": 32,
+        "comment": "// X, Y, and Z axes will be constrained to have the same units/pixel",
+        "name": "ImPlot3DFlags_Equal",
+        "value": "1 << 5"
+      },
+      {
+        "calc_value": 64,
+        "comment": "// Lock rotation interaction",
+        "name": "ImPlot3DFlags_NoRotate",
+        "value": "1 << 6"
+      },
+      {
+        "calc_value": 128,
+        "comment": "// Lock panning/translation interaction",
+        "name": "ImPlot3DFlags_NoPan",
+        "value": "1 << 7"
+      },
+      {
+        "calc_value": 256,
+        "comment": "// Lock zoom interaction",
+        "name": "ImPlot3DFlags_NoZoom",
+        "value": "1 << 8"
+      },
+      {
+        "calc_value": 512,
+        "comment": "// Disable all user inputs",
+        "name": "ImPlot3DFlags_NoInputs",
+        "value": "1 << 9"
       },
       {
         "calc_value": 7,
@@ -585,9 +632,15 @@
     ],
     "ImPlot3DMarker_": [
       {
-        "calc_value": -1,
+        "calc_value": -2,
         "comment": "// No marker",
         "name": "ImPlot3DMarker_None",
+        "value": "-2"
+      },
+      {
+        "calc_value": -1,
+        "comment": "// Automatic marker selection",
+        "name": "ImPlot3DMarker_Auto",
         "value": "-1"
       },
       {
@@ -692,6 +745,104 @@
         "value": "1 << 12"
       }
     ],
+    "ImPlot3DProp_": [
+      {
+        "calc_value": 0,
+        "comment": "// Line color; IMPLOT3D_AUTO_COL will use next Colormap color",
+        "name": "ImPlot3DProp_LineColor",
+        "value": "0"
+      },
+      {
+        "calc_value": 1,
+        "comment": "// Array of line colors (ImU32*); if nullptr, use LineColor for all",
+        "name": "ImPlot3DProp_LineColors",
+        "value": "1"
+      },
+      {
+        "calc_value": 2,
+        "comment": "// Line weight in pixels",
+        "name": "ImPlot3DProp_LineWeight",
+        "value": "2"
+      },
+      {
+        "calc_value": 3,
+        "comment": "// Fill color (applies to shaded regions); IMPLOT3D_AUTO_COL will use next Colormap color",
+        "name": "ImPlot3DProp_FillColor",
+        "value": "3"
+      },
+      {
+        "calc_value": 4,
+        "comment": "// Array of fill colors (ImU32*); if nullptr, use FillColor for all",
+        "name": "ImPlot3DProp_FillColors",
+        "value": "4"
+      },
+      {
+        "calc_value": 5,
+        "comment": "// Alpha multiplier (applies to FillColor, FillColors, MarkerFillColor, and MarkerFillColors)",
+        "name": "ImPlot3DProp_FillAlpha",
+        "value": "5"
+      },
+      {
+        "calc_value": 6,
+        "comment": "// Marker type",
+        "name": "ImPlot3DProp_Marker",
+        "value": "6"
+      },
+      {
+        "calc_value": 7,
+        "comment": "// Size of markers (radius) *in pixels*",
+        "name": "ImPlot3DProp_MarkerSize",
+        "value": "7"
+      },
+      {
+        "calc_value": 8,
+        "comment": "// Array of marker sizes (float*); if nullptr, use MarkerSize for all",
+        "name": "ImPlot3DProp_MarkerSizes",
+        "value": "8"
+      },
+      {
+        "calc_value": 9,
+        "comment": "// Marker outline color; IMPLOT3D_AUTO_COL will use next LineColor",
+        "name": "ImPlot3DProp_MarkerLineColor",
+        "value": "9"
+      },
+      {
+        "calc_value": 10,
+        "comment": "// Array of marker outline colors (ImU32*); if nullptr, use MarkerLineColor for all",
+        "name": "ImPlot3DProp_MarkerLineColors",
+        "value": "10"
+      },
+      {
+        "calc_value": 11,
+        "comment": "// Marker fill color; IMPLOT3D_AUTO_COL will use LineColor",
+        "name": "ImPlot3DProp_MarkerFillColor",
+        "value": "11"
+      },
+      {
+        "calc_value": 12,
+        "comment": "// Array of marker fill colors (ImU32*); if nullptr, use MarkerFillColor for all",
+        "name": "ImPlot3DProp_MarkerFillColors",
+        "value": "12"
+      },
+      {
+        "calc_value": 13,
+        "comment": "// Data index offset",
+        "name": "ImPlot3DProp_Offset",
+        "value": "13"
+      },
+      {
+        "calc_value": 14,
+        "comment": "// Data stride in bytes; IMPLOT3D_AUTO will result in sizeof(T) where T is the type passed to PlotX",
+        "name": "ImPlot3DProp_Stride",
+        "value": "14"
+      },
+      {
+        "calc_value": 15,
+        "comment": "// Optional item flags; can be composed from common ImPlot3DItemFlags and/or specialized ImPlot3DXFlags",
+        "name": "ImPlot3DProp_Flags",
+        "value": "15"
+      }
+    ],
     "ImPlot3DQuadFlags_": [
       {
         "calc_value": 0,
@@ -726,6 +877,26 @@
         "comment": "// No markers will be rendered",
         "name": "ImPlot3DQuadFlags_NoMarkers",
         "value": "1 << 12"
+      }
+    ],
+    "ImPlot3DScale_": [
+      {
+        "calc_value": 0,
+        "comment": "// Default linear scale",
+        "name": "ImPlot3DScale_Linear",
+        "value": "0"
+      },
+      {
+        "calc_value": 1,
+        "comment": "// Base 10 log scale",
+        "name": "ImPlot3DScale_Log10",
+        "value": "1"
+      },
+      {
+        "calc_value": 2,
+        "comment": "// Symmetric base 10 log scale",
+        "name": "ImPlot3DScale_SymLog",
+        "value": "2"
       }
     ],
     "ImPlot3DScatterFlags_": [
@@ -767,38 +938,38 @@
       },
       {
         "calc_value": 3,
-        "comment": "// float, plot outline weight of markers in pixels",
-        "name": "ImPlot3DStyleVar_MarkerWeight",
+        "comment": "// float, alpha modifier applied to all plot item fills",
+        "name": "ImPlot3DStyleVar_FillAlpha",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": "// float, alpha modifier applied to all plot item fills",
-        "name": "ImPlot3DStyleVar_FillAlpha",
+        "comment": "// ImVec2, default size used when ImVec2(0,0) is passed to BeginPlot",
+        "name": "ImPlot3DStyleVar_PlotDefaultSize",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": "// ImVec2, default size used when ImVec2(0,0) is passed to BeginPlot",
-        "name": "ImPlot3DStyleVar_PlotDefaultSize",
+        "comment": "// ImVec2, minimum size plot frame can be when shrunk",
+        "name": "ImPlot3DStyleVar_PlotMinSize",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "comment": "// ImVec2, minimum size plot frame can be when shrunk",
-        "name": "ImPlot3DStyleVar_PlotMinSize",
+        "comment": "// ImVec2, padding between widget frame and plot area, labels, or outside legends (i.e. main padding)",
+        "name": "ImPlot3DStyleVar_PlotPadding",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "comment": "// ImVec2, padding between widget frame and plot area, labels, or outside legends (i.e. main padding)",
-        "name": "ImPlot3DStyleVar_PlotPadding",
+        "comment": "// ImVec2, padding between axes labels, tick labels, and plot edge",
+        "name": "ImPlot3DStyleVar_LabelPadding",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "comment": "// ImVec2, padding between axes labels, tick labels, and plot edge",
-        "name": "ImPlot3DStyleVar_LabelPadding",
+        "comment": "// float, scale factor for 3D view, you can use it to make the whole plot larger or smaller",
+        "name": "ImPlot3DStyleVar_ViewScaleFactor",
         "value": "8"
       },
       {
@@ -900,116 +1071,401 @@
   },
   "enumtypes": [],
   "locations": {
-    "ImAxis3D_": "implot3d:286",
-    "ImPlane3D_": "implot3d:294",
-    "ImPlot3DAxisFlags_": "implot3d:270",
-    "ImPlot3DBox": "implot3d:709",
-    "ImPlot3DCol_": "implot3d:119",
-    "ImPlot3DColormap_": "implot3d:302",
-    "ImPlot3DCond_": "implot3d:113",
-    "ImPlot3DFlags_": "implot3d:102",
-    "ImPlot3DImageFlags_": "implot3d:242",
-    "ImPlot3DItemFlags_": "implot3d:178",
-    "ImPlot3DLegendFlags_": "implot3d:249",
-    "ImPlot3DLineFlags_": "implot3d:192",
-    "ImPlot3DLocation_": "implot3d:257",
-    "ImPlot3DMarker_": "implot3d:162",
-    "ImPlot3DMeshFlags_": "implot3d:232",
-    "ImPlot3DPlane": "implot3d:700",
-    "ImPlot3DPoint": "implot3d:619",
-    "ImPlot3DQuadFlags_": "implot3d:212",
-    "ImPlot3DQuat": "implot3d:749",
-    "ImPlot3DRange": "implot3d:733",
-    "ImPlot3DRay": "implot3d:691",
-    "ImPlot3DScatterFlags_": "implot3d:185",
-    "ImPlot3DStyle": "implot3d:805",
-    "ImPlot3DStyleVar_": "implot3d:143",
-    "ImPlot3DSurfaceFlags_": "implot3d:222",
-    "ImPlot3DTriangleFlags_": "implot3d:202"
+    "ImAxis3D_": "implot3d:318",
+    "ImPlane3D_": "implot3d:326",
+    "ImPlot3DAxisFlags_": "implot3d:302",
+    "ImPlot3DBox": "implot3d:930",
+    "ImPlot3DCol_": "implot3d:147",
+    "ImPlot3DColormap_": "implot3d:341",
+    "ImPlot3DCond_": "implot3d:141",
+    "ImPlot3DDummyFlags_": "implot3d:276",
+    "ImPlot3DFlags_": "implot3d:125",
+    "ImPlot3DImageFlags_": "implot3d:269",
+    "ImPlot3DItemFlags_": "implot3d:205",
+    "ImPlot3DLegendFlags_": "implot3d:281",
+    "ImPlot3DLineFlags_": "implot3d:219",
+    "ImPlot3DLocation_": "implot3d:289",
+    "ImPlot3DMarker_": "implot3d:188",
+    "ImPlot3DMeshFlags_": "implot3d:259",
+    "ImPlot3DPlane": "implot3d:920",
+    "ImPlot3DPoint": "implot3d:837",
+    "ImPlot3DProp_": "implot3d:105",
+    "ImPlot3DQuadFlags_": "implot3d:239",
+    "ImPlot3DQuat": "implot3d:972",
+    "ImPlot3DRange": "implot3d:955",
+    "ImPlot3DRay": "implot3d:910",
+    "ImPlot3DScale_": "implot3d:334",
+    "ImPlot3DScatterFlags_": "implot3d:212",
+    "ImPlot3DSpec": "implot3d:384",
+    "ImPlot3DStyle": "implot3d:1029",
+    "ImPlot3DStyleVar_": "implot3d:169",
+    "ImPlot3DSurfaceFlags_": "implot3d:249",
+    "ImPlot3DTriangleFlags_": "implot3d:229"
   },
   "nonPOD": {
+    "ImBitArray": "inherited",
+    "ImColor": "inherited",
+    "ImDrawCmd": "inherited",
+    "ImDrawData": "inherited",
+    "ImDrawDataBuilder": "inherited",
+    "ImDrawList": "inherited",
+    "ImDrawListSharedData": "inherited",
+    "ImDrawListSplitter": "inherited",
+    "ImFont": "inherited",
+    "ImFontAtlas": "inherited",
+    "ImFontAtlasBuilder": "inherited",
+    "ImFontAtlasRect": "inherited",
+    "ImFontBaked": "inherited",
+    "ImFontConfig": "inherited",
+    "ImFontGlyph": "inherited",
+    "ImFontGlyphRangesBuilder": "inherited",
+    "ImFontLoader": "inherited",
+    "ImGuiBoxSelectState": "inherited",
+    "ImGuiComboPreviewData": "inherited",
+    "ImGuiContext": "inherited",
+    "ImGuiContextHook": "inherited",
+    "ImGuiDebugAllocInfo": "inherited",
+    "ImGuiDebugItemPathQuery": "inherited",
+    "ImGuiDockContext": "inherited",
+    "ImGuiDockNode": "inherited",
+    "ImGuiErrorRecoveryState": "inherited",
+    "ImGuiIDStackTool": "inherited",
+    "ImGuiIO": "inherited",
+    "ImGuiInputEvent": "inherited",
+    "ImGuiInputTextCallbackData": "inherited",
+    "ImGuiInputTextDeactivatedState": "inherited",
+    "ImGuiInputTextState": "inherited",
+    "ImGuiKeyOwnerData": "inherited",
+    "ImGuiKeyRoutingData": "inherited",
+    "ImGuiKeyRoutingTable": "inherited",
+    "ImGuiLastItemData": "inherited",
+    "ImGuiListClipper": "inherited",
+    "ImGuiListClipperData": "inherited",
+    "ImGuiMenuColumns": "inherited",
+    "ImGuiMultiSelectState": "inherited",
+    "ImGuiMultiSelectTempData": "inherited",
+    "ImGuiNavItemData": "inherited",
+    "ImGuiNextItemData": "inherited",
+    "ImGuiNextWindowData": "inherited",
+    "ImGuiOldColumnData": "inherited",
+    "ImGuiOldColumns": "inherited",
+    "ImGuiOnceUponAFrame": "inherited",
+    "ImGuiPackedDate": "inherited",
+    "ImGuiPayload": "inherited",
+    "ImGuiPlatformIO": "inherited",
+    "ImGuiPlatformImeData": "inherited",
+    "ImGuiPlatformMonitor": "inherited",
+    "ImGuiPopupData": "inherited",
+    "ImGuiPtrOrIndex": "inherited",
+    "ImGuiSelectionBasicStorage": "inherited",
+    "ImGuiSelectionExternalStorage": "inherited",
+    "ImGuiSettingsHandler": "inherited",
+    "ImGuiStackLevelInfo": "inherited",
+    "ImGuiStoragePair": "inherited",
+    "ImGuiStyle": "inherited",
+    "ImGuiStyleMod": "inherited",
+    "ImGuiTabBar": "inherited",
+    "ImGuiTabItem": "inherited",
+    "ImGuiTable": "inherited",
+    "ImGuiTableColumn": "inherited",
+    "ImGuiTableColumnSettings": "inherited",
+    "ImGuiTableColumnSortSpecs": "inherited",
+    "ImGuiTableInstanceData": "inherited",
+    "ImGuiTableSettings": "inherited",
+    "ImGuiTableSortSpecs": "inherited",
+    "ImGuiTableTempData": "inherited",
+    "ImGuiTextBuffer": "inherited",
+    "ImGuiTextFilter": "inherited",
+    "ImGuiTextRange": "inherited",
+    "ImGuiTypingSelectState": "inherited",
+    "ImGuiViewport": "inherited",
+    "ImGuiViewportP": "inherited",
+    "ImGuiWindow": "inherited",
+    "ImGuiWindowClass": "inherited",
+    "ImGuiWindowSettings": "inherited",
     "ImPlot3DBox": true,
     "ImPlot3DPoint": true,
     "ImPlot3DQuat": true,
     "ImPlot3DRange": true,
-    "ImPlot3DStyle": true
+    "ImPlot3DSpec": true,
+    "ImPlot3DStyle": true,
+    "ImPool": "inherited",
+    "ImRect": "inherited",
+    "ImSpan": "inherited",
+    "ImSpanAllocator": "inherited",
+    "ImStableVector": "inherited",
+    "ImTextureData": "inherited",
+    "ImTextureRef": "inherited",
+    "ImVec1": "inherited",
+    "ImVec2": "inherited",
+    "ImVec2i": "inherited",
+    "ImVec2ih": "inherited",
+    "ImVec4": "inherited",
+    "ImVector": "inherited"
   },
+  "nonPOD_used": {
+    "ImPlot3DPoint": true,
+    "ImPlot3DQuat": true,
+    "ImPlot3DSpec": true,
+    "ImPlot3DStyle": true,
+    "ImTextureRef": "inherited",
+    "ImVec2": "inherited",
+    "ImVec4": "inherited"
+  },
+  "opaque_structs": [],
   "struct_comments": {
+    "ImPlot3DBox": {
+      "above": "// ImPlot3DBox: Axis-aligned bounding box in 3D space"
+    },
+    "ImPlot3DPlane": {
+      "above": "// ImPlot3DPlane: Represents a plane in 3D space defined by a point and normal vector"
+    },
     "ImPlot3DPoint": {
-      "above": "// ImPlot3DPoint: 3D vector to store points in 3D"
+      "above": "// ImPlot3DPoint: 3D vector to store points in 3D space"
+    },
+    "ImPlot3DQuat": {
+      "above": "// ImPlot3DQuat: Quaternion for representing 3D rotations"
+    },
+    "ImPlot3DRange": {
+      "above": "// ImPlot3DRange: Represents a 1D range with min and max values"
+    },
+    "ImPlot3DRay": {
+      "above": "// ImPlot3DRay: Represents a ray in 3D space with an origin and direction"
+    },
+    "ImPlot3DSpec": {
+      "above": "// Plot item styling specification. Provide these to PlotX functions to override styling, specify\n// offsetting or stride, or set optional flags. This struct can be used in the following ways:\n//\n// 1. By declaring and defining a struct instance:\n//\n//    ImPlot3DSpec spec;\n//    spec.LineColor = ImVec4(1,0,0,1);\n//    spec.LineWeight = 2.0f;\n//    spec.Marker = ImPlot3DMarker_Circle;\n//    spec.Flags = ImPlot3DItemFlags_NoLegend | ImPlot3DLineFlags_Segments;\n//    ImPlot3D::PlotLine(\"MyLine\", xs, ys, zs, 100, spec);\n//\n// 2. Inline using ImPlot3DProp,value pairs (order does NOT matter):\n//\n//    ImPlot3D::PlotLine(\"MyLine\", xs, ys, zs, 100, \n//      ImPlot3DProp_LineColor, ImVec4(1,0,0,1),\n//      ImPlot3DProp_LineWeight, 2.0f,\n//      ImPlot3DProp_Marker, ImPlot3DMarker_Circle,\n//      ImPlot3DProp_Flags, ImPlot3DItemFlags_NoLegend | ImPlot3DLineFlags_Segments\n//    );"
     }
   },
   "structs": {
     "ImPlot3DBox": [
       {
+        "comment": {
+          "sameline": "// Minimum corner of the box"
+        },
         "name": "Min",
         "type": "ImPlot3DPoint"
       },
       {
+        "comment": {
+          "sameline": "// Maximum corner of the box"
+        },
         "name": "Max",
         "type": "ImPlot3DPoint"
       }
     ],
     "ImPlot3DPlane": [
       {
+        "comment": {
+          "sameline": "// A point on the plane"
+        },
         "name": "Point",
         "type": "ImPlot3DPoint"
       },
       {
+        "comment": {
+          "sameline": "// Plane normal vector"
+        },
         "name": "Normal",
         "type": "ImPlot3DPoint"
       }
     ],
     "ImPlot3DPoint": [
       {
+        "comment": {
+          "sameline": "// Coordinates"
+        },
         "name": "x",
-        "type": "float"
+        "type": "double"
       },
       {
+        "comment": {
+          "sameline": "// Coordinates"
+        },
         "name": "y",
-        "type": "float"
+        "type": "double"
       },
       {
+        "comment": {
+          "sameline": "// Coordinates"
+        },
         "name": "z",
-        "type": "float"
+        "type": "double"
       }
     ],
     "ImPlot3DQuat": [
       {
+        "comment": {
+          "sameline": "// Quaternion components"
+        },
         "name": "x",
-        "type": "float"
+        "type": "double"
       },
       {
+        "comment": {
+          "sameline": "// Quaternion components"
+        },
         "name": "y",
-        "type": "float"
+        "type": "double"
       },
       {
+        "comment": {
+          "sameline": "// Quaternion components"
+        },
         "name": "z",
-        "type": "float"
+        "type": "double"
       },
       {
+        "comment": {
+          "sameline": "// Quaternion components"
+        },
         "name": "w",
-        "type": "float"
+        "type": "double"
       }
     ],
     "ImPlot3DRange": [
       {
+        "comment": {
+          "sameline": "// Minimum value"
+        },
         "name": "Min",
-        "type": "float"
+        "type": "double"
       },
       {
+        "comment": {
+          "sameline": "// Maximum value"
+        },
         "name": "Max",
-        "type": "float"
+        "type": "double"
       }
     ],
     "ImPlot3DRay": [
       {
+        "comment": {
+          "sameline": "// Ray origin point"
+        },
         "name": "Origin",
         "type": "ImPlot3DPoint"
       },
       {
+        "comment": {
+          "sameline": "// Ray direction (not necessarily normalized)"
+        },
         "name": "Direction",
         "type": "ImPlot3DPoint"
+      }
+    ],
+    "ImPlot3DSpec": [
+      {
+        "comment": {
+          "sameline": "// Line color; IMPLOT3D_AUTO_COL will use next Colormap color"
+        },
+        "name": "LineColor",
+        "type": "ImVec4"
+      },
+      {
+        "comment": {
+          "sameline": "// Per-index line colors; if nullptr, use LineColor for all"
+        },
+        "name": "LineColors",
+        "type": "ImU32*"
+      },
+      {
+        "comment": {
+          "sameline": "// Line weight in pixels"
+        },
+        "name": "LineWeight",
+        "type": "float"
+      },
+      {
+        "comment": {
+          "sameline": "// Fill color (applies to shaded regions); IMPLOT3D_AUTO_COL will use next Colormap color"
+        },
+        "name": "FillColor",
+        "type": "ImVec4"
+      },
+      {
+        "comment": {
+          "sameline": "// Per-index fill colors; if nullptr, use FillColor for all"
+        },
+        "name": "FillColors",
+        "type": "ImU32*"
+      },
+      {
+        "comment": {
+          "sameline": "// Alpha multiplier (applies to FillColor, FillColors, MarkerFillColor, and MarkerFillColors)"
+        },
+        "name": "FillAlpha",
+        "type": "float"
+      },
+      {
+        "comment": {
+          "sameline": "// Marker type"
+        },
+        "name": "Marker",
+        "type": "ImPlot3DMarker"
+      },
+      {
+        "comment": {
+          "sameline": "// Size of markers (radius) *in pixels*"
+        },
+        "name": "MarkerSize",
+        "type": "float"
+      },
+      {
+        "comment": {
+          "sameline": "// Per-index marker sizes; if nullptr, use MarkerSize for all"
+        },
+        "name": "MarkerSizes",
+        "type": "float*"
+      },
+      {
+        "comment": {
+          "sameline": "// Marker outline color; IMPLOT3D_AUTO_COL will use LineColor"
+        },
+        "name": "MarkerLineColor",
+        "type": "ImVec4"
+      },
+      {
+        "comment": {
+          "sameline": "// Per-index marker outline colors; if nullptr, use MarkerLineColor for all"
+        },
+        "name": "MarkerLineColors",
+        "type": "ImU32*"
+      },
+      {
+        "comment": {
+          "sameline": "// Marker fill color; IMPLOT3D_AUTO_COL will use LineColor"
+        },
+        "name": "MarkerFillColor",
+        "type": "ImVec4"
+      },
+      {
+        "comment": {
+          "sameline": "// Per-index marker fill colors; if nullptr, use MarkerFillColor for all"
+        },
+        "name": "MarkerFillColors",
+        "type": "ImU32*"
+      },
+      {
+        "comment": {
+          "sameline": "// Data index offset"
+        },
+        "name": "Offset",
+        "type": "int"
+      },
+      {
+        "comment": {
+          "sameline": "// Data stride in bytes; IMPLOT3D_AUTO will result in sizeof(T) where T is the type passed to PlotX"
+        },
+        "name": "Stride",
+        "type": "int"
+      },
+      {
+        "comment": {
+          "sameline": "// Optional item flags; can be composed from common ImPlot3DItemFlags and/or specialized ImPlot3DXFlags"
+        },
+        "name": "Flags",
+        "type": "ImPlot3DItemFlags"
       }
     ],
     "ImPlot3DStyle": [
@@ -1037,13 +1493,6 @@
       },
       {
         "comment": {
-          "sameline": "// Marker outline weight in pixels"
-        },
-        "name": "MarkerWeight",
-        "type": "float"
-      },
-      {
-        "comment": {
           "sameline": "// Alpha modifier applied to plot fills"
         },
         "name": "FillAlpha",
@@ -1051,22 +1500,39 @@
       },
       {
         "comment": {
-          "above": "\n    // Plot style"
+          "above": "\n    // Plot style",
+          "sameline": "// Default size used when ImVec2(0,0) is passed to BeginPlot"
         },
         "name": "PlotDefaultSize",
         "type": "ImVec2"
       },
       {
+        "comment": {
+          "sameline": "// Minimum size plot frame can be when shrunk"
+        },
         "name": "PlotMinSize",
         "type": "ImVec2"
       },
       {
+        "comment": {
+          "sameline": "// Padding between widget frame and plot area"
+        },
         "name": "PlotPadding",
         "type": "ImVec2"
       },
       {
+        "comment": {
+          "sameline": "// Padding between axes labels, tick labels, and plot edge"
+        },
         "name": "LabelPadding",
         "type": "ImVec2"
+      },
+      {
+        "comment": {
+          "sameline": "// Scale factor for 3D view"
+        },
+        "name": "ViewScaleFactor",
+        "type": "float"
       },
       {
         "comment": {
@@ -1092,16 +1558,17 @@
       },
       {
         "comment": {
-          "above": "\n    // Colors"
+          "above": "\n    // Colors",
+          "sameline": "// Array of plot colors"
         },
         "name": "Colors[ImPlot3DCol_COUNT]",
-        "size": 15,
+        "size": 14,
         "type": "ImVec4"
       },
       {
         "comment": {
           "above": "\n    // Colormap",
-          "sameline": "// The current colormap. Set this to either an ImPlot3DColormap_ enum or an index returned by AddColormap"
+          "sameline": "// The current colormap (ImPlot3DColormap_ enum or index from AddColormap)"
         },
         "name": "Colormap",
         "type": "ImPlot3DColormap"

@@ -24,8 +24,15 @@ namespace Hexa.NET.ImPlot3D
 		/// No marker<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlot3DMarker_None")]
+		[NativeName(NativeNameType.Value, "-2")]
+		None = unchecked(-2),
+
+		/// <summary>
+		/// Automatic marker selection<br/>
+		/// </summary>
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DMarker_Auto")]
 		[NativeName(NativeNameType.Value, "-1")]
-		None = unchecked(-1),
+		Auto = unchecked(-1),
 
 		/// <summary>
 		/// Circle marker (default)<br/>

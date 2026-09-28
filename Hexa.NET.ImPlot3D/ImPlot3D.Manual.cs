@@ -38,7 +38,7 @@
 #if NET5_0_OR_GREATER
             ((delegate* unmanaged[Cdecl]<delegate*<nuint, void*, void*>, delegate*<void*, void*, void>, void*, void>)funcTable[2])((delegate*<nuint, void*, void*>)Utils.GetFunctionPointerForDelegate(allocFunc), (delegate*<void*, void*, void>)Utils.GetFunctionPointerForDelegate(freeFunc), userData);
 #else
-			((delegate* unmanaged[Cdecl]<nint, nint, nint, void>)funcTable[409])((nint)Utils.GetFunctionPointerForDelegate(allocFunc), (nint)Utils.GetFunctionPointerForDelegate(freeFunc), (nint)userData);
+			((delegate* unmanaged[Cdecl]<nint, nint, nint, void>)funcTable[2])((nint)Utils.GetFunctionPointerForDelegate(allocFunc), (nint)Utils.GetFunctionPointerForDelegate(freeFunc), (nint)userData);
 #endif
         }
 
@@ -67,7 +67,7 @@
 #if NET5_0_OR_GREATER
             ((delegate* unmanaged[Cdecl]<delegate*<nuint, void*, void*>*, delegate*<void*, void*, void>*, void**, void>)funcTable[3])(pAllocFunc, pFreeFunc, pUserData);
 #else
-			((delegate* unmanaged[Cdecl]<nint, nint, nint, void>)funcTable[410])((nint)pAllocFunc, (nint)pFreeFunc, (nint)pUserData);
+			((delegate* unmanaged[Cdecl]<nint, nint, nint, void>)funcTable[3])((nint)pAllocFunc, (nint)pFreeFunc, (nint)pUserData);
 #endif
         }
 

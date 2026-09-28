@@ -21,21 +21,21 @@ namespace Hexa.NET.ImPlot3D
 	public enum ImPlane3D : int
 	{
 		/// <summary>
-		/// To be documented.
+		/// YZ plane (perpendicular to X-axis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlane3D_YZ")]
 		[NativeName(NativeNameType.Value, "0")]
 		Yz = unchecked(0),
 
 		/// <summary>
-		/// To be documented.
+		/// XZ plane (perpendicular to Y-axis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlane3D_XZ")]
 		[NativeName(NativeNameType.Value, "1")]
 		Xz = unchecked(1),
 
 		/// <summary>
-		/// To be documented.
+		/// XY plane (perpendicular to Z-axis)<br/>
 		/// </summary>
 		[NativeName(NativeNameType.EnumItem, "ImPlane3D_XY")]
 		[NativeName(NativeNameType.Value, "2")]

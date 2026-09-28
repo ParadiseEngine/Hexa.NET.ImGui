@@ -92,7 +92,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, uv1, tintCol, (ImPlotSpec)(new ImPlotSpec()));
+			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, uv1, tintCol, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -121,7 +121,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlotSpec)(new ImPlotSpec()));
+			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, uv1, (Vector4)(new Vector4(1,1,1,1)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -150,7 +150,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlotSpec)(new ImPlotSpec()));
+			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -179,7 +179,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlotSpec)(new ImPlotSpec()));
+			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), (Vector4)(new Vector4(1,1,1,1)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -208,7 +208,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlotSpec)(new ImPlotSpec()));
+			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, uv0, (Vector2)(new Vector2(1,1)), tintCol, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -237,7 +237,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlotSpec)(new ImPlotSpec()));
+			PlotImageNative(pStr0, texRef, boundsMin, boundsMax, (Vector2)(new Vector2(0,0)), (Vector2)(new Vector2(1,1)), tintCol, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -415,7 +415,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotText(byte* text, double x, double y, Vector2 pixOffset)
 		{
-			PlotTextNative(text, x, y, pixOffset, (ImPlotSpec)(new ImPlotSpec()));
+			PlotTextNative(text, x, y, pixOffset, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -423,7 +423,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotText(byte* text, double x, double y)
 		{
-			PlotTextNative(text, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(new ImPlotSpec()));
+			PlotTextNative(text, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -452,7 +452,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* ptext = &text)
 			{
-				PlotTextNative((byte*)ptext, x, y, pixOffset, (ImPlotSpec)(new ImPlotSpec()));
+				PlotTextNative((byte*)ptext, x, y, pixOffset, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -463,7 +463,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* ptext = &text)
 			{
-				PlotTextNative((byte*)ptext, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(new ImPlotSpec()));
+				PlotTextNative((byte*)ptext, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -496,7 +496,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* ptext = text)
 			{
-				PlotTextNative((byte*)ptext, x, y, pixOffset, (ImPlotSpec)(new ImPlotSpec()));
+				PlotTextNative((byte*)ptext, x, y, pixOffset, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -507,7 +507,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* ptext = text)
 			{
-				PlotTextNative((byte*)ptext, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(new ImPlotSpec()));
+				PlotTextNative((byte*)ptext, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -573,7 +573,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(text, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotTextNative(pStr0, x, y, pixOffset, (ImPlotSpec)(new ImPlotSpec()));
+			PlotTextNative(pStr0, x, y, pixOffset, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -602,7 +602,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(text, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotTextNative(pStr0, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(new ImPlotSpec()));
+			PlotTextNative(pStr0, x, y, (Vector2)(new Vector2(0,0)), (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);
@@ -664,7 +664,7 @@ namespace Hexa.NET.ImPlot
 		/// </summary>
 		public static void PlotDummy(byte* labelId)
 		{
-			PlotDummyNative(labelId, (ImPlotSpec)(new ImPlotSpec()));
+			PlotDummyNative(labelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 		}
 
 		/// <summary>
@@ -685,7 +685,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = &labelId)
 			{
-				PlotDummyNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()));
+				PlotDummyNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -707,7 +707,7 @@ namespace Hexa.NET.ImPlot
 		{
 			fixed (byte* plabelId = labelId)
 			{
-				PlotDummyNative((byte*)plabelId, (ImPlotSpec)(new ImPlotSpec()));
+				PlotDummyNative((byte*)plabelId, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			}
 		}
 
@@ -762,7 +762,7 @@ namespace Hexa.NET.ImPlot
 				int pStrOffset0 = Utils.EncodeStringUTF8(labelId, pStr0, pStrSize0);
 				pStr0[pStrOffset0] = 0;
 			}
-			PlotDummyNative(pStr0, (ImPlotSpec)(new ImPlotSpec()));
+			PlotDummyNative(pStr0, (ImPlotSpec)(global::Hexa.NET.ImPlot.ImPlotSpec.Default));
 			if (pStrSize0 >= Utils.MaxStackallocSize)
 			{
 				Utils.Free(pStr0);

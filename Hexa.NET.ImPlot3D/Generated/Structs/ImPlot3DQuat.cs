@@ -20,7 +20,7 @@ namespace Hexa.NET.ImPlot3D
 	/// <summary>
 	/// To be documented.
 	/// </summary>
-	[NativeName(NativeNameType.StructOrClass, "ImPlot3DQuat")]
+	[NativeName(NativeNameType.StructOrClass, "ImPlot3DQuat_c")]
 	[StructLayout(LayoutKind.Sequential)]
 	public partial struct ImPlot3DQuat
 	{
@@ -28,35 +28,35 @@ namespace Hexa.NET.ImPlot3D
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "x")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float X;
+		[NativeName(NativeNameType.Type, "double")]
+		public double X;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "y")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float Y;
+		[NativeName(NativeNameType.Type, "double")]
+		public double Y;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "z")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float Z;
+		[NativeName(NativeNameType.Type, "double")]
+		public double Z;
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
 		[NativeName(NativeNameType.Field, "w")]
-		[NativeName(NativeNameType.Type, "float")]
-		public float W;
+		[NativeName(NativeNameType.Type, "double")]
+		public double W;
 
 
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public unsafe ImPlot3DQuat(float x = default, float y = default, float z = default, float w = default)
+		public unsafe ImPlot3DQuat(double x = default, double y = default, double z = default, double w = default)
 		{
 			X = x;
 			Y = y;
@@ -65,193 +65,12 @@ namespace Hexa.NET.ImPlot3D
 		}
 
 
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Conjugate")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Conjugate([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.ConjugateNative(@this, self);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Conjugate")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Conjugate([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ref ImPlot3DQuat self)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				fixed (ImPlot3DQuat* pself = &self)
-				{
-					ImPlot3D.ConjugateNative(@this, (ImPlot3DQuat*)pself);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_destroy")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Destroy()
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.DestroyNative(@this);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Dot")]
-		[return: NativeName(NativeNameType.Type, "float")]
-		public unsafe float Dot([NativeName(NativeNameType.Param, "rhs")] [NativeName(NativeNameType.Type, "ImPlot3DQuat const")] ImPlot3DQuat rhs)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				float ret = ImPlot3D.DotNative(@this, rhs);
-				return ret;
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_FromElAz")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void FromElAz([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.FromElAzNative(@this, elevation, azimuth);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_FromTwoVectors")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void FromTwoVectors([NativeName(NativeNameType.Param, "v0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint const")] ImPlot3DPoint v0, [NativeName(NativeNameType.Param, "v1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint const")] ImPlot3DPoint v1)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.FromTwoVectorsNative(@this, v0, v1);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Inverse")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Inverse([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.InverseNative(@this, self);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Inverse")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Inverse([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ref ImPlot3DQuat self)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				fixed (ImPlot3DQuat* pself = &self)
-				{
-					ImPlot3D.InverseNative(@this, (ImPlot3DQuat*)pself);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Length")]
-		[return: NativeName(NativeNameType.Type, "float")]
-		public unsafe float Length()
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				float ret = ImPlot3D.LengthNative(@this);
-				return ret;
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Normalize")]
-		[return: NativeName(NativeNameType.Type, "ImPlot3DQuat *")]
-		public unsafe ImPlot3DQuat* Normalize()
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3DQuat* ret = ImPlot3D.NormalizeNative(@this);
-				return ret;
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Normalized")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Normalized([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.NormalizedNative(@this, self);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Normalized")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Normalized([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ref ImPlot3DQuat self)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				fixed (ImPlot3DQuat* pself = &self)
-				{
-					ImPlot3D.NormalizedNative(@this, (ImPlot3DQuat*)pself);
-				}
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Slerp")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Slerp([NativeName(NativeNameType.Param, "q1")] [NativeName(NativeNameType.Type, "ImPlot3DQuat const")] ImPlot3DQuat q1, [NativeName(NativeNameType.Param, "q2")] [NativeName(NativeNameType.Type, "ImPlot3DQuat const")] ImPlot3DQuat q2, [NativeName(NativeNameType.Param, "t")] [NativeName(NativeNameType.Type, "float")] float t)
-		{
-			fixed (ImPlot3DQuat* @this = &this)
-			{
-				ImPlot3D.SlerpNative(@this, q1, q2, t);
-			}
-		}
-
 	}
 
 	/// <summary>
 	/// To be documented.
 	/// </summary>
-	[NativeName(NativeNameType.Typedef, "ImPlot3DQuat")]
+	[NativeName(NativeNameType.Typedef, "ImPlot3DQuat_c")]
 	#if NET5_0_OR_GREATER
 	[DebuggerDisplay("{DebuggerDisplay,nq}")]
 	#endif
@@ -293,161 +112,19 @@ namespace Hexa.NET.ImPlot3D
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public ref float X => ref Unsafe.AsRef<float>(&Handle->X);
+		public ref double X => ref Unsafe.AsRef<double>(&Handle->X);
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public ref float Y => ref Unsafe.AsRef<float>(&Handle->Y);
+		public ref double Y => ref Unsafe.AsRef<double>(&Handle->Y);
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public ref float Z => ref Unsafe.AsRef<float>(&Handle->Z);
+		public ref double Z => ref Unsafe.AsRef<double>(&Handle->Z);
 		/// <summary>
 		/// To be documented.
 		/// </summary>
-		public ref float W => ref Unsafe.AsRef<float>(&Handle->W);
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Conjugate")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Conjugate([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
-		{
-			ImPlot3D.ConjugateNative(Handle, self);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Conjugate")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Conjugate([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ref ImPlot3DQuat self)
-		{
-			fixed (ImPlot3DQuat* pself = &self)
-			{
-				ImPlot3D.ConjugateNative(Handle, (ImPlot3DQuat*)pself);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_destroy")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Destroy()
-		{
-			ImPlot3D.DestroyNative(Handle);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Dot")]
-		[return: NativeName(NativeNameType.Type, "float")]
-		public unsafe float Dot([NativeName(NativeNameType.Param, "rhs")] [NativeName(NativeNameType.Type, "ImPlot3DQuat const")] ImPlot3DQuat rhs)
-		{
-			float ret = ImPlot3D.DotNative(Handle, rhs);
-			return ret;
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_FromElAz")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void FromElAz([NativeName(NativeNameType.Param, "elevation")] [NativeName(NativeNameType.Type, "float")] float elevation, [NativeName(NativeNameType.Param, "azimuth")] [NativeName(NativeNameType.Type, "float")] float azimuth)
-		{
-			ImPlot3D.FromElAzNative(Handle, elevation, azimuth);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_FromTwoVectors")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void FromTwoVectors([NativeName(NativeNameType.Param, "v0")] [NativeName(NativeNameType.Type, "ImPlot3DPoint const")] ImPlot3DPoint v0, [NativeName(NativeNameType.Param, "v1")] [NativeName(NativeNameType.Type, "ImPlot3DPoint const")] ImPlot3DPoint v1)
-		{
-			ImPlot3D.FromTwoVectorsNative(Handle, v0, v1);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Inverse")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Inverse([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
-		{
-			ImPlot3D.InverseNative(Handle, self);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Inverse")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Inverse([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ref ImPlot3DQuat self)
-		{
-			fixed (ImPlot3DQuat* pself = &self)
-			{
-				ImPlot3D.InverseNative(Handle, (ImPlot3DQuat*)pself);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Length")]
-		[return: NativeName(NativeNameType.Type, "float")]
-		public unsafe float Length()
-		{
-			float ret = ImPlot3D.LengthNative(Handle);
-			return ret;
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Normalize")]
-		[return: NativeName(NativeNameType.Type, "ImPlot3DQuat *")]
-		public unsafe ImPlot3DQuat* Normalize()
-		{
-			ImPlot3DQuat* ret = ImPlot3D.NormalizeNative(Handle);
-			return ret;
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Normalized")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Normalized([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ImPlot3DQuat* self)
-		{
-			ImPlot3D.NormalizedNative(Handle, self);
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Normalized")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Normalized([NativeName(NativeNameType.Param, "self")] [NativeName(NativeNameType.Type, "ImPlot3DQuat *")] ref ImPlot3DQuat self)
-		{
-			fixed (ImPlot3DQuat* pself = &self)
-			{
-				ImPlot3D.NormalizedNative(Handle, (ImPlot3DQuat*)pself);
-			}
-		}
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.Func, "ImPlot3DQuat_Slerp")]
-		[return: NativeName(NativeNameType.Type, "void")]
-		public unsafe void Slerp([NativeName(NativeNameType.Param, "q1")] [NativeName(NativeNameType.Type, "ImPlot3DQuat const")] ImPlot3DQuat q1, [NativeName(NativeNameType.Param, "q2")] [NativeName(NativeNameType.Type, "ImPlot3DQuat const")] ImPlot3DQuat q2, [NativeName(NativeNameType.Param, "t")] [NativeName(NativeNameType.Type, "float")] float t)
-		{
-			ImPlot3D.SlerpNative(Handle, q1, q2, t);
-		}
-
+		public ref double W => ref Unsafe.AsRef<double>(&Handle->W);
 	}
 
 }

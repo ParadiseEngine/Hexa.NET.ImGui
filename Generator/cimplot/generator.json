@@ -37,7 +37,7 @@
     "ImPlotRect()": "*ImPlotRectNative()",
     "ImPlotRange()": "*ImPlotRangeNative()",
     "ImPlotCond_Once": "ImPlotCond.Once",
-    "ImPlotSpec()": "new ImPlotSpec()"
+    "ImPlotSpec()": "global::Hexa.NET.ImPlot.ImPlotSpec.Default"
   },
   "IgnoredParts": [ "ImPlot" ],
   "Usings": [ "Hexa.NET.ImGui" ]

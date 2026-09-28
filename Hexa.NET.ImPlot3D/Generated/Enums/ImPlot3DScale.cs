@@ -17,35 +17,29 @@ namespace Hexa.NET.ImPlot3D
 	/// <summary>
 	/// To be documented.
 	/// </summary>
-	[NativeName(NativeNameType.Enum, "ImAxis3D_")]
-	public enum ImAxis3D : int
+	[NativeName(NativeNameType.Enum, "ImPlot3DScale_")]
+	[Flags]
+	public enum ImPlot3DScale : int
 	{
 		/// <summary>
-		/// X-axis<br/>
+		/// Default linear scale<br/>
 		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImAxis3D_X")]
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DScale_Linear")]
 		[NativeName(NativeNameType.Value, "0")]
-		X = unchecked(0),
+		Linear = unchecked(0),
 
 		/// <summary>
-		/// Y-axis<br/>
+		/// Base 10 log scale<br/>
 		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImAxis3D_Y")]
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DScale_Log10")]
 		[NativeName(NativeNameType.Value, "1")]
-		Y = unchecked(1),
+		Log10 = unchecked(1),
 
 		/// <summary>
-		/// Z-axis<br/>
+		/// Symmetric base 10 log scale<br/>
 		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImAxis3D_Z")]
+		[NativeName(NativeNameType.EnumItem, "ImPlot3DScale_SymLog")]
 		[NativeName(NativeNameType.Value, "2")]
-		Z = unchecked(2),
-
-		/// <summary>
-		/// To be documented.
-		/// </summary>
-		[NativeName(NativeNameType.EnumItem, "ImAxis3D_COUNT")]
-		[NativeName(NativeNameType.Value, "3")]
-		Count = unchecked(3),
+		SymLog = unchecked(2),
 	}
 }
